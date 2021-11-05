@@ -1,0 +1,178 @@
+{
+  "translations": {
+    "nav": {
+      "home": "About us",
+      "service": "Our service",
+      "recruit": "Career",
+      "inquiry": "Support"
+    },
+    "navBottom": {
+      "ais": "AIS Co., Ltd",
+      "busuiness": "Business registration number : 755-87-00945 | CEO : Min Seok Kim",
+      "hosting": "Hosting Service : AIS Co., Ltd.",
+      "address": "7F, Bongeunsa-ro 439, Gangnam-gu, Seoul, Korea 06097 (CC Building)",
+      "serviceTerms": "Terms of service",
+      "privacyTerms": "Privacy policy"
+    },
+    "companyInfo": {
+      "jumboTitleFirst": "Farming begins with",
+      "jumboTitleStrong": "understanding ",
+      "jumboTitleLast": "of crops",
+
+      "aisAboutTitle": "AIS   provides   optimal   agricultural   work   prescriptions   to   help   farmers   to   increase   cropyields and reduce production costs in response to the changing environment through an algorithm that considers the stages of crop growth.",
+      "aisAboutContentTitle1": "We measure precise environmental data",
+      "aisAboutContentSub1": "It   is   possible   to   materialize   meticulous   farming   based   on   data   obtained   from meteorological instruments  that  measures temperature, humidity, wind direction, wind speed, rainfall, insolation, and soil.",
+      "aisAboutContentTitle2": "We provide an easy and new farming experience.",
+      "aisAboutContentSub2": "The Wellgrower service, which was created as a core solution of our company, selects, and prescribes the cultivate management  solution  that can  make the highest  yield among tens of millions of solutions.",
+
+      "aisVisionTitle1": "Leading low-cost, high-efficiency, ",
+      "aisVisionTitle2": "open-field smart farming",
+      "aisVisionContentScale1": "Scaling up ",
+      "aisVisionContentScale2": "in agriculture",
+      "aisVisionContentStabilization1": "Stabilization of ",
+      "aisVisionContentStabilization2": "income",
+      "aisVisionContentSmart1": "Smart ",
+      "aisVisionContentSmart2": "production",
+
+      "aisHistoryTitle": "AIS has been constantly striving to make it easier for anyone to become specialized in agriculture. Explore our history.",
+      "aisHistoryContent20211": "Introduction of the demonstration area service for the Goesan open-field smart agriculture pilot project",
+      "aisHistoryContent20212": "Received investment from Korea Venture Investment Corp.",
+      "aisHistoryContent20201": "Selected as the Strategic Start-up Task[4IR] by Korea Technology and InformationPromotion Agency for SMEs",
+      "aisHistoryContent20202": "Received investment from Sopoong Ventures Corp.",
+      "aisHistoryContent20203": "Received investment from Rokya Co., Ltd.",
+      "aisHistoryContent20191": "Selected as the best company in Busan at the Welcome to TIPS event",
+      "aisHistoryContent20192": "Received investment from Galmae Angel Club",
+      "aisHistoryContent20181": "Launched Wellgrower-potato beta service",
+      "aisHistoryContent20182": "Selected as excellent company by Smart Venture Campus hosted by Ministry of SMEs and Startups",
+      "aisHistoryContent20183": "Signed MOU with Vietnamese smart farm company Hachi",
+      "aisHistoryContent20171": "Selected as the best company in Crowd funding Roadshow hosted by Korea Securities Depository",
+      "aisHistoryContent20172": "Establishment of AIS Co. ,Ltd.",
+
+      "aisNewsTitle": "Press ",
+
+      "aisLocationTitle": "Location",
+      "aisLocationAddress": "7F, Bongeunsa-ro 439, Gangnam-gu, Seoul, Korea 06097 (CC Building)"
+    },
+    "serviceInfo": {
+      "headerTitleFirst": "Now it's time to think differently about farming",
+      "headerTitleLast": "Customized farming prescription",
+      "headerTitleSub1": "WELLGROWER",
+      "headerTitleSub2": "",
+      "headerTitleSub3": "",
+      "appDownload": "Download App",
+
+      "introTitleStrong1": " the sowing date ",
+      "introTitleSub1": " from",
+      "introTitleStrong2": "the harvest date",
+      "introTitleSub2": " to ",
+      "introTitleSub3": "Get a prescription for farming covering",
+
+      "introContent": "Wellgrower is a service that collects and analyzes crop environment data based on a crop algorithm and manages the crops in a customized manner.",
+
+      "imgTitle1": "Analyze farmland environment",
+      "imgContent1": "Precisely diagnose the environment in which crops grow with meteorological analysis data of farmland and soil analysis data.",
+      "imgTitle2": "Customized farming prescription",
+      "imgContent2": "Based on the analyzed information, we prescribe the optimal process that can produce the maximum yield.",
+      "imgTitle3": "Drone monitoring",
+      "imgContent3": "Special drone camera detects where problems are occurring during crop growth and takes appropriate action.",
+      "imgTitle4": "Report for each cropping season",
+      "imgContent4": "When the harvest is over, the farming issues during the cropping season are summarized and delivered in the form of a report.",
+
+      "containTitle1": "If you register your farmland, farming prescription is displayed per day",
+      "containContent1": "Through data analysis, we calculate the number of cases in which the highest yield can be obtained among tens of thousands of probabilities and",
+      "containContentStrong1": " provide the optimal suggestion for farming.",
+      "containContent2": "",
+      "containTitle2": "Check detail information of my farmland based on the collected data",
+      "containContent3": "You can check ",
+      "containContentStrong2": "the analyzed evidence",
+      "containContent4": " for why you need to do the suggested work and predicted yield of crops.",
+
+      "simpleTitle1": "No more burdensome farm record book.",
+      "simpleTitle2": "Save information with just a simple click.",
+      "simpleContent1": "If you finish the task, ",
+      "simpleContentStrong": " click the check button.",
+      "simpleContent2": "Information is automatically registered on the farm record book.",
+      "simpleContent3": "Check the farm record book to see when the work was done.",
+
+      "farmTitle1": "Find a ",
+      "farmTitleStrong": "suitable service ",
+      "farmTitle2": "for you at Wellgrower, a customized prescription farming service for a crop.",
+      "farmAppDownload": "Download App",
+      "appDownAlert": "Service is being prepared",
+
+      "farmListTitle1": "Affordable type",
+      "farmListTitleSub1": "(observation type data)",
+      "farmList1": "Future yield ",
+      "farmList1_1": "prediction",
+      "farmList2": "Farm work prescription",
+      "farmList3": "Soil/weather data analysis and application",
+      "farmList4": "Automatic management of a farm record book",
+      "farmList5": "Crop stress management",
+      "farmList6": "Deliver management report for each cropping season",
+
+      "farmListTitle2": "Customization type",
+      "farmListTitleSub2": "(observation + prediction data)",
+      "farmGoodList1": " of future yield",
+      "farmGoodList1Strong": "Meticulous",
+      "farmGoodList2Strong": "Customized",
+      "farmGoodList3Strong": "for my farmland",
+      "farmEntryImg": "puzzleIcon"
+    },
+    "inquiry": {
+      "inquiryMainTitle1": "How can we help you?",
+      "inquiryMainTitle2": "We will carefully listen to your voice and take another step forward with various services.",
+      "inquiryContent": "If you have any questions or requests, please fill out the form and send us. We will do our best to answer.",
+      "inquiryPlaceholderTitle": "Subject",
+      "inquiryPlaceholderEmail": "E-mail",
+      "inquiryPlaceholderMessage": "Request:",
+      "inquirySubmit": "Submit",
+      "inquirySubmitting": "Submitting",
+      "alertSuccess": "Your email has been sent.",
+      "alertFail": "Transmission failed. Please try again in a few minutes.",
+      "alertEmail": "It doesn't fit the email format. Please re-enter."
+    },
+    "recruit": {
+      "topTitle1": "We are looking for colleagues who will lead changes in agriculture with us.",
+      "topTitle2": "AIS actively engages to make even tiny changes, ",
+      "topTitle3": "feels the joy of growth, ",
+      "topTitle4": "and works together to achieve our goals.",
+      "topTitle5": "In AIS, anyone can grow as much as you want.",
+
+      "inquiryTitle1": "We do what we want to do.",
+      "inquiryContent1": "In AIS, it’s free to collaborate with other teams. Like-minded teams can freely do what they want to do following the value of service users.",
+      "inquiryTitle2": "We openly express opinions.",
+      "inquiryContent2": "We aim for horizontal culture to freely share diverse information and perspectives. Everyone involves in decision making process since good decision comes from multiple opinions and feedback.",
+      "inquiryTitle3": "We prioritize the most important value.",
+      "inquiryContent3": "To find and solve the essence of the problem, rather than caught up with the surface of the problem, we find the most important value by asking ourselves “why?”",
+
+      "recruitTitle1": "Support and rewards prepared for the members ",
+      "recruitContent1": "who challenge for the better",
+      "recruitList1": "Support for the business equipment on demand",
+      "recruitList2": "Flexible working hours",
+      "recruitList3": "Free to use annual leave",
+      "recruitList4": "Free lunches and you can decide the menu",
+      "recruitList5": "Attend workshop once a year",
+      "recruitList6": "Support online lecture, books for our task",
+      "recruitList7": "Free, unlimited snacks",
+      "recruitList8": "Half-day birthday",
+      "recruitList9": "Time to rest and relax after having lunch"
+    },
+
+    "footer": {
+      "logoAlt": "AIS Logo",
+      "aisAbout": "AIS",
+      "aisVision": "Vision",
+      "aisHistory": "History",
+      "aisNews": "Press",
+      "aisLocation": "Location",
+      "culture": "Life at AIS",
+      "welfare": "Benefits"
+    },
+    "error": {
+      "errorDescription1": "Invalid access or the requested page could not be found.",
+      "errorDescription2": "Please double check that the address on the page you entered is correct.",
+      "prevPage": "Prev Page",
+      "goGome": "Go Home"
+    }
+  }
+}

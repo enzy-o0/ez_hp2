@@ -1,0 +1,58 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "김민석 AIS 대표 '감자 원재료로 하는 가공·제품화로 사업 확대할 것'",
+      "link": "https://www.busaneconomy.com/news/articleView.html?idxno=94204",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "title": "에이아이에스(AIS), 감자 최대 수확량 올리는 ‘노지 스마트팜’ 개척자",
+      "link": "https://www.busaneconomy.com/news/articleView.html?idxno=94201",
+      "image": "http://www.busaneconomy.com/news/photo/201905/94201_84323_2555.jpg"
+    },
+    {
+      "id": 3,
+      "title": "농식품 스타트업의 매직…노지작물 생산량 30% 껑충",
+      "link": "https://news.mt.co.kr/mtview.php?no=2020082014403560821&VNC_T",
+      "image": "https://thumb.mt.co.kr/06/2020/08/2020082014403560821_1.jpg/dims/optimize/"
+    },
+    {
+      "id": 4,
+      "title": "농작물 최적생육관리 솔루션 ‘에이아이에스’, 소풍벤처스와 록야로부터 투자 유치",
+      "link": "https://platum.kr/archives/152365",
+      "image": "https://platum.kr/wp-content/uploads/2020/11/ais.png"
+    },
+    {
+      "id": 5,
+      "title": "농식품 특화 액셀러레이팅 프로그램에 선정된 스타트업 13팀",
+      "link": "https://platum.kr/archives/144983",
+      "image": "https://platum.kr/wp-content/uploads/2020/07/sopoong.jpg"
+    },
+    {
+      "id": 6,
+      "title": "AIS, 작물 알고리즘 활용한 첨단 솔루션으로 노지 스마트농업",
+      "link": "https://cnews.thekpm.com/view.php?ud=202107060839471548a218188523_17",
+      "image": "https://cgeimage.commutil.kr/phpwas/restmb_allidxmake.php?idx=3&simg=2021070608404008246a218188523211176100201.jpg"
+    },
+    {
+      "id": 7,
+      "title": "정용진이 점찍은 컨테이너 농장···IoT 접목 생산량 100배 늘려",
+      "link": "https://news.mt.co.kr/mtview.php?no=2021061618014973091",
+      "image": "https://thumb.mt.co.kr/06/2021/06/2021061618014973091_1.jpg/dims/optimize/"
+    },
+    {
+      "id": 8,
+      "title": "농식품 투자가 탄소중립 앞당긴다",
+      "link": "https://www.chosun.com/national/national_general/2021/07/06/QBUL6MTPWNHQBD6ZEU6ZWF7Q4I/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "image": "https://images.chosun.com/resizer/Ri754C0GvOBWMiBO6cXSrAZKfac=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/CMEIFY43ERH4BPZ37RZTXA67JA.jpg"
+    },
+    {
+      "id": 9,
+      "title": "지구 구해낼 무기는 결국 ‘농업’… 농식품 혁명이 온다",
+      "link": "https://www.chosun.com/national/national_general/2021/08/10/A6IDQTSFW5CMJP5FSY4SZGOB24/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "image": "https://images.chosun.com/resizer/cUwT0MGKntDcGheBFkCt7V5W2FI=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/CKJL3UWRAVHOVMXZVVD3TFH5S4.png"
+    }
+  ]
+}

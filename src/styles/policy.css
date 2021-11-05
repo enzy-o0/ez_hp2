@@ -1,0 +1,47 @@
+.policyWrapper {
+  width: 50%;
+  margin: auto;
+}
+
+.policyWrapper ol,
+.policyWrapper ul {
+  padding-left: 1rem;
+  font-size: 16px;
+}
+
+.policyWrapper li {
+  padding: 3px;
+}
+
+.policyWrapper h2 {
+  font-size: 28px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.policyWrapper h3,
+.policyWrapper p {
+  margin: 0.5rem;
+  font-size: 16px;
+}
+
+.policyWrapper table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .policyWrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .policyWrapper {
+    width: 95%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,367 @@
+span {
+  word-break: keep-all;
+}
+
+.mainImage {
+  vertical-align: middle;
+}
+
+.topTextWapper {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sectionImage {
+  width: 90%;
+}
+
+.recruitTable {
+  padding-top: 3rem;
+  margin-bottom: 5em;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.recruitTableTd {
+  width: 33%;
+  height: 12rem;
+  padding: 1rem;
+  border-bottom: solid 1px rgba(5, 7, 9, 0.58);
+  margin: 0;
+}
+
+.recruitTableTdWeb {
+  border-bottom: none;
+}
+
+.recruitTableTdCenter {
+  border-right: solid 1px rgba(5, 7, 9, 0.58);
+  border-left: solid 1px rgba(5, 7, 9, 0.58);
+}
+
+.recruitTableTdEng {
+  /* width: 33%; */
+  height: 12rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #000;
+}
+
+.recruitTableRow {
+  font-size: 1rem;
+}
+
+.recruitTableRowEng {
+  font-size: 0.9rem;
+}
+
+.recruitTableTitle {
+  height: 65%;
+  word-break: keep-all;
+  width: 90%;
+}
+
+.recruitTableImgWrapper {
+  text-align: right;
+  width: 100%;
+  height: 35%;
+  vertical-align: bottom;
+}
+
+.recruitTableImg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.recruitSection {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.recruitSectionWrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.initText {
+  width: 50%;
+  font-size: 1.625rem;
+  font-weight: bold;
+  line-height: 1.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scrollText {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.recruitSectionRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 0.7rem;
+  margin-bottom: 64px;
+}
+
+.recruitSectionCol {
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.recruitSectionColTitle {
+  color: #00a52a;
+  font-weight: 500;
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+
+.recruitSection2 {
+  display: flex;
+  text-align: right;
+}
+
+.recruitSectionText {
+  order: 1;
+}
+
+.recruitSectionImg {
+  order: 2;
+  text-align: right;
+}
+
+.recruitMoreTitle {
+  padding-top: 5rem;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.topImage {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../asset/images/recruit_main_image.png);
+  background-position: 45% 0%;
+  background-size: cover;
+}
+
+.recruitButtonWrapper {
+  text-align: center;
+  display: flex;
+  padding-bottom: 3rem;
+  z-index: 101;
+}
+
+.recruitButton {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  border: 1px solid #000;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: #005500;
+  z-index: 101;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  hr {
+    width: 100%;
+  }
+
+  .initText {
+    width: 60%;
+  }
+
+  .recruitSectionRow {
+    text-align: center;
+  }
+
+  .recruitSectionCol {
+    margin-top: 1.125rem;
+    font-size: 1rem;
+  }
+
+  .recruitSectionText {
+    order: 2;
+  }
+
+  .recruitSectionImg {
+    order: 1;
+    text-align: center;
+  }
+
+  .recruitMoreTitle {
+    font-size: 1.313rem;
+    margin-top: 2em;
+  }
+
+  .recruitMoreTitleEng {
+    font-size: 1rem;
+    margin-top: 2em;
+  }
+
+  .recruitTableTd {
+    /* width: 10rem;
+        height: 10rem; */
+    width: 50%;
+  }
+
+  .recruitSectionWrapper {
+    width: 80%;
+  }
+
+  .topImage {
+    background-image: url(../../asset/images/recruit_main_image_tablet.png);
+    background-position: 0% 50%;
+  }
+
+  .recruitTableTitle {
+    width: 60%;
+  }
+
+  .recruitTableTdCenter {
+    border-right: none;
+    border-left: none;
+  }
+
+  .recruitTableTdTablet {
+    border-right: solid 1px rgba(5, 7, 9, 0.58);
+  }
+
+  .recruitTableTdWeb {
+    border-bottom: solid 1px rgba(5, 7, 9, 0.58);
+  }
+
+  .recruitTableTdTabletBottom {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sectionImage1 {
+    width: 20.5rem;
+    height: 19.375rem;
+  }
+
+  .initText {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+
+  .scrollText {
+    font-size: 1.406rem;
+  }
+
+  .recruitSectionRow {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .recruitSectionCol {
+    margin-top: 1.125rem;
+    width: 80%;
+  }
+
+  .recruitSectionText {
+    order: 2;
+  }
+
+  .recruitSectionImg {
+    order: 1;
+    text-align: center;
+  }
+
+  .recruitTableRow {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  .recruitTableTd {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    border-bottom: none;
+  }
+
+  .recruitSectionWrapper {
+    width: 80%;
+  }
+
+  .recruitTableTitle {
+    width: 60%;
+    height: 40%;
+  }
+
+  .recruitSectionColTitle {
+    font-size: 1.25rem;
+  }
+
+  .recruitSectionColContent {
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  .recruitTableImgWrapper {
+    margin-top: 0;
+    height: 60%;
+  }
+
+  .recruitTableImg {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .recruitMoreTitle {
+    font-size: 1.25rem;
+  }
+
+  .topImage {
+    background-image: url(../../asset/images/recruit_main_image_phone.png);
+    background-position: 45% 45%;
+  }
+
+  .recruitTableRowEng {
+    font-size: 1rem;
+  }
+
+  .recruitTableTdCenter {
+    border: none;
+  }
+
+  @media screen and (max-width: 540px) {
+    .recruitTableTd {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .recruitTableTd {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 359px) {
+    .recruitTableTd {
+      width: 100%;
+    }
+
+    .recruitTableTitle {
+      width: 100%;
+    }
+  }
+}

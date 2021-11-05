@@ -1,0 +1,176 @@
+{
+  "translations": {
+    "nav": {
+      "home": "회사 소개",
+      "service": "서비스 소개",
+      "recruit": "채용",
+      "inquiry": "고객 문의"
+    },
+    "navBottom": {
+      "ais": "(주)에이아이에스",
+      "busuiness": "사업자 등록번호 : 755-87-00945 | 대표 : 김민석",
+      "hosting": "호스팅 서비스 : 주식회사 에이아이에스",
+      "address": "06097 서울특별시 강남구 삼성동 봉은사로 439, 7층 (삼성동, CC빌딩)",
+      "serviceTerms": "서비스 이용약관",
+      "privacyTerms": "개인정보 처리방침"
+    },
+    "companyInfo": {
+      "jumboTitleFirst": "농사의 시작은",
+      "jumboTitleStrong": "작물에 대한 이해",
+      "jumboTitleLast": "입니다",
+
+      "aisAboutTitle": "에이아이에스는 작물 생육단계를 고려한 알고리즘을 통해 농가들이 변하는 환경에 대응하여 작물 수확량을 증가시키고 생산비를 감소시킬 수 있도록 최적의 농작업 처방을 제공하고 있습니다.",
+      "aisAboutContentTitle1": "정밀한 환경데이터를 측정합니다",
+      "aisAboutContentSub1": "온도, 습도, 풍향, 풍속, 강우량, 일사량, 토양을 측정하는 기상관측장비를 바탕으로 얻은 데이터를 기반으로 한 정밀한 농법 실현이 가능합니다.",
+      "aisAboutContentTitle2": "쉽고 새로운 영농경험을 제공합니다",
+      "aisAboutContentSub2": "자사의 핵심 솔루션으로 탄생한 ‘잘키움' 서비스는 수많은 재배관리 중 수확량이 가장 많이 나오는 단 하나의 재배관리 솔루션으로 처방해드립니다.",
+
+      "aisVisionTitle1": "저비용 고효율",
+      "aisVisionTitle2": "노지 스마트농업 선도",
+      "aisVisionContentScale1": "농업의",
+      "aisVisionContentScale2": "규모화",
+      "aisVisionContentStabilization1": "소득의",
+      "aisVisionContentStabilization2": "안정화",
+      "aisVisionContentSmart1": "생산의",
+      "aisVisionContentSmart2": "스마트화",
+
+      "aisHistoryTitle": "누구나 쉽게 농업의 전문화를 이룰 수 있도록 끊임없이 노력하는 에이아이에스의 발자취를 소개합니다.",
+      "aisHistoryContent20211": "괴산 노지스마트농업 시범사업 실증구역 서비스 도입",
+      "aisHistoryContent20212": "한국벤처투자 투자 유치",
+      "aisHistoryContent20201": "중소기업 기술개발 사업 전략형 창업과제[4IR] 선정",
+      "aisHistoryContent20202": "소풍 벤처스 투자 유치",
+      "aisHistoryContent20203": "록야 투자 유치",
+      "aisHistoryContent20191": "Welcome to TIPS 부산 최우수 기업 선정",
+      "aisHistoryContent20192": "갈매엔젤클럽 투자 유치",
+      "aisHistoryContent20181": "'잘키움-감자' 베타 서비스 런칭",
+      "aisHistoryContent20182": "스마트벤처 캠퍼스 우수기업 선정",
+      "aisHistoryContent20183": "베트남 스마트팜 기업 ‘Hachi’ 와 MOU 체결",
+      "aisHistoryContent20171": "크라우드 펀딩 로드쇼 최우수기업 선정",
+      "aisHistoryContent20172": "(주)에이아이에스 설립",
+
+      "aisNewsTitle": "언론 속의 에이아이에스",
+
+      "aisLocationTitle": "오시는 길",
+      "aisLocationAddress": "서울특별시 강남구 삼성동 봉은사로 439, 7층 (삼성동, CC빌딩)"
+    },
+    "serviceInfo": {
+      "headerTitleFirst": "이제 농사도 다르게 생각할 때",
+      "headerTitleLast": "1:1 맞춤 처방농법",
+      "headerTitleSub1": "잘",
+      "headerTitleSub2": "키",
+      "headerTitleSub3": "움",
+      "appDownload": "앱 다운로드",
+
+      "introTitleStrong1": "파종일",
+      "introTitleSub1": "부터",
+      "introTitleStrong2": "수확일",
+      "introTitleSub2": "까지 고려한",
+      "introTitleSub3": "농작업 처방을 받아보세요",
+      "introContent": "잘키움은 작물 알고리즘을 기반으로 작물 환경 데이터를 수집 및 분석하여 재배하고 계신 작물을 1:1 맞춤으로 재배 관리를 해드리는 서비스입니다",
+      "imgTitle1": "밭농지 환경 분석",
+      "imgContent1": "농지의 기상 분석 데이터와 토양 분석 데이터로 내 작물이 자라는 환경을 정밀히 진단합니다.",
+      "imgTitle2": "맞춤 농작업 처방",
+      "imgContent2": "분석된 정보를 바탕으로 최대 수확량을 낼 수 있는 최적의 농작업을 처방해 드립니다.",
+      "imgTitle3": "드론 모니터링",
+      "imgContent3": "드론 특수 카메라를 통해 작물 생육 중 문제가 발생한 곳을 발견하여 적합한 조치를 취합니다.",
+      "imgTitle4": "작기 운영 보고서",
+      "imgContent4": "수확이 끝나면 한 작기 동안 있었던 농가의 재배 관련 이슈를 정리하여 보고서 형태로 전달드립니다.",
+
+      "containTitle1": "나의 농지를 등록하면 하루단위로 보여지는 농작업 처방",
+      "containContent1": "데이터 분석을 통해 수만가지의 확률 중 수확량이 가장 높게 나올 수 있는 하나의 경우의 수를 산출하여",
+      "containContentStrong1": "최적의 농작업 처방",
+      "containContent2": "을 내려드립니다",
+      "containTitle2": "수집된 데이터를 기반으로 분석된 내 농지의 상세 정보 확인",
+      "containContent3": "오늘 표출된 농작업을 왜 해야 하는지에 대해 분석된 ",
+      "containContentStrong2": "근거자료와 내 작물의 예측 생산량",
+      "containContent4": "을 확인할 수 있습니다",
+
+      "simpleTitle1": "쓰기 힘들었던 영농일지,",
+      "simpleTitle2": "터치 한 번으로 간편하게 등록",
+      "simpleContent1": "할일을 끝내고 체크 버튼을 누르면",
+      "simpleContentStrong": "자동으로 등록되는 영농일지",
+      "simpleContent2": "서비스",
+      "simpleContent3": "영농일지 페이지를 통해 언제 농작업을 했는지 확인해 보세요",
+
+      "farmTitle1": "하나의 작물을 위한 맞춤 처방농법 잘키움에서",
+      "farmTitleStrong": "나에게 적합한 서비스",
+      "farmTitle2": "를 찾아보세요",
+      "farmAppDownload": "앱 다운로드",
+      "appDownAlert": "서비스 준비 중입니다.",
+
+      "farmListTitle1": "농가 보급형",
+      "farmListTitleSub1": "(관측형 데이터)",
+      "farmList1": "미래 생산량",
+      "farmList1_1": " 예측",
+      "farmList2": "농작업 처방",
+      "farmList3": "토양/기상 데이터 분석 및 적용",
+      "farmList4": "영농일지 자동 관리",
+      "farmList5": "작물 스트레스 관리",
+      "farmList6": "작기 운영 보고서 전달",
+
+      "farmListTitle2": "농가 맞춤형",
+      "farmListTitleSub2": "(관측 + 예측형 데이터)",
+      "farmGoodList1Strong": "정밀",
+      "farmGoodList2Strong": "맞춤",
+      "farmGoodList3Strong": "내 농지",
+      "farmEntryImg": "퍼즐모양"
+    },
+    "inquiry": {
+      "inquiryMainTitle1": "무엇을 도와드릴까요?",
+      "inquiryMainTitle2": "여러분의 의견을 소중하게 귀담아 듣고 다양한 서비스로 한걸음 더 나아가겠습니다.",
+      "inquiryContent": "궁금하시거나 요청하실 부분을 기입하여 보내주시면 성심성의껏 답변 드리겠습니다.",
+      "inquiryPlaceholderTitle": "제목",
+      "inquiryPlaceholderEmail": "답변 받으실 이메일 주소",
+      "inquiryPlaceholderMessage": "문의내용:",
+      "inquirySubmit": "제출하기",
+      "inquirySubmitting": "제출 중 입니다.",
+
+      "alertSuccess": "전송되었습니다",
+      "alertFail": "전송에 실패하였습니다. 잠시 후 다시 시도해주세요",
+      "alertEmail": "이메일 형식에 맞지 않습니다. 다시 입력해주세요."
+    },
+    "recruit": {
+      "topTitle1": "에이아이에스와 함께 농업의 변화를 이끌어갈 동료를 찾습니다",
+      "topTitle2": "에이아이에스는 작은 변화라도 적극적으로 도전하며",
+      "topTitle3": "성장의 기쁨을 느끼고",
+      "topTitle4": "함께 목표를 이루기 위해 일하고 있습니다.",
+      "topTitle5": "저희 팀에서는 누구나 생각하는 만큼 성장할 수 있습니다.",
+
+      "inquiryTitle1": "하고 싶은 일을 합니다.",
+      "inquiryContent1": "에이아이에스에서는 팀 별 업무 협업이 자유로워 마음이 맞는 팀끼리 서비스 사용자의 가치에 맞게 하고 싶은 일을 자유롭게 실행할 수 있습니다.",
+      "inquiryTitle2": "의견을 자유롭게 주고 받습니다.",
+      "inquiryContent2": "자유로운 정보 공유와 아이디어 공유를 위해 수평적인 문화를 지향합니다. 올바른 의사결정은 여러 의견과 피드백을 통해 발생하기 때문에 모두가 참여해 만들어 갑니다.",
+      "inquiryTitle3": "가장 중요한 가치를 먼저 생각합니다.",
+      "inquiryContent3": "보이는 현상이 아닌 숨겨진 본질을 찾아 해결하기 위해 왜? 라는 질문을 통해 가장 중요한 가치를 찾습니다.",
+
+      "recruitTitle1": "더 나은 변화에 도전하는",
+      "recruitContent1": "팀원을 위해 준비한 지원과 보상",
+      "recruitList1": "원하는 업무용 장비 지원",
+      "recruitList2": "유연근무제",
+      "recruitList3": "자유로운 연차 사용",
+      "recruitList4": "먹고 싶은 중식 지원",
+      "recruitList5": "연 1회 국내/외 워크샵",
+      "recruitList6": "필요한 온라인 강의, 도서 지원",
+      "recruitList7": "간식 무제한 제공",
+      "recruitList8": "생일 반차",
+      "recruitList9": "여유로운 점심시간"
+    },
+
+    "footer": {
+      "logoAlt": "AIS 로고",
+      "aisAbout": "소개",
+      "aisVision": "비전",
+      "aisHistory": "연혁",
+      "aisNews": "언론 속의 에이아이에스",
+      "aisLocation": "오시는 길",
+      "culture": "문화",
+      "welfare": "복지"
+    },
+    "error": {
+      "errorDescription1": "요청하신 페이지가 없습니다.",
+      "errorDescription2": "입력하신 주소를 확인해 주세요.",
+      "prevPage": "이전 페이지",
+      "goGome": "홈으로 돌아가기"
+    }
+  }
+}

@@ -1,0 +1,741 @@
+html,
+body {
+  font-size: 32px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover,
+a:active {
+  color: #005500;
+}
+
+strong {
+  font-weight: 600;
+}
+
+section {
+  padding-top: 2.875em;
+}
+
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2.25rem;
+  background: url(../../public/asset/images/jumbotron.png) no-repeat center
+    center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+.jumbotron strong {
+  color: #005500;
+}
+
+.jumbotronTitle {
+  margin-left: 3em;
+}
+
+.jumbotronTitleEng {
+  margin-left: 3em;
+}
+
+/* aisAbout */
+.aisAbout {
+  width: 70%;
+  margin: 3em auto;
+}
+
+.aisAboutTitle {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 3em;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.aisAboutWrapper {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3.125em;
+  border: solid 0.5px #c4c4c4;
+  border-radius: 27px;
+}
+
+.aisAboutWrapper:last-child {
+  flex-direction: row-reverse;
+  text-align: end;
+  margin-bottom: 0em;
+}
+
+.aisAboutImg {
+  width: 50%;
+}
+
+.aisAboutImgT {
+  display: none;
+}
+
+.aisAboutImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.aisAboutContent {
+  width: 50%;
+  margin: auto 0;
+  padding: 1em;
+}
+
+.aisAboutContent h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.875em;
+}
+
+.aisAboutContent p {
+  font-size: 0.75rem;
+}
+
+.outerVision {
+  background: url(../../public/asset/images/visionbg.png) no-repeat center
+    center;
+  width: 100%;
+  height: 20.156em;
+  position: relative;
+  background-size: cover;
+}
+
+.innerVision {
+  width: 70%;
+  height: 12em;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  text-align: center;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.aisVision {
+  text-align: center;
+  margin-top: 1.813em;
+  font-size: 1.125rem;
+}
+
+.aisVision:after {
+  content: "";
+  display: block;
+  width: 10%;
+  margin: auto;
+  border-bottom: 2px solid #005500;
+  margin-bottom: 2px;
+}
+
+.aisVisionTitle {
+  color: #005500;
+  text-align: center;
+  margin-top: 1.688em;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.aisVisionsWrapper {
+  font-size: 1rem;
+  position: relative;
+  margin: 3rem auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.aisVisionImg {
+  position: relative;
+}
+
+.aisVisionImg img {
+  width: 100%;
+}
+
+.aisVisionContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #005500;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* history */
+
+.historyWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.historyWrapper h2 {
+  width: 70%;
+  margin: 1em auto 2em;
+  text-align: center;
+  font-size: 1.313rem;
+  line-height: 1.5;
+}
+
+.history {
+  background: url(../../public/asset/images/historybg.png) no-repeat center
+    center;
+  background-size: cover;
+}
+
+.lineWrapper {
+  padding-top: 5.063em;
+  padding-right: 3.313em;
+}
+
+.historyContent {
+  padding-top: 3.5em;
+  text-align: left;
+  color: #ffffff;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.historyContent p {
+  margin-bottom: 0.25em;
+}
+
+.history {
+  border: 1px solid #fff;
+}
+
+.historyInner {
+  width: 80%;
+  margin: auto;
+  padding: 5% 10%;
+}
+
+.history h3 {
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.history h3:before {
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.history .historyItem {
+  position: relative;
+  padding: 0 0 0 48px;
+  text-align: left;
+}
+
+.history .historyItem:before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.historyItem:first-child:before {
+  top: 12px;
+  height: calc(100%-10px);
+}
+
+.history ol {
+  padding: 20px 0 74px;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 1rem;
+  padding-left: 20px;
+  word-break: keep-all;
+}
+
+.history li {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+/* news */
+
+.news h2 {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+}
+
+.newsSlide {
+  height: 21.719em;
+  background: rgba(0, 85, 0, 0.03);
+  padding: 2.625em 5.688em;
+}
+
+.newsItem {
+  background: #ffffff;
+  height: 16.469em;
+  border: solid 0.8px rgba(0, 0, 0, 0.5);
+  margin: 0 0.469em;
+}
+
+.newsImgWrapper {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.newsImgWrapper img {
+  overflow: hidden;
+}
+
+.newsContent {
+  width: 100%;
+  height: 30%;
+  background: #ffffff;
+  bottom: 0;
+  padding: 0.938em 0.625em 0.875em;
+}
+
+.newsContent p {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* location */
+.location {
+  margin-bottom: 7.75rem;
+}
+
+.addressWrapper {
+  width: 50%;
+  margin: auto;
+}
+
+.location h2 {
+  text-align: center;
+  margin: 2em auto 1em;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.location address {
+  text-align: center;
+  font-size: 1.125rem;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 1224px) {
+  .jumbotronTitle {
+    margin-left: 2em;
+  }
+
+  .jumbotronTitleEng {
+    margin-left: 2em;
+  }
+}
+
+/* media query */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 32px;
+  }
+
+  /* about */
+  .aisAbout {
+    width: 90%;
+    padding: 3.875em 0 0px 0;
+  }
+
+  .aisAboutTitle {
+    margin-bottom: 3.875em;
+    width: 100%;
+  }
+
+  .aisAboutWrapper {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .aisAboutImg {
+    display: none;
+  }
+
+  .aisAboutImgT {
+    width: 100%;
+    display: block;
+  }
+
+  .aisAboutImgT img {
+    width: 100%;
+  }
+
+  .aisAboutContent {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron {
+    padding: 0;
+  }
+
+  .jumbotron h1 {
+    line-height: 1.5;
+  }
+
+  .jumbotronTitle {
+    width: 60%;
+    margin-left: 2em;
+  }
+
+  .jumbotronTitleEng {
+    margin: 0;
+  }
+
+  .companyInfoTitleEng {
+    text-align: center;
+  }
+
+  /* about */
+  .aisAbout {
+    width: 80%;
+    padding: 3.875em 0 0px 0;
+  }
+
+  .aisAboutTitle {
+    margin-bottom: 3.875em;
+    width: 100%;
+  }
+
+  .aisAboutWrapper {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .aisAboutImg {
+    display: none;
+  }
+
+  .aisAboutImgT {
+    width: 100%;
+    display: block;
+  }
+
+  .aisAboutImgT img {
+    width: 100%;
+  }
+
+  .aisAboutContent {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
+
+  /* vision */
+  .aisVisionsWrapper {
+    height: auto;
+    margin: 3.875em auto 0;
+  }
+
+  .aisVisionTitle {
+    margin: 2em auto;
+    font-size: 1.1rem;
+  }
+
+  .aisVisionsWrapper {
+    display: block;
+  }
+
+  .aisVisionImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75em;
+  }
+
+  .aisVisionImg img {
+    width: 50%;
+  }
+
+  .aisVisionImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75em;
+  }
+
+  .aisVision:after {
+    width: 20%;
+  }
+
+  /* history */
+  .history {
+    margin-top: 3.875em;
+    padding: 0 1.563em;
+  }
+
+  .historyWrapper h2 {
+    width: 80%;
+  }
+
+  .lineWrapper {
+    padding-right: 1.25em;
+  }
+
+  .historyInner {
+    padding: 5%;
+  }
+
+  /* press */
+  .newsSlide {
+    padding: 2.625em 3.688em;
+  }
+
+  /* location */
+
+  .location {
+    margin-bottom: 3.875rem;
+  }
+
+  .location h2 {
+    font-size: 1.313rem;
+  }
+
+  .location address {
+    font-size: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  .addressWrapper {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.25em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .jumbotron h1 {
+    line-height: 1.5;
+    font-size: 1.75rem;
+    width: 80%;
+  }
+
+  .jumbotronTitle {
+    margin-left: 1em;
+  }
+
+  .jumbotronTitleEng {
+    margin: 1em;
+  }
+
+  /* about */
+  .aisAbout {
+    width: 90%;
+    padding: 3.875em 0 0px 0;
+  }
+
+  .aisAboutTitle {
+    margin-bottom: 3.875em;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .aisAboutContent h3 {
+    font-size: 1.2rem;
+  }
+
+  .aisAboutContent p {
+    font-size: 1rem;
+  }
+
+  .aisAboutWrapper {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .aisAboutImg {
+    display: none;
+  }
+
+  .aisAboutImgT {
+    width: 100%;
+    display: block;
+  }
+
+  .aisAboutImgT img {
+    width: 100%;
+  }
+
+  .aisAboutContent {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
+
+  /* vision */
+  .aisVisionsWrapper {
+    height: auto;
+    margin: 3.875em auto;
+  }
+
+  .aisVisionTitle {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .aisVisionImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75em;
+  }
+
+  .aisVisionImg img {
+    width: 80%;
+  }
+
+  .aisVisionContent {
+    font-size: 1.781rem;
+  }
+
+  .aisVision:after {
+    width: 20%;
+  }
+
+  /* news */
+  .news h2 {
+    font-size: 1.3rem;
+  }
+
+  .aisVisionsWrapper {
+    flex-wrap: wrap;
+  }
+
+  .newsSlide {
+    padding: 1em 2em;
+  }
+
+  /* history */
+  .history {
+    margin-top: 3.875em;
+    padding: 0 1.563em;
+  }
+
+  .historyWrapper h2 {
+    width: 80%;
+    font-size: 1.281rem;
+  }
+
+  .lineWrapper {
+    padding-right: 1.25em;
+  }
+
+  .lineWrapper img {
+    width: 50%;
+  }
+
+  .historyInner {
+    padding: 5%;
+  }
+
+  .history h3:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .history .historyItem:before {
+    left: 8px;
+  }
+
+  .location {
+    margin-bottom: 3rem;
+  }
+
+  /* location */
+  .location h2 {
+    font-size: 1.3rem;
+  }
+
+  .location address {
+    width: 80%;
+    margin: auto;
+  }
+
+  .addressWrapper {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.25em;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .lineWrapper img {
+    width: 70%;
+  }
+
+  .newsSlide {
+    padding: 1em 2em;
+  }
+
+  .location {
+    margin-bottom: 3rem;
+  }
+}

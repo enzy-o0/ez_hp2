@@ -1,0 +1,98 @@
+body {
+  font-size: 24px;
+}
+
+.hr {
+  margin: 42px 0;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.serviceWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bottomWrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  z-index: 999;
+}
+
+.menuWrapper {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.23px;
+  text-align: left;
+}
+
+.menuTitle {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.logoText {
+  text-align: start;
+  font-size: 18px;
+  margin-bottom: 3.188rem;
+  color: #000;
+}
+
+.aisText {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+
+.aisTerms {
+  display: flex;
+  margin-top: 2.531rem;
+}
+
+.aisTermsMenu {
+  margin-right: 1rem;
+  font-size: 20px;
+}
+
+a {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .menuTitle {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .logoText {
+    margin-top: 1.281rem;
+    margin-bottom: 4.625rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aisText {
+    font-size: 1.125rem;
+  }
+
+  .aisInfotext,
+  .aisTermsMenu {
+    font-size: 0.875rem;
+  }
+
+  .aisTerms {
+    flex-direction: column;
+  }
+
+  .aisTermsMenu {
+    margin-bottom: 0.5rem;
+  }
+}

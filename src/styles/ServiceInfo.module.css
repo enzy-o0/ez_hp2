@@ -1,0 +1,1191 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* header */
+header {
+  height: 100vh;
+  font-size: 56px;
+  font-weight: 500;
+  background: url(../../asset/images/header.jpg) center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 96px;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+header p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.headerWrapper {
+  padding: 0.5em;
+}
+
+#titleWellgrower {
+  font-weight: 900;
+}
+
+#titleWellgrower span {
+  margin-right: 36px;
+}
+
+.wellgrowerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appDownloadBtn {
+  width: 300px;
+  height: 72px;
+  background: #ffffff;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+}
+
+.appDownloadBtn:hover {
+  box-shadow: 0 0 32px 0 rgba(255, 255, 255, 0.3),
+    0 17px 30px 0 rgba(0, 0, 0, 0.1), inset 0 0 18px 0 rgba(0, 0, 0, 0.1);
+}
+
+.appDownloadText {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.43;
+}
+
+#wellgrowerIcon {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appDownloadBtnEng {
+  width: 450px;
+  margin-top: 0.4em;
+  background: #ffffff;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+}
+
+/* main */
+.serContainer {
+  padding: 80px 0;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.highlighter {
+  background: linear-gradient(to top, #c9f227 50%, transparent 50%);
+}
+
+.introTitle {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.52;
+}
+
+.introPara {
+  width: 70%;
+  margin: auto;
+  word-break: keep-all;
+  margin-top: 36px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+#imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgWrapper {
+  padding: 81px 0px 77px;
+  width: 100%;
+}
+
+.serviceRow {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.imgItem:last-child {
+  margin-right: 0px;
+}
+
+.imgItem {
+  margin-right: 15px;
+  width: 276px;
+  height: 427px;
+  border: solid 0.5px rgba(204, 204, 204, 0.6);
+}
+
+.imgItem > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imgBox {
+  height: 40%;
+}
+
+.imgItem img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgInfo {
+  padding: 1em 0;
+  height: 60%;
+}
+
+.imgTitle {
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.36px;
+  font-size: 0.625rem;
+  padding: 0 0.2rem;
+}
+
+.imgPara {
+  word-break: keep-all;
+  margin-top: 18px;
+  font-size: 0.563rem;
+  letter-spacing: -0.27px;
+  padding: 0 0.3rem;
+}
+
+.animaWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containTitle {
+  word-break: keep-all;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.29;
+}
+
+.containPara {
+  word-break: keep-all;
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.wellgrowerImgWrapper {
+  margin-top: 74px;
+  margin-bottom: 57px;
+}
+
+.right,
+.left {
+  width: 50%;
+}
+
+.right img,
+.left img {
+  width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+#whenFarmWrapper {
+  width: 70%;
+  margin: auto;
+  text-align: left;
+}
+
+.farmFindTitle {
+  width: 70%;
+  margin: auto;
+  word-break: keep-all;
+  line-height: normal;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.farmFindWrapper .appDownloadBtn {
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 80px;
+  width: 300px;
+  height: 92px;
+  box-shadow: 0 0 32px 0 rgba(255, 255, 255, 0.3),
+    0 17px 30px 0 rgba(0, 0, 0, 0.1), inset 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.farmFindWrapper .appDownloadBtnEng {
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 80px;
+  width: 350px;
+  height: 92px;
+  box-shadow: 0 0 32px 0 rgba(255, 255, 255, 0.3),
+    0 17px 30px 0 rgba(0, 0, 0, 0.1), inset 0 0 18px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.farmFindLists {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.farmTitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.farmTitle {
+  line-height: normal;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.farmPara {
+  word-break: keep-all;
+  font-size: 24px;
+}
+
+.farmLine {
+  width: 52px;
+  height: 8px;
+  border-radius: 8px;
+  background: #005500;
+  margin-top: 10px;
+}
+
+.farmLeft,
+.farmRight {
+  width: 45%;
+  padding: 47.5px 0;
+  border-top: 2px solid #cbcbcb;
+  border-bottom: 2px solid #cbcbcb;
+}
+
+.farmListWrapper {
+  margin-top: 48px;
+}
+
+.farmListWrapper li {
+  margin: 16px 0;
+  font-size: 28px;
+}
+
+.none {
+  color: rgba(153, 153, 153, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.checkImg,
+.noneCheckImg {
+  width: 36px;
+  margin-right: 16px;
+}
+
+/* footer */
+#footer {
+  margin-top: 80px;
+  padding: 87px 0px;
+  color: #ffffff;
+}
+
+.inner {
+  width: 70%;
+  margin: auto;
+}
+
+#footer h2 {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+#policy {
+  margin-top: 63px;
+}
+
+.infoPolicy {
+  font-size: 22px;
+}
+
+.policyLists {
+  display: flex;
+}
+
+.policyList {
+  margin-right: 46px;
+  font-size: 24px;
+}
+
+.policyList a {
+  color: #ffffff;
+}
+
+.mediaQuery {
+  display: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* media query */
+@media screen and (max-width: 1120px) {
+  .serContainer {
+    width: 90%;
+  }
+  .imgWrapper {
+    width: 100%;
+  }
+
+  .serviceRow {
+    width: 100%;
+  }
+
+  #whenFarmWrapper {
+    width: 90%;
+  }
+
+  .inner {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html,
+  body {
+    font-size: 32px;
+  }
+
+  header p {
+    font-size: 1.125rem;
+  }
+
+  header .headerContent {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .titleWellgrowerEng {
+    margin: 1em;
+    text-align: center;
+  }
+
+  .wellgrowerWrapper {
+    margin-top: 13px;
+  }
+
+  header .appDownloadBtn {
+    width: 278px;
+    margin-left: 20px;
+  }
+
+  header .appDownloadBtnEng {
+    margin: auto;
+  }
+
+  #titleWellgrower span {
+    margin-right: 20px;
+  }
+
+  /* main */
+  .introTitle {
+    font-size: 0.875rem;
+  }
+
+  .introPara {
+    font-size: 0.625rem;
+  }
+
+  .serviceRow {
+    flex-wrap: wrap;
+  }
+
+  .imgTitle {
+    font-size: 0.625rem;
+  }
+
+  .imgItem {
+    margin: 15px;
+  }
+
+  .imgItem:last-child {
+    margin-right: 15px;
+  }
+
+  .imgPara {
+    font-size: 0.469rem;
+  }
+
+  .containTitle {
+    font-size: 0.688rem;
+  }
+
+  .containPara {
+    font-size: 0.469rem;
+  }
+
+  .farmFindTitle {
+    width: 80%;
+    font-size: 0.875rem;
+  }
+
+  .appDownloadText {
+    font-size: 0.7rem;
+  }
+
+  .farmFindLists {
+    display: block;
+  }
+
+  .farmLeft,
+  .farmRight {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  p {
+    margin: 0 0 0px;
+  }
+
+  /* header */
+  header {
+    font-size: 36px;
+    line-height: 1.11;
+    min-height: 412px;
+    padding-top: 48px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .wellgrowerWrapper {
+    margin-top: 15px;
+    display: block;
+  }
+
+  header p {
+    line-height: normal;
+  }
+
+  header button {
+    margin: auto;
+  }
+
+  #titleWellgrower span {
+    margin-right: 21.3px;
+  }
+
+  #titleWellgrower span:last-child {
+    margin-right: 0px;
+  }
+
+  .appDownloadBtn {
+    width: 90%;
+    height: 58px;
+    padding: 16px;
+    margin-top: 15px;
+  }
+
+  .wellgrowerIcon {
+    width: 35px;
+    margin-right: 14.7px;
+    padding-top: 5px;
+  }
+
+  #wellgrowerIcon {
+    width: 100%;
+  }
+
+  .appDownloadText {
+    font-size: 24px;
+  }
+
+  /* eng */
+  .wellgrowerWrapperEng {
+    padding: 1em 2em;
+  }
+
+  .headerContent {
+    padding: 0 2em;
+  }
+
+  .wellgrowerWrapperEng h1 {
+    margin-bottom: 1em;
+  }
+
+  .wellgrowerWrapperEng button {
+    width: 80%;
+  }
+
+  /* main */
+  .introTitle {
+    font-size: 28px;
+    line-height: 1.29;
+  }
+
+  .introPara {
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .serviceRow {
+    flex-wrap: wrap;
+  }
+
+  .imgTitle {
+    font-size: 1rem;
+  }
+
+  .imgPara {
+    font-size: 1rem;
+  }
+
+  .imgItem {
+    margin-right: 30px;
+    margin-bottom: 36px;
+  }
+
+  .imgItem:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .containTitle {
+    font-size: 28.2px;
+    line-height: 1.29;
+  }
+
+  .containPara {
+    font-size: 18.8px;
+    font-weight: 300;
+    line-height: 1.43;
+  }
+
+  .wellgrowerImgWrapper {
+    width: 236px;
+    margin: 60px auto 0;
+  }
+
+  .wellgrowerImgWrapper img {
+    width: 100%;
+  }
+
+  .right,
+  .left {
+    width: 50%;
+  }
+
+  .right > img,
+  .left > img {
+    width: 100%;
+  }
+
+  .findFarmLists {
+    padding: 0 70px;
+  }
+
+  .farmFindTitle {
+    width: 100%;
+    word-break: keep-all;
+    font-size: 28px;
+    margin-top: 72px;
+  }
+
+  .farmFindWrapper .appDownloadBtn {
+    width: 205px;
+    height: 64px;
+  }
+
+  .farmFindWrapper .appDownloadBtn .appDownloadText {
+    font-size: 19.1px;
+  }
+
+  .farmFindLists {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .farmLeft,
+  .farmRight {
+    width: 100%;
+  }
+
+  #farmEntry {
+    margin-bottom: 93px;
+  }
+
+  .farmFindWrapper .appDownloadBtnEng {
+    margin: auto;
+    margin-top: 26px;
+    margin-bottom: 80px;
+    width: 300px;
+    height: 62px;
+  }
+
+  /* footer */
+  #footer {
+    margin-top: 123px;
+  }
+
+  .infoPolicy {
+    font-size: 18px;
+  }
+
+  .policyLists {
+    flex-wrap: wrap;
+  }
+
+  .policyList {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .mediaQuery {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* main */
+  .serviceRow {
+    width: 100%;
+  }
+
+  .imgItem {
+    margin-right: 10px;
+  }
+
+  header {
+    padding-top: 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* header */
+  header {
+    font-size: 20px;
+    line-height: 1.25;
+    min-height: 233px;
+    padding-top: 48px;
+  }
+
+  .headerWrapper {
+    width: 100%;
+  }
+
+  header p {
+    line-height: 2;
+    padding: 0 2em;
+  }
+
+  .wellgrowerWrapper {
+    margin-top: 10px;
+    padding: 0 2em;
+  }
+
+  #titleWellgrower {
+    font-size: 28px;
+    line-height: 1.04;
+  }
+
+  #titleWellgrower span {
+    margin-right: 7px;
+  }
+
+  .appDownloadBtn {
+    width: 100%;
+    height: 42px;
+    padding: 10.5px 7px;
+  }
+
+  .appDownloadText {
+    font-size: 16px;
+    line-height: 2.5;
+  }
+
+  #wellgrowerIcon {
+    width: 100%;
+  }
+
+  /* main */
+  .serContainer {
+    padding: 40px 0;
+  }
+
+  .introTitle {
+    font-size: 16px;
+    line-height: 1.04;
+  }
+
+  .introPara {
+    width: 80%;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .imgItem {
+    margin-right: 0px;
+    margin-bottom: 24px;
+    height: 363px;
+    border: solid 0.4px rgba(204, 204, 204, 0.6);
+  }
+
+  .imgTitle {
+    font-size: 20px;
+  }
+
+  .imgPara {
+    font-size: 14px;
+  }
+
+  .imgItem:last-child {
+    margin-bottom: 0px;
+  }
+
+  .animaWrapper {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .containTitle {
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .containPara {
+    width: 90%;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 37px;
+    font-size: 14px;
+  }
+
+  .wellgrowerImgWrapper {
+    width: 193px;
+    margin: 50px auto 0;
+  }
+
+  .animaWrapper:last-child {
+    flex-direction: column-reverse;
+  }
+
+  #whenFarmWrapper {
+    text-align: center;
+  }
+
+  .farmFindTitle {
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 0;
+  }
+
+  .farmFindWrapper .appDownloadBtn {
+    width: 245px;
+    height: 44px;
+    margin-top: 22px;
+    margin-bottom: 43.7px;
+  }
+
+  .farmFindWrapper .appDownloadBtn .appDownloadText {
+    font-size: 19.1px;
+    line-height: 1.43;
+  }
+
+  .farmFindLists {
+    padding: 27.7px 20.4px;
+  }
+
+  .checkImg,
+  .noneCheckImg {
+    width: 20px;
+    margin-right: 9.5px;
+  }
+
+  .farmTitle {
+    font-size: 20px;
+  }
+
+  .farmPara {
+    font-size: 14px;
+  }
+
+  .farmLine {
+    width: 29.3px;
+    height: 4.5px;
+    border-radius: 4.5px;
+    margin-top: 4.3px;
+  }
+
+  .farmEntryImgWrapper,
+  .farmCustomizedImgWrapper {
+    width: 67.7px;
+  }
+
+  .farmEntryImg,
+  .farmCustomizedImg {
+    width: 100%;
+  }
+
+  .farmListWrapper li {
+    font-size: 16px;
+  }
+
+  #farmEntry {
+    margin-bottom: 49.4px;
+  }
+
+  .farmListWrapper {
+    margin-top: 27px;
+  }
+
+  .farmLeft,
+  .farmRight {
+    padding: 33.2px 0;
+  }
+
+  /* footer */
+  #footer {
+    margin-top: 0px;
+    padding: 34.2px 14.5px 38px 40px;
+  }
+
+  #footer h2 {
+    font-size: 11.3px;
+    margin-bottom: 8px;
+  }
+
+  .inner {
+    width: 100%;
+    word-break: keep-all;
+  }
+
+  .infoPolicy {
+    font-size: 8.4px;
+    font-weight: 300;
+  }
+
+  #policy {
+    margin-top: 22.5px;
+  }
+
+  .policyLists {
+    width: 80%;
+  }
+
+  .policyList {
+    font-size: 9.4px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+  }
+
+  .policyList {
+    margin-bottom: 11.3px;
+  }
+}
+
+/* color */
+.grayscale_line {
+  color: rgba(238, 238, 238, 0.9);
+}
+.grayscale_disabled_text {
+  color: #d6d6d6;
+}
+.grayscale_border {
+  color: #99cccccc;
+}
+.grayscale_primary_text {
+  color: rgba(5, 7, 9, 0.9);
+}
+.grayscale_bubble {
+  color: rgba(0, 0, 0, 0.02);
+}
+.grayscale_secondary_text {
+  color: rgba(5, 7, 9, 0.58);
+}
+.primary_dark {
+  color: #002b00;
+}
+.primary_light {
+  color: #3d832f;
+}
+.grayscale_wash {
+  color: #fefefe;
+}
+.primary_p_700 {
+  color: #2a8420;
+}
+.primary_p_900 {
+  color: #005500;
+}
+.primary_p_800 {
+  color: #1e7315;
+}
+.primary_p_500 {
+  color: #40a433;
+}
+.primary_p_300 {
+  color: #79be71;
+}
+.primary_p_400 {
+  color: #5db152;
+}
+.primary_p_600 {
+  color: #37952a;
+}
+.primary_p_200 {
+  color: #a0d099;
+}
+.primary_p_100 {
+  color: #c5e2c1;
+}
+.secondary_s_900 {
+  color: #878900;
+}
+.secondary_dark {
+  color: #94bf00;
+}
+.secondary_s_700 {
+  color: #aec80f;
+}
+.secondary_light {
+  color: #ffff64;
+}
+.secondary_s_800 {
+  color: #9fb000;
+}
+.primary_p_50 {
+  color: #e7f4e6;
+}
+.secondary_s_100 {
+  color: #effbc4;
+}
+.secondary_s_200 {
+  color: #e5fa9c;
+}
+.secondary_s_600 {
+  color: #bedf1e;
+}
+.secondary_s_500 {
+  color: #c9f227;
+}
+.secondary_s_400 {
+  color: #d1f450;
+}
+.secondary_s_300 {
+  color: #daf873;
+}
+.secondary_s_50 {
+  color: #f9fee7;
+}
+.status_alert {
+  color: #d43900;
+}
+.status_success {
+  color: #1f3a93;
+}
+.status_fail {
+  color: #b50000;
+}
+.bg {
+  color: #fafafa;
+}
+
+/* background */
+.bg_grayscale_line {
+  background-color: rgba(238, 238, 238, 0.9);
+}
+.bg_grayscale_disabled_text {
+  background-color: #d6d6d6;
+}
+.bg_grayscale_border {
+  background-color: #99cccccc;
+}
+.bg_grayscale_primary_text {
+  background-color: rgba(5, 7, 9, 0.9);
+}
+.bg_grayscale_bubble {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.bg_grayscale_secondary_text {
+  background-color: rgba(5, 7, 9, 0.58);
+}
+.bg_primary_dark {
+  background-color: #002b00;
+}
+.bg_primary_light {
+  background-color: #3d832f;
+}
+.bg_grayscale_wash {
+  background-color: #fefefe;
+}
+.bg_primary_p_700 {
+  background-color: #2a8420;
+}
+.bg_primary_p_900 {
+  background-color: #005500;
+}
+.bg_primary_p_800 {
+  background-color: #1e7315;
+}
+.bg_primary_p_500 {
+  background-color: #40a433;
+}
+.bg_primary_p_300 {
+  background-color: #79be71;
+}
+.bg_primary_p_400 {
+  background-color: #5db152;
+}
+.bg_primary_p_600 {
+  background-color: #37952a;
+}
+.bg_primary_p_200 {
+  background-color: #a0d099;
+}
+.bg_primary_p_100 {
+  background-color: #c5e2c1;
+}
+.bg_secondary_s_900 {
+  background-color: #878900;
+}
+.bg_secondary_dark {
+  background-color: #94bf00;
+}
+.bg_secondary_s_700 {
+  background-color: #aec80f;
+}
+.bg_secondary_light {
+  background-color: #ffff64;
+}
+.bg_secondary_s_800 {
+  background-color: #9fb000;
+}
+.bg_primary_p_50 {
+  background-color: #e7f4e6;
+}
+.bg_secondary_s_100 {
+  background-color: #effbc4;
+}
+.bg_secondary_s_200 {
+  background-color: #e5fa9c;
+}
+.bg_secondary_s_600 {
+  background-color: #bedf1e;
+}
+.bg_secondary_s_500 {
+  background-color: #c9f227;
+}
+.bg_secondary_s_400 {
+  background-color: #d1f450;
+}
+.bg_secondary_s_300 {
+  background-color: #daf873;
+}
+.bg_secondary_s_50 {
+  background-color: #f9fee7;
+}
+.bg_status_alert {
+  background-color: #d43900;
+}
+.bg_status_success {
+  background-color: #1f3a93;
+}
+.bg_status_fail {
+  background-color: #b50000;
+}
+.bg_bg {
+  background-color: #fafafa;
+}
+
+.bg_img {
+  background-color: rgba(0, 85, 0, 0.05);
+}
