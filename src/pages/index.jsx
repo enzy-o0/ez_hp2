@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Footer from "../components/Footer";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import dynamic from "next/dynamic";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import about from "../../public/asset/images/about1.png";
@@ -17,15 +15,29 @@ import aisLogo from "../../public/asset/images/aislogo.png";
 import prev from "../../public/asset/images/prev-arrow.svg";
 import next from "../../public/asset/images/next-arrow.svg";
 
-import mainBg from "../../public/asset/images/jumbotron.png";
-
 import aisData from "../../public/asset/aisData.json";
+import styles from "../styles/Home.module.css";
 
-import Slider from "react-slick";
-import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
+const Slider = dynamic(import("react-slick"), {
+  ssr: false,
+});
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+const AOS = dynamic(import("aos"), {
+  ssr: false,
+});
+
+const { RenderAfterNavermapsLoaded, NaverMap, Marker } = dynamic(
+  import("react-naver-maps"),
+  {
+    ssr: false,
+  }
+);
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -53,22 +65,17 @@ function SamplePrevArrow(props) {
   );
 }
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common"])),
-  },
-});
-
-const CompanyInfo = () => {
-  const { i18n } = useTranslation("common");
+const Home = () => {
+  const { t, i18n } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
   const aisDataToArr = [...aisData.news];
 
   useEffect(() => {
     setisRendering(true);
-    AOS.init({
-      duration: 2000,
-    });
+    // typeof window !== "undefined" &&
+    //   AOS.init({
+    //     duration: 2000,
+    //   });
   }, []);
 
   const settings = {
@@ -116,7 +123,7 @@ const CompanyInfo = () => {
 
   return (
     <>
-      {isRendering && (
+      {isRendering && typeof window !== "undefined" && (
         <>
           <div
             style={{
@@ -131,10 +138,10 @@ const CompanyInfo = () => {
                   <>
                     <div className={styles.jumbotronTitle}>
                       <h1>
-                        {i18n("companyInfo.jumboTitleFirst")}
+                        {t("companyInfo.jumboTitleFirst")}
                         <br></br>
-                        <strong>{i18n("companyInfo.jumboTitleStrong")}</strong>
-                        {i18n("companyInfo.jumboTitleLast")}
+                        <strong>{t("companyInfo.jumboTitleStrong")}</strong>
+                        {t("companyInfo.jumboTitleLast")}
                       </h1>
                     </div>
                   </>
@@ -142,10 +149,10 @@ const CompanyInfo = () => {
                   <>
                     <div className={styles.jumbotronTitleEng}>
                       <h1 className={styles.companyInfoTitleEng}>
-                        {i18n("companyInfo.jumboTitleFirst")}
+                        {t("companyInfo.jumboTitleFirst")}
                         <br></br>
-                        <strong>{i18n("companyInfo.jumboTitleStrong")}</strong>
-                        {i18n("companyInfo.jumboTitleLast")}
+                        <strong>{t("companyInfo.jumboTitleStrong")}</strong>
+                        {t("companyInfo.jumboTitleLast")}
                       </h1>
                     </div>
                   </>
@@ -154,7 +161,7 @@ const CompanyInfo = () => {
             </section>
             <section className={styles.aisAbout}>
               <h2 className={styles.aisAboutTitle}>
-                {i18n("companyInfo.aisAboutTitle")}
+                {t("companyInfo.aisAboutTitle")}
               </h2>
               <div
                 className={styles.aisAboutWrapper}
@@ -169,8 +176,8 @@ const CompanyInfo = () => {
                   <img src={aboutT} alt="about" />
                 </div>
                 <div className={styles.aisAboutContent}>
-                  <h3>{i18n("companyInfo.aisAboutContentTitle1")}</h3>
-                  <p>{i18n("companyInfo.aisAboutContentSub1")}</p>
+                  <h3>{t("companyInfo.aisAboutContentTitle1")}</h3>
+                  <p>{t("companyInfo.aisAboutContentSub1")}</p>
                 </div>
               </div>
               <div
@@ -186,8 +193,8 @@ const CompanyInfo = () => {
                   <img src={about2T} alt="about2" />
                 </div>
                 <div className={styles.aisAboutContent}>
-                  <h3>{i18n("companyInfo.aisAboutContentTitle2")}</h3>
-                  <p>{i18n("companyInfo.aisAboutContentSub2")}</p>
+                  <h3>{t("companyInfo.aisAboutContentTitle2")}</h3>
+                  <p>{t("companyInfo.aisAboutContentSub2")}</p>
                 </div>
               </div>
             </section>
@@ -196,8 +203,8 @@ const CompanyInfo = () => {
                 <div className={styles.innerVision}>
                   <p className={styles.aisVision}>vision</p>
                   <h2 className={styles.aisVisionTitle}>
-                    “{i18n("companyInfo.aisVisionTitle1")}
-                    <br></br> {i18n("companyInfo.aisVisionTitle2")}”
+                    “{t("companyInfo.aisVisionTitle1")}
+                    <br></br> {t("companyInfo.aisVisionTitle2")}”
                   </h2>
                 </div>
               </div>
@@ -205,23 +212,22 @@ const CompanyInfo = () => {
                 <div className={styles.aisVisionImg} id="scale">
                   <Circle1 alt="scale" />
                   <p className={styles.aisVisionContent}>
-                    {i18n("companyInfo.aisVisionContentScale1")}
-                    <br></br> {i18n("companyInfo.aisVisionContentScale2")}
+                    {t("companyInfo.aisVisionContentScale1")}
+                    <br></br> {t("companyInfo.aisVisionContentScale2")}
                   </p>
                 </div>
                 <div className={styles.aisVisionImg} id="stabilization">
                   <img src={circle2} alt="stabilization" />
                   <p className={styles.aisVisionContent}>
-                    {i18n("companyInfo.aisVisionContentStabilization1")}
-                    <br></br>{" "}
-                    {i18n("companyInfo.aisVisionContentStabilization2")}
+                    {t("companyInfo.aisVisionContentStabilization1")}
+                    <br></br> {t("companyInfo.aisVisionContentStabilization2")}
                   </p>
                 </div>
                 <div className={styles.aisVisionImg} id="smart">
                   <img src={circle3} alt="smart" />
                   <p className={styles.aisVisionContent}>
-                    {i18n("companyInfo.aisVisionContentSmart1")}
-                    <br></br> {i18n("companyInfo.aisVisionContentSmart2")}
+                    {t("companyInfo.aisVisionContentSmart1")}
+                    <br></br> {t("companyInfo.aisVisionContentSmart2")}
                   </p>
                 </div>
               </div>
@@ -231,96 +237,99 @@ const CompanyInfo = () => {
                 <img src={aisLogo} alt="aislogo" />
               </div>
               <h2 data-aos="fade-up" data-aos-duration="2000">
-                {i18n("companyInfo.aisHistoryTitle")}
+                {t("companyInfo.aisHistoryTitle")}
               </h2>
               <div className={`${styles.history} history`}>
                 <div className={styles.historyInner}>
                   <div className={styles.historyItem}>
                     <h3>2021</h3>
                     <ol>
-                      <li>{i18n("companyInfo.aisHistoryContent20211")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20212")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20211")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20212")}</li>
                     </ol>
                   </div>
                   <div className={styles.historyItem}>
                     <h3>2020</h3>
                     <ol>
-                      <li>{i18n("companyInfo.aisHistoryContent20201")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20202")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20203")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20201")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20202")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20203")}</li>
                     </ol>
                   </div>
                   <div className={styles.historyItem}>
                     <h3>2019</h3>
                     <ol>
-                      <li>{i18n("companyInfo.aisHistoryContent20191")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20192")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20191")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20192")}</li>
                     </ol>
                   </div>
                   <div className={styles.historyItem}>
                     <h3>2018</h3>
                     <ol>
-                      <li>{i18n("companyInfo.aisHistoryContent20181")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20182")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20183")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20181")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20182")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20183")}</li>
                     </ol>
                   </div>
                   <div className={styles.historyItem}>
                     <h3>2017</h3>
                     <ol>
-                      <li>{i18n("companyInfo.aisHistoryContent20171")}</li>
-                      <li>{i18n("companyInfo.aisHistoryContent20172")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20171")}</li>
+                      <li>{t("companyInfo.aisHistoryContent20172")}</li>
                     </ol>
                   </div>
                 </div>
               </div>
             </section>
             <section id="aisNews" className={styles.news}>
-              <h2>{i18n("companyInfo.aisNewsTitle")}</h2>
-              <div className={styles.newsSlide}>
-                <Slider {...settings}>
-                  {aisDataToArr.reverse().map((item) => {
-                    return (
-                      <div key={item}>
-                        <a href={item.link} target="_blank" rel="noreferrer">
-                          <div className={styles.newsItem}>
-                            <div
-                              className={styles.newsImgWrapper}
-                              style={{
-                                backgroundImage: item.image
-                                  ? `url(${item.image})`
-                                  : `url(${aisLogo})`,
-                                backgroundSize: item.image
-                                  ? "cover"
-                                  : "contain",
-                              }}
-                            ></div>
-                            <div className={styles.newsContent}>
-                              <p>{itemitle}</p>
+              <h2>{t("companyInfo.aisNewsTitle")}</h2>
+              {typeof window !== "undefined" && (
+                <div className={styles.newsSlide}>
+                  <Slider {...settings}>
+                    {aisDataToArr.reverse().map((item) => {
+                      return (
+                        <div key={item}>
+                          <a href={item.link} target="_blank" rel="noreferrer">
+                            <div className={styles.newsItem}>
+                              <div
+                                className={styles.newsImgWrapper}
+                                style={{
+                                  backgroundImage: item.image
+                                    ? `url(${item.image})`
+                                    : `url(${aisLogo})`,
+                                  backgroundSize: item.image
+                                    ? "cover"
+                                    : "contain",
+                                }}
+                              ></div>
+                              <div className={styles.newsContent}>
+                                <p>{item.title}</p>
+                              </div>
                             </div>
-                          </div>
-                        </a>
-                      </div>
-                    );
-                  })}
-                </Slider>
-              </div>
+                          </a>
+                        </div>
+                      );
+                    })}
+                  </Slider>
+                </div>
+              )}
             </section>
             <section id="aisLocation" className={styles.location}>
-              <h2>{i18n("companyInfo.aisLocationTitle")}</h2>
-              <address>{i18n("companyInfo.aisLocationAddress")}</address>
-              <div className={styles.addressWrapper}>
-                <RenderAfterNavermapsLoaded
-                  ncpClientId={"wqw7xk67ax"}
-                  error={<p>Maps Load Error</p>}
-                  loading={<p>Maps Loading...</p>}
-                >
-                  <NaverMapAPI />
-                </RenderAfterNavermapsLoaded>
-              </div>
+              <h2>{t("companyInfo.aisLocationTitle")}</h2>
+              <address>{t("companyInfo.aisLocationAddress")}</address>
+              {typeof window !== "undefined" && (
+                <div className={styles.addressWrapper}>
+                  <RenderAfterNavermapsLoaded
+                    ncpClientId={"wqw7xk67ax"}
+                    error={<p>Maps Load Error</p>}
+                    loading={<p>Maps Loading...</p>}
+                  >
+                    <NaverMapAPI />
+                  </RenderAfterNavermapsLoaded>
+                </div>
+              )}
             </section>
           </div>
-          <Footer />
         </>
       )}
     </>
@@ -350,4 +359,4 @@ function NaverMapAPI() {
   );
 }
 
-export default CompanyInfo;
+export default Home;

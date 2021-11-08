@@ -1,0 +1,177 @@
+/* html,
+body {
+  font-size: 32px;
+} */
+
+.inquiryMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.625rem;
+  box-sizing: border-box;
+  /* background: url(../../public/asset/images/inquiry_main.png) no-repeat; */
+  background-position: 0% 0%;
+  height: 100vh;
+  padding-top: 96px;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.inquiryMain h1,
+.inquiryMain h2 {
+  width: 70%;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.mainTitle {
+  margin-bottom: 24px;
+}
+
+.inquiry {
+  width: 80%;
+  padding: 4.75em 0;
+  margin: auto;
+}
+
+.inquiry h2 {
+  width: 70%;
+  text-align: center;
+  font-size: 1.625rem;
+  margin: auto;
+  margin-bottom: 2.5em;
+  font-weight: 600;
+}
+
+.inquiry form {
+  width: 70%;
+  margin: auto;
+}
+
+.inquiryInput {
+  width: 100%;
+  padding: 0.5em 2em;
+  margin-bottom: 1em;
+  border: 1px solid rgba(5, 7, 9, 0.58);
+}
+
+.inquiry textarea {
+  height: 15em;
+  font-size: 0.75rem;
+}
+
+.inquiry button {
+  display: block;
+  width: 80%;
+  margin: auto;
+  color: #ffffff;
+  background-color: #005500;
+  font-weight: 900;
+  text-align: center;
+  padding: 30px;
+  border: none;
+  outline: 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .inquiry h2 {
+    width: 95%;
+  }
+
+  .inquiryInput {
+    padding: 0.5em 1em;
+  }
+
+  .inquiry form {
+    width: 95%;
+  }
+}
+
+/* media */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .inquiry h2 {
+    width: 100%;
+  }
+
+  .inquiry form {
+    width: 100%;
+  }
+
+  .inquiryInput {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 36px;
+    font-size: 28px;
+  }
+
+  .inquiry textarea {
+    font-size: 24px;
+  }
+
+  .inquiry a {
+    height: 2.25em;
+  }
+
+  .inquiry button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .inquiryMain {
+    /* background-image: url(../../public/asset/images/inquiry_main_tablet.png); */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* html,
+  body {
+    font-size: 16px;
+  } */
+
+  .inquiryMain h1,
+  .inquiryMain h2 {
+    font-size: 1.525rem;
+    line-height: 1.5;
+  }
+
+  .inquiry form {
+    width: 95%;
+  }
+
+  .inquiry {
+    width: 95%;
+  }
+
+  .inquiry h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.625rem;
+    margin: auto;
+    margin-bottom: 3.25em;
+  }
+
+  .inquiryInput {
+    width: 100%;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
+  .inquiry textarea {
+    font-size: 13px;
+  }
+
+  .inquiry button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .inquiryMain {
+    /* background-image: url(../public/asset/images/inquiry_main_mobile.png); */
+  }
+}

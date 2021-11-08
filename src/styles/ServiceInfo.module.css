@@ -1,55 +1,13 @@
-ul,
-li {
-  list-style: none;
-  padding: 0;
-}
-
-h1 {
-  font-size: 72px;
-}
-
 .h1,
 .h2,
-.h3,
-h1,
-h2,
-h3 {
+.h3 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-main {
-  overflow: hidden;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* header */
-header {
-  height: 100vh;
-  font-size: 56px;
-  font-weight: 500;
-  background: url(../../asset/images/header.jpg) center center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 96px;
-}
-
-section {
-  padding: 0;
-  margin: 0;
-}
-
-header p {
+/* header p {
   font-weight: 400;
   margin: 0;
-}
+} */
 
 .headerWrapper {
   padding: 0.5em;
@@ -391,10 +349,6 @@ header p {
   display: none;
 }
 
-address {
-  font-style: normal;
-}
-
 /* media query */
 @media screen and (max-width: 1120px) {
   .serContainer {
@@ -419,23 +373,23 @@ address {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  html,
+  /* html,
   body {
     font-size: 32px;
-  }
+  } */
 
-  header p {
+  /* header p {
     font-size: 1.125rem;
-  }
+  } */
 
   header .headerContent {
     font-size: 1.125rem;
     text-align: center;
   }
 
-  header h1 {
+  /* header h1 {
     font-size: 1.5rem;
-  }
+  } */
 
   .titleWellgrowerEng {
     margin: 1em;
@@ -518,35 +472,35 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  p {
+  /* p {
     margin: 0 0 0px;
-  }
+  } */
 
   /* header */
-  header {
+  /* header {
     font-size: 36px;
     line-height: 1.11;
     min-height: 412px;
     padding-top: 48px;
     text-align: center;
-  }
+  } */
 
-  h1 {
+  /* h1 {
     font-size: 48px;
-  }
+  } */
 
   .wellgrowerWrapper {
     margin-top: 15px;
     display: block;
   }
 
-  header p {
+  /* header p {
     line-height: normal;
-  }
+  } */
 
-  header button {
+  /* header button {
     margin: auto;
-  }
+  } */
 
   #titleWellgrower span {
     margin-right: 21.3px;
@@ -736,28 +690,28 @@ address {
     margin-right: 10px;
   }
 
-  header {
+  /* header {
     padding-top: 48px;
-  }
+  } */
 }
 
 @media screen and (max-width: 480px) {
   /* header */
-  header {
+  /* header {
     font-size: 20px;
     line-height: 1.25;
     min-height: 233px;
     padding-top: 48px;
-  }
+  } */
 
   .headerWrapper {
     width: 100%;
   }
 
-  header p {
+  /* header p {
     line-height: 2;
     padding: 0 2em;
-  }
+  } */
 
   .wellgrowerWrapper {
     margin-top: 10px;

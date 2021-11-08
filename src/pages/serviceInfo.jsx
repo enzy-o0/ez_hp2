@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 
 import Footer from "../components/Footer";
 import styles from "../styles/ServiceInfo.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+const AOS = dynamic(import("aos"), {
+  ssr: false,
+});
 
 // import Swal from "sweetalert2";
 // import withReactContent from "sweetalert2-react-content";
 
 import titleBg from "../../public/asset/images/header.jpg";
-import { useTranslation } from "next-i18next";
+import { useTranslation, appWithTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 // const MySwal = withReactContent(Swal);
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 const alert = () => {
   // MySwal.fire({
@@ -23,7 +32,7 @@ const alert = () => {
 };
 
 const ServiceInfo = () => {
-  const { i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
 
   useEffect(() => {
@@ -48,15 +57,15 @@ const ServiceInfo = () => {
                 {i18n.language === "ko" ? (
                   <>
                     <p>
-                      {i18n.t("serviceInfo.headerTitleFirst")}
+                      {t("serviceInfo.headerTitleFirst")}
                       <br />
-                      {i18n.t("serviceInfo.headerTitleLast")}
+                      {t("serviceInfo.headerTitleLast")}
                     </p>
                     <div className={styles.wellgrowerWrapper}>
                       <h1 id={styles.titleWellgrower}>
-                        <span>{i18n.t("serviceInfo.headerTitleSub1")}</span>
-                        <span>{i18n.t("serviceInfo.headerTitleSub2")}</span>
-                        <span>{i18n.t("serviceInfo.headerTitleSub3")}</span>
+                        <span>{t("serviceInfo.headerTitleSub1")}</span>
+                        <span>{t("serviceInfo.headerTitleSub2")}</span>
+                        <span>{t("serviceInfo.headerTitleSub3")}</span>
                       </h1>
                       <button className={styles.appDownloadBtn} onClick={alert}>
                         <div className={styles.wellgrowerIcon}>
@@ -72,7 +81,7 @@ const ServiceInfo = () => {
                         <div
                           className={`${styles.primary_p_900} ${styles.appDownloadText}`}
                         >
-                          {i18n.t("serviceInfo.appDownload")}
+                          {t("serviceInfo.appDownload")}
                         </div>
                       </button>
                     </div>
@@ -80,16 +89,16 @@ const ServiceInfo = () => {
                 ) : (
                   <>
                     <p className={styles.headerContent}>
-                      {i18n.t("serviceInfo.headerTitleFirst")}
+                      {t("serviceInfo.headerTitleFirst")}
                       <br />
-                      {i18n.t("serviceInfo.headerTitleLast")}
+                      {t("serviceInfo.headerTitleLast")}
                     </p>
                     <div className={styles.wellgrowerWrapperEng}>
                       <h1
                         id={styles.titleWellgrower}
                         className={styles.titleWellgrowerEng}
                       >
-                        <span>{i18n.t("serviceInfo.headerTitleSub1")}</span>
+                        <span>{t("serviceInfo.headerTitleSub1")}</span>
                       </h1>
                       <button
                         className={`${styles.appDownloadBtn} ${styles.appDownloadBtnEng}`}
@@ -108,7 +117,7 @@ const ServiceInfo = () => {
                         <div
                           className={`${styles.primary_p_900} ${styles.appDownloadText}`}
                         >
-                          {i18n.t("serviceInfo.appDownload")}
+                          {t("serviceInfo.appDownload")}
                         </div>
                       </button>
                     </div>
@@ -122,26 +131,26 @@ const ServiceInfo = () => {
                   {i18n.language === "ko" ? (
                     <>
                       <strong className={styles.primary_p_900}>
-                        {i18n.t("serviceInfo.introTitleStrong1")}
+                        {t("serviceInfo.introTitleStrong1")}
                       </strong>
-                      {i18n.t("serviceInfo.introTitleSub1")}{" "}
+                      {t("serviceInfo.introTitleSub1")}{" "}
                       <strong className={styles.primary_p_900}>
-                        {i18n.t("serviceInfo.introTitleStrong2")}
+                        {t("serviceInfo.introTitleStrong2")}
                       </strong>
-                      {i18n.t("serviceInfo.introTitleSub2")}
+                      {t("serviceInfo.introTitleSub2")}
                       <br />
-                      {i18n.t("serviceInfo.introTitleSub3")}{" "}
+                      {t("serviceInfo.introTitleSub3")}{" "}
                     </>
                   ) : (
                     <>
-                      {i18n.t("serviceInfo.introTitleSub3")}
-                      {i18n.t("serviceInfo.introTitleSub1")}
+                      {t("serviceInfo.introTitleSub3")}
+                      {t("serviceInfo.introTitleSub1")}
                       <strong className={styles.primary_p_900}>
-                        {i18n.t("serviceInfo.introTitleStrong1")}
+                        {t("serviceInfo.introTitleStrong1")}
                       </strong>
-                      {i18n.t("serviceInfo.introTitleSub2")}
+                      {t("serviceInfo.introTitleSub2")}
                       <strong className={styles.primary_p_900}>
-                        {i18n.t("serviceInfo.introTitleStrong2")}
+                        {t("serviceInfo.introTitleStrong2")}
                       </strong>
                     </>
                   )}
@@ -149,7 +158,7 @@ const ServiceInfo = () => {
                 <p
                   className={`${styles.introPara} ${styles.grayscale_secondary_text}`}
                 >
-                  {i18n.t("serviceInfo.introContent")}
+                  {t("serviceInfo.introContent")}
                 </p>
               </div>
               <div
@@ -164,19 +173,19 @@ const ServiceInfo = () => {
                           require("../../public/asset/images/environment.png")
                             .default
                         }
-                        alt={i18n.t("serviceInfo.imgTitle1")}
+                        alt={t("serviceInfo.imgTitle1")}
                       />
                     </div>
                     <div
                       className={`${styles.bg_grayscale_wash} ${styles.imgInfo}`}
                     >
                       <div className={styles.imgTitle}>
-                        {i18n.t("serviceInfo.imgTitle1")}
+                        {t("serviceInfo.imgTitle1")}
                       </div>
                       <p
                         className={`${styles.imgPara} ${styles.grayscale_secondary_text}`}
                       >
-                        {i18n.t("serviceInfo.imgContent1")}
+                        {t("serviceInfo.imgContent1")}
                       </p>
                     </div>
                   </div>
@@ -187,19 +196,19 @@ const ServiceInfo = () => {
                           require("../../public/asset/images/custom.png")
                             .default
                         }
-                        alt={i18n.t("serviceInfo.imgTitle2")}
+                        alt={t("serviceInfo.imgTitle2")}
                       />
                     </div>
                     <div
                       className={`${styles.bg_grayscale_wash} ${styles.imgInfo}`}
                     >
                       <div className={styles.imgTitle}>
-                        {i18n.t("serviceInfo.imgTitle2")}
+                        {t("serviceInfo.imgTitle2")}
                       </div>
                       <p
                         className={`${styles.imgPara} ${styles.grayscale_secondary_text}`}
                       >
-                        {i18n.t("serviceInfo.imgContent2")}
+                        {t("serviceInfo.imgContent2")}
                       </p>
                     </div>
                   </div>
@@ -209,19 +218,19 @@ const ServiceInfo = () => {
                         src={
                           require("../../public/asset/images/drone.png").default
                         }
-                        alt={i18n.t("serviceInfo.imgTitle3")}
+                        alt={t("serviceInfo.imgTitle3")}
                       />
                     </div>
                     <div
                       className={`${styles.bg_grayscale_wash} ${styles.imgInfo}`}
                     >
                       <div className={styles.imgTitle}>
-                        {i18n.t("serviceInfo.imgTitle3")}
+                        {t("serviceInfo.imgTitle3")}
                       </div>
                       <p
                         className={`${styles.imgPara} ${styles.grayscale_secondary_text}`}
                       >
-                        {i18n.t("serviceInfo.imgContent3")}
+                        {t("serviceInfo.imgContent3")}
                       </p>
                     </div>
                   </div>
@@ -232,19 +241,19 @@ const ServiceInfo = () => {
                           require("../../public/asset/images/operation.png")
                             .default
                         }
-                        alt={i18n.t("serviceInfo.imgTitle4")}
+                        alt={t("serviceInfo.imgTitle4")}
                       />
                     </div>
                     <div
                       className={`${styles.bg_grayscale_wash} ${styles.imgInfo}`}
                     >
                       <div className={styles.imgTitle}>
-                        {i18n.t("serviceInfo.imgTitle4")}
+                        {t("serviceInfo.imgTitle4")}
                       </div>
                       <p
                         className={`${styles.imgPara} ${styles.grayscale_secondary_text}`}
                       >
-                        {i18n.t("serviceInfo.imgContent4")}
+                        {t("serviceInfo.imgContent4")}
                       </p>
                     </div>
                   </div>
@@ -261,17 +270,17 @@ const ServiceInfo = () => {
                     <h2
                       className={`${styles.containTitle} ${styles.grayscale_primary_text}`}
                     >
-                      {i18n.t("serviceInfo.containTitle1")}
+                      {t("serviceInfo.containTitle1")}
                     </h2>
                     <p
                       className={`${styles.grayscale_primary_text} ${styles.containPara}`}
                     >
-                      {i18n.t("serviceInfo.containContent1")}{" "}
+                      {t("serviceInfo.containContent1")}{" "}
                       <span className={styles.highlighter}>
                         {" "}
-                        {i18n.t("serviceInfo.containContentStrong1")}
+                        {t("serviceInfo.containContentStrong1")}
                       </span>
-                      {i18n.t("serviceInfo.containContent2")}
+                      {t("serviceInfo.containContent2")}
                     </p>
                   </div>
                   <div
@@ -294,7 +303,7 @@ const ServiceInfo = () => {
                       <>
                         <img
                           src={
-                            require("../../../public/asset/images/wellgrowerEng1.svg")
+                            require("../../public/asset/images/wellgrowerEng1.svg")
                               .default
                           }
                           alt="phoneImg"
@@ -324,7 +333,7 @@ const ServiceInfo = () => {
                       <>
                         <img
                           src={
-                            require("../../../public/asset/images/wellgrowerEng2.svg")
+                            require("../../public/asset/images/wellgrowerEng2.svg")
                               .default
                           }
                           alt="phoneImg"
@@ -341,16 +350,16 @@ const ServiceInfo = () => {
                     <h2
                       className={`${styles.containTitle} ${styles.grayscale_primary_text}`}
                     >
-                      {i18n.t("serviceInfo.containTitle2")}
+                      {t("serviceInfo.containTitle2")}
                     </h2>
                     <p
                       className={`${styles.grayscale_primary_text} ${styles.containPara}`}
                     >
-                      {i18n.t("serviceInfo.containContent3")}{" "}
+                      {t("serviceInfo.containContent3")}{" "}
                       <span className={styles.highlighter}>
-                        {i18n.t("serviceInfo.containContentStrong2")}
+                        {t("serviceInfo.containContentStrong2")}
                       </span>
-                      {i18n.t("serviceInfo.containContent4")}
+                      {t("serviceInfo.containContent4")}
                     </p>
                   </div>
                 </div>
@@ -362,20 +371,20 @@ const ServiceInfo = () => {
                   <h2
                     className={`${styles.containTitle} ${styles.grayscale_primary_text}`}
                   >
-                    {i18n.t("serviceInfo.simpleTitle1")}
+                    {t("serviceInfo.simpleTitle1")}
                     <br />
-                    {i18n.t("serviceInfo.simpleTitle2")}
+                    {t("serviceInfo.simpleTitle2")}
                   </h2>
                   <p
                     className={`${styles.grayscale_primary_text} ${styles.containPara}`}
                   >
-                    {i18n.t("serviceInfo.simpleContent1")}{" "}
+                    {t("serviceInfo.simpleContent1")}{" "}
                     <span className={styles.highlighter}>
-                      {i18n.t("serviceInfo.simpleContentStrong")}
+                      {t("serviceInfo.simpleContentStrong")}
                     </span>{" "}
-                    {i18n.t("serviceInfo.simpleContent2")}
+                    {t("serviceInfo.simpleContent2")}
                     <br />
-                    {i18n.t("serviceInfo.simpleContent3")}
+                    {t("serviceInfo.simpleContent3")}
                   </p>
                 </div>
                 <div className={styles.wellgrowerImgWrapper}>
@@ -405,11 +414,11 @@ const ServiceInfo = () => {
               <div className={`${styles.serContainer} ${styles.findFarmLists}`}>
                 <div className={styles.farmFindWrapper}>
                   <h2 className={styles.farmFindTitle}>
-                    {i18n.t("serviceInfo.farmTitle1")}{" "}
+                    {t("serviceInfo.farmTitle1")}{" "}
                     <strong className={styles.primary_p_900}>
-                      {i18n.t("serviceInfo.farmTitleStrong")}
+                      {t("serviceInfo.farmTitleStrong")}
                     </strong>
-                    {i18n.t("serviceInfo.farmTitle2")}
+                    {t("serviceInfo.farmTitle2")}
                   </h2>
                   {i18n.language === "ko" ? (
                     <>
@@ -428,7 +437,7 @@ const ServiceInfo = () => {
                           className={`${styles.primary_p_900} ${styles.appDownloadText}`}
                         >
                           {" "}
-                          {i18n.t("serviceInfo.farmAppDownload")}
+                          {t("serviceInfo.farmAppDownload")}
                         </div>
                       </button>
                     </>
@@ -452,7 +461,7 @@ const ServiceInfo = () => {
                           className={`${styles.primary_p_900} ${styles.appDownloadText}`}
                         >
                           {" "}
-                          {i18n.t("serviceInfo.farmAppDownload")}
+                          {t("serviceInfo.farmAppDownload")}
                         </div>
                       </button>
                     </>
@@ -466,11 +475,11 @@ const ServiceInfo = () => {
                           <h3
                             className={`${styles.grayscale_primary_text} ${styles.farmTitle}`}
                           >
-                            {i18n.t("serviceInfo.farmListTitle1")}
+                            {t("serviceInfo.farmListTitle1")}
                           </h3>
                           <p className={styles.farmPara}>
                             {" "}
-                            {i18n.t("serviceInfo.farmListTitleSub1")}
+                            {t("serviceInfo.farmListTitleSub1")}
                           </p>
                           <div className={styles.farmLine}></div>
                         </div>
@@ -481,7 +490,7 @@ const ServiceInfo = () => {
                                 .default
                             }
                             className={styles.farmEntryImg}
-                            alt={i18n.t("serviceInfo.farmEntryImg")}
+                            alt={t("serviceInfo.farmEntryImg")}
                           />
                         </div>
                       </div>
@@ -496,8 +505,8 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            {i18n.t("serviceInfo.farmList1")}
-                            {i18n.t("serviceInfo.farmList1_1")}
+                            {t("serviceInfo.farmList1")}
+                            {t("serviceInfo.farmList1_1")}
                           </li>
                           <li className={styles.farmList}>
                             <img
@@ -508,7 +517,7 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            {i18n.t("serviceInfo.farmList2")}
+                            {t("serviceInfo.farmList2")}
                           </li>
                           <li className={styles.farmList}>
                             <img
@@ -519,7 +528,7 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            {i18n.t("serviceInfo.farmList3")}
+                            {t("serviceInfo.farmList3")}
                           </li>
                           <li className={styles.farmList}>
                             <img
@@ -530,7 +539,7 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            {i18n.t("serviceInfo.farmList4")}
+                            {t("serviceInfo.farmList4")}
                           </li>
                           <li className={styles.none}>
                             <img
@@ -541,7 +550,7 @@ const ServiceInfo = () => {
                               }
                               alt="noneCheckImg"
                             />
-                            {i18n.t("serviceInfo.farmList5")}
+                            {t("serviceInfo.farmList5")}
                           </li>
                           <li className={styles.none}>
                             <img
@@ -552,7 +561,7 @@ const ServiceInfo = () => {
                               }
                               alt="noneCheckImg"
                             />
-                            {i18n.t("serviceInfo.farmList6")}
+                            {t("serviceInfo.farmList6")}
                           </li>
                         </ul>
                       </div>
@@ -566,13 +575,13 @@ const ServiceInfo = () => {
                             className={`${styles.farmTitle}  ${styles.primary_p_900}`}
                           >
                             {" "}
-                            {i18n.t("serviceInfo.farmListTitle2")}
+                            {t("serviceInfo.farmListTitle2")}
                           </h3>
                           <p
                             className={`${styles.primary_p_900} ${styles.farmPara}`}
                           >
                             {" "}
-                            {i18n.t("serviceInfo.farmListTitleSub2")}
+                            {t("serviceInfo.farmListTitleSub2")}
                           </p>
                           <div className={styles.farmLine}></div>
                         </div>
@@ -583,7 +592,7 @@ const ServiceInfo = () => {
                                 .default
                             }
                             className={styles.farmCustomizedImg}
-                            alt={i18n.t("serviceInfo.farmEntryImg")}
+                            alt={t("serviceInfo.farmEntryImg")}
                           />
                         </div>
                       </div>
@@ -602,14 +611,14 @@ const ServiceInfo = () => {
                             />
                             {i18n.language === "ko" ? (
                               <>
-                                {i18n.t("serviceInfo.farmList1")}
+                                {t("serviceInfo.farmList1")}
                                 <span className={styles.highlighter}>
                                   {" "}
                                   <strong>
                                     {" "}
-                                    {i18n.t("serviceInfo.farmGoodList1Strong")}
+                                    {t("serviceInfo.farmGoodList1Strong")}
                                   </strong>{" "}
-                                  {i18n.t("serviceInfo.farmList1_1")}
+                                  {t("serviceInfo.farmList1_1")}
                                 </span>
                               </>
                             ) : (
@@ -618,11 +627,11 @@ const ServiceInfo = () => {
                                   {" "}
                                   <strong>
                                     {" "}
-                                    {i18n.t("serviceInfo.farmGoodList1Strong")}
+                                    {t("serviceInfo.farmGoodList1Strong")}
                                   </strong>{" "}
                                 </span>
-                                {i18n.t("serviceInfo.farmList1_1")}
-                                {i18n.t("serviceInfo.farmGoodList1")}
+                                {t("serviceInfo.farmList1_1")}
+                                {t("serviceInfo.farmGoodList1")}
                               </>
                             )}
                           </li>
@@ -639,9 +648,9 @@ const ServiceInfo = () => {
                             />
                             <strong className={styles.highlighter}>
                               {" "}
-                              {i18n.t("serviceInfo.farmGoodList2Strong")}
+                              {t("serviceInfo.farmGoodList2Strong")}
                             </strong>{" "}
-                            {i18n.t("serviceInfo.farmList2")}
+                            {t("serviceInfo.farmList2")}
                           </li>
                           <li
                             className={`${styles.farmList} ${styles.primary_dark}`}
@@ -658,16 +667,16 @@ const ServiceInfo = () => {
                               <>
                                 <strong className={styles.highlighter}>
                                   {" "}
-                                  {i18n.t("serviceInfo.farmGoodList3Strong")}
+                                  {t("serviceInfo.farmGoodList3Strong")}
                                 </strong>{" "}
-                                {i18n.t("serviceInfo.farmList3")}
+                                {t("serviceInfo.farmList3")}
                               </>
                             ) : (
                               <>
-                                {i18n.t("serviceInfo.farmList3")}
+                                {t("serviceInfo.farmList3")}
                                 <strong className={styles.highlighter}>
                                   {" "}
-                                  {i18n.t("serviceInfo.farmGoodList3Strong")}
+                                  {t("serviceInfo.farmGoodList3Strong")}
                                 </strong>{" "}
                               </>
                             )}
@@ -683,7 +692,7 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            {i18n.t("serviceInfo.farmList4")}
+                            {t("serviceInfo.farmList4")}
                           </li>
                           <li
                             className={`${styles.farmList} ${styles.primary_dark}`}
@@ -696,7 +705,7 @@ const ServiceInfo = () => {
                               }
                               alt="checkImg"
                             />
-                            <strong>{i18n.t("serviceInfo.farmList5")}</strong>
+                            <strong>{t("serviceInfo.farmList5")}</strong>
                           </li>
                           <li
                             className={`${styles.farmList} ${styles.primary_dark}`}

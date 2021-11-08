@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "../styles/policy.css";
+import dynamic from "next/dynamic";
+
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 const TermInfo = () => {
   const [isRendering, setisRendering] = useState(false);

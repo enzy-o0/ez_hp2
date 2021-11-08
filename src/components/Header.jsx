@@ -8,12 +8,12 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 const Header = (props) => {
-  const { i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
   const router = useRouter();
   const [menuActive, setMenuActive] = useState(
     router.pathname ? router.pathname : "home"
   );
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(null);
 
   const pathArray = router.pathname.split("/");
 
@@ -22,7 +22,7 @@ const Header = (props) => {
   }, [pathArray]);
 
   const changeLanguage = (lng) => {
-    // i18n.changeLanguage(lng, () => {
+    // t.changeLanguage(lng, () => {
     //   const newUrl = `/${lng}/${menuActive}`;
     //   props.history.push(newUrl);
     // });
@@ -45,9 +45,9 @@ const Header = (props) => {
         expanded={expanded}
       >
         <Container className="navbarContainer">
-          <Navbar.Brand
+          {/* <Navbar.Brand
             as={Link}
-            to={`/${i18n.language}/home#`}
+            to={`/${t.language}/home#`}
             onClick={() => setMenuActive("home")}
           >
             <img
@@ -56,7 +56,7 @@ const Header = (props) => {
               alt="AIS 로고"
               className="navbarLogo"
             />
-          </Navbar.Brand>
+          </Navbar.Brand> */}
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             onClick={() => setExpanded(!expanded)}
@@ -67,28 +67,28 @@ const Header = (props) => {
               className="me-auto"
               onSelect={() => setExpanded(false)}
             >
-              <Nav.Link
+              {/* <Nav.Link
                 smooth
                 as={Link}
-                to={`/${i18n.language}/home#`}
+                to={`/${t.language}/home#`}
                 onClick={() => menuClick("home")}
                 className={menuActive === "home" ? "active" : ""}
               >
-                {i18n("nav.home")}
+                {t("nav.home")}
               </Nav.Link>
               <Nav.Link
                 smooth
                 as={Link}
-                to={`/${i18n.language}/service#`}
+                to={`/${t.language}/service#`}
                 onClick={() => menuClick("service")}
                 className={menuActive === "service" ? "active" : ""}
               >
-                {i18n("nav.service")}
+                {t("nav.service")}
               </Nav.Link>
               <Nav.Link
                 smooth
                 as={Link}
-                to={`/${i18n.language}/career#`}
+                to={`/${t.language}/career#`}
                 onClick={() => menuClick("career")}
                 className={
                   menuActive === "career" || menuActive === "recruit"
@@ -96,17 +96,17 @@ const Header = (props) => {
                     : ""
                 }
               >
-                {i18n("nav.recruit")}
+                {t("nav.recruit")}
               </Nav.Link>
               <Nav.Link
                 smooth
                 as={Link}
-                to={`/${i18n.language}/support#`}
+                to={`/${t.language}/support#`}
                 onClick={() => menuClick("support")}
                 className={menuActive === "support" ? "active" : ""}
               >
-                {i18n("nav.inquiry")}
-              </Nav.Link>
+                {t("nav.inquiry")}
+              </Nav.Link> */}
             </Nav>
             <Nav
               className="translate"
@@ -119,7 +119,7 @@ const Header = (props) => {
                   alignItems: "center",
                 }}
               >
-                <Nav.Link
+                {/* <Nav.Link
                   className="languageActive"
                   onClick={() => changeLanguage("ko")}
                   eventKey="ko"
@@ -133,7 +133,7 @@ const Header = (props) => {
                   eventKey="en"
                 >
                   ENG
-                </Nav.Link>
+                </Nav.Link> */}
               </div>
             </Nav>
           </Navbar.Collapse>

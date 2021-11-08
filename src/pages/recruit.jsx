@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Footer from "../components/Footer";
+import dynamic from "next/dynamic";
+
 import RecruitSectionImg1 from "../../public/asset/images/recruit_section_image_1.webp";
 import RecruitSectionImg12x from "../../public/asset/images/recruit_section_image_1@2x.webp";
 import RecruitSectionImg13x from "../../public/asset/images/recruit_section_image_1@3x.webp";
@@ -10,24 +12,33 @@ import RecruitSectionImg3 from "../../public/asset/images/recruit_section_image_
 import RecruitSectionImg32x from "../../public/asset/images/recruit_section_image_3@2x.webp";
 import RecruitSectionImg33x from "../../public/asset/images/recruit_section_image_3@3x.webp";
 
-import { Row, Col } from "react-bootstrap";
+const { Row, Col } = dynamic(import("react-bootstrap"), {
+  ssr: false,
+});
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+const AOS = dynamic(import("aos"), {
+  ssr: false,
+});
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import styles from "../styles/Recruit.module.css";
 
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 const Recruit = () => {
-  const { i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
 
   useEffect(() => {
     setisRendering(true);
 
-    AOS.init({
-      duration: 2000,
-    });
+    // AOS.init({
+    //   duration: 2000,
+    // });
   }, []);
 
   const [bgOpacity, setbgOpacity] = useState(0);
@@ -35,28 +46,32 @@ const Recruit = () => {
   const [scrollTxtOpacity, setScrollTextOpacity] = useState(0);
   const [bgScale, setBgScale] = useState(1);
   const [opacity, setOpacity] = useState(1);
-  const { height } = useWindowDimensions();
+  // const { height } = useWindowDimensions();
 
-  const handleScroll = useCallback(() => {
-    if (window.scrollY < height) {
-      setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
-      setInitTextOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)
-      setScrollTextOpacity(window.scrollY * 4 * (1 / height));
-      setBgScale(1 + window.scrollY * 4 * (0.1 / height));
-      setOpacity(1);
-    } else if (window.scrollY < height * 4) {
-      setOpacity(1 / (window.scrollY * (1 / height)));
-    } else {
-      setOpacity(0);
-    }
-  }, [height]);
+  // const handleScroll = useCallback(() => {
+  //   if (typeof window === "undefined" || !window.document) {
+  //     if (window.scrollY < height) {
+  //       setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
+  //       setInitTextOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)
+  //       setScrollTextOpacity(window.scrollY * 4 * (1 / height));
+  //       setBgScale(1 + window.scrollY * 4 * (0.1 / height));
+  //       setOpacity(1);
+  //     } else if (window.scrollY < height * 4) {
+  //       setOpacity(1 / (window.scrollY * (1 / height)));
+  //     } else {
+  //       setOpacity(0);
+  //     }
+  //   }
+  // }, [height]);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+  // useEffect(() => {
+  //   if (typeof window === "undefined" || !window.document) {
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   }
+  // }, [handleScroll]);
 
   return (
     <>
@@ -103,22 +118,22 @@ const Recruit = () => {
                     className={styles.initText}
                     style={{ opacity: `${initTxtOpacity}` }}
                   >
-                    {i18n("recruit.topTitle1")}
+                    {t("recruit.topTitle1")}
                   </h1>
                   <span
                     className={`${styles.initText} ${styles.scrollText}`}
                     style={{ opacity: `${scrollTxtOpacity}` }}
                   >
-                    {i18n("recruit.topTitle2")}
+                    {t("recruit.topTitle2")}
 
                     <br />
-                    {i18n("recruit.topTitle3")}
+                    {t("recruit.topTitle3")}
 
                     <br />
-                    {i18n("recruit.topTitle4")}
+                    {t("recruit.topTitle4")}
 
                     <br />
-                    {i18n("recruit.topTitle5")}
+                    {t("recruit.topTitle5")}
                   </span>
                 </div>
               </div>
@@ -161,10 +176,10 @@ const Recruit = () => {
                       sm={12}
                     >
                       <div className={styles.recruitSectionColTitle}>
-                        {i18n("recruit.inquiryTitle1")}
+                        {t("recruit.inquiryTitle1")}
                       </div>
                       <span className={styles.recruitSectionColContent}>
-                        {i18n("recruit.inquiryContent1")}
+                        {t("recruit.inquiryContent1")}
                       </span>
                     </Col>
                   </Row>
@@ -181,10 +196,10 @@ const Recruit = () => {
                       sm={12}
                     >
                       <div className={styles.recruitSectionColTitle}>
-                        {i18n("recruit.inquiryTitle2")}
+                        {t("recruit.inquiryTitle2")}
                       </div>
                       <span className={styles.recruitSectionColContent}>
-                        {i18n("recruit.inquiryContent2")}
+                        {t("recruit.inquiryContent2")}
                       </span>
                     </Col>
                     <Col
@@ -227,10 +242,10 @@ const Recruit = () => {
                       sm={12}
                     >
                       <div className={styles.recruitSectionColTitle}>
-                        {i18n("recruit.inquiryTitle3")}
+                        {t("recruit.inquiryTitle3")}
                       </div>
                       <span className={styles.recruitSectionColContent}>
-                        {i18n("recruit.inquiryContent3")}
+                        {t("recruit.inquiryContent3")}
                       </span>
                     </Col>
                   </Row>
@@ -240,9 +255,9 @@ const Recruit = () => {
             </section>
             <section className={styles.recruitSectionWrapper}>
               <div className={styles.recruitMoreTitle} id="aisWelfare">
-                {i18n("recruit.recruitTitle1")}
+                {t("recruit.recruitTitle1")}
                 <br />
-                {i18n("recruit.recruitContent1")}
+                {t("recruit.recruitContent1")}
               </div>
               <div className={styles.recruitTable}>
                 <Row
@@ -261,7 +276,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList1")}
+                      {t("recruit.recruitList1")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -270,7 +285,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_1.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList1")}
+                        alt={t("recruit.recruitList1")}
                       ></img>
                     </div>
                   </Col>
@@ -282,7 +297,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList2")}
+                      {t("recruit.recruitList2")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -291,7 +306,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_2.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList2")}
+                        alt={t("recruit.recruitList2")}
                       ></img>
                     </div>
                   </Col>
@@ -303,7 +318,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList3")}
+                      {t("recruit.recruitList3")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -312,14 +327,14 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_3.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList3")}
+                        alt={t("recruit.recruitList3")}
                       ></img>
                     </div>
                   </Col>
                   <Col className={styles.recruitTableTd} lg={4} md={6} sm={12}>
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList4")}
+                      {t("recruit.recruitList4")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -328,7 +343,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_4.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList4")}
+                        alt={t("recruit.recruitList4")}
                       ></img>
                     </div>
                   </Col>
@@ -340,7 +355,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList5")}
+                      {t("recruit.recruitList5")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -349,13 +364,13 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_5.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList5")}
+                        alt={t("recruit.recruitList5")}
                       ></img>
                     </div>
                   </Col>
                   <Col className={styles.recruitTableTd} lg={4} md={6} sm={12}>
                     <div className={styles.recruitTableTitle}>
-                      {i18n("recruit.recruitList6")}
+                      {t("recruit.recruitList6")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -364,7 +379,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_6.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList6")}
+                        alt={t("recruit.recruitList6")}
                       ></img>
                     </div>
                   </Col>
@@ -376,7 +391,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList7")}
+                      {t("recruit.recruitList7")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -385,7 +400,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_7.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList7")}
+                        alt={t("recruit.recruitList7")}
                       ></img>
                     </div>
                   </Col>
@@ -397,7 +412,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList8")}
+                      {t("recruit.recruitList8")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -406,7 +421,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_8.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList8")}
+                        alt={t("recruit.recruitList8")}
                       ></img>
                     </div>
                   </Col>
@@ -418,7 +433,7 @@ const Recruit = () => {
                   >
                     <div className={styles.recruitTableTitle}>
                       {" "}
-                      {i18n("recruit.recruitList9")}
+                      {t("recruit.recruitList9")}
                     </div>
                     <div className={styles.recruitTableImgWrapper}>
                       <img
@@ -427,7 +442,7 @@ const Recruit = () => {
                           require("../../public/asset/images/recruit_table_icon_9.svg")
                             .default
                         }
-                        alt={i18n("recruit.recruitList9")}
+                        alt={t("recruit.recruitList9")}
                       ></img>
                     </div>
                   </Col>
@@ -437,12 +452,14 @@ const Recruit = () => {
           </div>
           <div className={styles.recruitButtonWrapper}>
             <button
-              onClick={() =>
-                window.open(
-                  "https://aiskorea.notion.site/AIS-KOREA-0d87c52f37ae4f8ab137368a44b79806",
-                  "_blank"
-                )
-              }
+              onClick={() => {
+                if (typeof window === "undefined" || !window.document) {
+                  window.open(
+                    "https://aiskorea.notion.site/AIS-KOREA-0d87c52f37ae4f8ab137368a44b79806",
+                    "_blank"
+                  );
+                }
+              }}
               className={styles.recruitButton}
             >
               {" "}
@@ -456,29 +473,35 @@ const Recruit = () => {
   );
 };
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
+// function getWindowDimensions() {
+//   if (typeof window === "undefined" || !window.document) {
+//     const { innerWidth: width, innerHeight: height } = window;
+//     return {
+//       width,
+//       height,
+//     };
+//   }
+// }
 
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+// function useWindowDimensions() {
+//   if (typeof window === "undefined" || !window.document) {
+//     const [windowDimensions, setWindowDimensions] = useState(
+//       getWindowDimensions()
+//     );
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
+//     useEffect(() => {
+//       function handleResize() {
+//         setWindowDimensions(getWindowDimensions());
+//       }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+//       if (typeof window === "undefined" || !window.document) {
+//         window.addEventListener("resize", handleResize);
+//         return () => window.removeEventListener("resize", handleResize);
+//       }
+//     }, []);
 
-  return windowDimensions;
-}
+//     return windowDimensions;
+//   }
+// }
 
 export default Recruit;

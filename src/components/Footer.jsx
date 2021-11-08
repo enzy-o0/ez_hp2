@@ -4,9 +4,16 @@ import AisLogo from "../../public/asset/images/ais_bottom_logo.webp";
 import AisLogo2x from "../../public/asset/images/ais_bottom_logo@2x.webp";
 import AisLogo3x from "../../public/asset/images/ais_bottom_logo@3x.webp";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 const NavBottom = () => {
-  const { i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   return (
     <div className="serviceWrapper">
@@ -16,59 +23,59 @@ const NavBottom = () => {
             <img
               src={AisLogo}
               srcSet={`${AisLogo2x} 2x, ${AisLogo3x} 3x`}
-              alt={i18n("nav.home")}
+              alt={t("nav.home")}
             />
           </Col>
           <Col lg={7} md={8} className="menuWrapper">
             <Row>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{i18n("nav.home")}</p>
-                  <Link smooth href={`/${i18n.language}/home#`}>
-                    <a>{i18n("footer.aisAbout")}</a>
+                  <p className="menuTitle">{t("nav.home")}</p>
+                  {/* <Link smooth href={`/home#`}>
+                    <a>{t("footer.aisAbout")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/home#aisVision`}>
-                    <a>{i18n("footer.aisVision")}</a>
+                  <Link smooth href={`/${t.language}/home#aisVision`}>
+                    <a>{t("footer.aisVision")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/home#aisHistory`}>
-                    <a>{i18n("footer.aisHistory")}</a>
+                  <Link smooth href={`/${t.language}/home#aisHistory`}>
+                    <a>{t("footer.aisHistory")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/home#aisNews`}>
-                    <a>{i18n("footer.aisNews")}</a>
+                  <Link smooth href={`/${t.language}/home#aisNews`}>
+                    <a>{t("footer.aisNews")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/home#aisLocation`}>
-                    <a>{i18n("footer.aisLocation")}</a>
-                  </Link>
+                  <Link smooth href={`/${t.language}/home#aisLocation`}>
+                    <a>{t("footer.aisLocation")}</a>
+                  </Link> */}
                 </div>
               </Col>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{i18n("nav.service")}</p>
-                  <Link smooth href={`/${i18n.language}/service#`}>
-                    <a>{i18n("nav.service")}</a>
-                  </Link>
+                  <p className="menuTitle">{t("nav.service")}</p>
+                  {/* <Link smooth href={`/${t.language}/service#`}>
+                    <a>{t("nav.service")}</a>
+                  </Link> */}
                 </div>
               </Col>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{i18n("nav.recruit")}</p>
-                  <Link smooth href={`/${i18n.language}/career#`}>
-                    <a>{i18n("footer.aisAbout")}</a>
+                  <p className="menuTitle">{t("nav.recruit")}</p>
+                  {/* <Link smooth href={`/${t.language}/career#`}>
+                    <a>{t("footer.aisAbout")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/career#aisCulture`}>
-                    <a>{i18n("footer.culture")}</a>
+                  <Link smooth href={`/${t.language}/career#aisCulture`}>
+                    <a>{t("footer.culture")}</a>
                   </Link>
-                  <Link smooth href={`/${i18n.language}/career#aisWelfare`}>
-                    <a>{i18n("footer.welfare")}</a>
-                  </Link>
+                  <Link smooth href={`/${t.language}/career#aisWelfare`}>
+                    <a>{t("footer.welfare")}</a>
+                  </Link> */}
                 </div>
               </Col>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{i18n("nav.inquiry")}</p>
-                  <Link smooth href={`/${i18n.language}/support#`}>
-                    <a>{i18n("nav.inquiry")}</a>
-                  </Link>
+                  <p className="menuTitle">{t("nav.inquiry")}</p>
+                  {/* <Link smooth href={`/${t.language}/support#`}>
+                    <a>{t("nav.inquiry")}</a>
+                  </Link> */}
                 </div>
               </Col>
             </Row>
@@ -76,22 +83,22 @@ const NavBottom = () => {
         </Row>
         <hr className="hr" />
         <div className="logoText">
-          <p className="aisText">{i18n("navBottom.ais")}</p>
+          <p className="aisText">{t("navBottom.ais")}</p>
           <p className="aisInfotext">
-            {i18n("navBottom.busuiness")}
+            {t("navBottom.busuiness")}
             <br />
-            {i18n("navBottom.hosting")}
+            {t("navBottom.hosting")}
             <br />
-            {i18n("navBottom.address")}
+            {t("navBottom.address")}
             <br />
           </p>
           <div className="aisTerms">
-            <Link smooth to="/terms/service#">
-              <a className="aisTermsMenu">{i18n("navBottom.serviceTerms")}</a>
+            {/* <Link smooth href="/terms/service#">
+              <a className="aisTermsMenu">{t("navBottom.serviceTerms")}</a>
             </Link>
-            <Link smooth to="/terms/info#">
-              <a className="aisTermsMenu">{i18n("navBottom.privacyTerms")}</a>
-            </Link>
+            <Link smooth href="/terms/info#">
+              <a className="aisTermsMenu">{t("navBottom.privacyTerms")}</a>
+            </Link> */}
           </div>
         </div>
       </Row>
