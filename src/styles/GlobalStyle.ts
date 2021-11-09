@@ -2,6 +2,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+    * {
+        box-sizing: border-box;
+    }
+
     html, body {
         padding: 0;
         margin: 0;
@@ -11,10 +15,6 @@ const GlobalStyle = createGlobalStyle`
     a {
         color: inherit;
         text-decoration: none;
-    }
-
-    * {
-        box-sizing: border-box;
     }
 
     span {
@@ -49,18 +49,6 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
-    /* header */
-    header {
-        height: 100vh;
-        font-size: 56px;
-        font-weight: 500;
-        background: url(../../public/asset/images/header.jpg) center center / cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 96px;
-    }
-
     section {
         padding: 0;
         margin: 0;
@@ -73,83 +61,97 @@ const GlobalStyle = createGlobalStyle`
     address {
         font-style: normal;
     }
+
+    @media screen and (min-width: 992px) {
+        html {
+            font-size: 24px;
+        }
+
+        /* 브라우저 버전 */
+        /* main title */
+        h2 {
+            font-size: 2.75rem;
+        }
+
+        /* title */
+        h3 {
+            font-size: 1.333rem;
+        }
+
+        /* content */
+        p,
+        address {
+            font-size: 1rem;
+        }
+
+        /* main */
+        .main.vision, .recruit.subTitle {
+            font-size: 2rem;
+        }
+
+        /* 서비스 소개 - 점보에 있는 다운로드 버튼 텍스트 */
+        .service.download {
+            font-size: 1.083rem;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        html {
+            font-size: 30px;
+        }
+
+          /* 태블릿 버전 */
+        /* main title */
+        h2 {
+            font-size: 1.667rem;
+        }
+
+        /* title */
+        h3 {
+            font-size: 1.333rem;
+        }
+
+        /* content */
+        p,
+        address {
+            font-size: 1rem;
+        }
+
+        /* 서비스 소개 - 점보에 있는 다운로드 버튼 텍스트 */
+        .service.download {
+            font-size: 0.867rem;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        html, body {
+            font-size: 15px;
+        }
+
+        /* main title */
+        h2 {
+            font-size: 1.867rem;
+        }
+
+        /* title */
+        h3 {
+            font-size: 1.333rem;
+        }
+
+        /* content */
+        p,
+        address {
+            font-size: 1rem;
+        }
+
+        /* 지원과 보상 */
+        .recruit.title {
+            font-size: 1.467rem
+;
+        }
+    }
+
 `;
 
 export default GlobalStyle;
-
-// // /* 모바일 위주 */
-// /* logo */
-// h1 {
-//     font-size: 32px;
-//   }
-
-//   /* main title */
-//   h2 {
-//     font-size: 28px;
-//   }
-
-//   /* title */
-//   h3 {
-//     font-size: 20px;
-//   }
-
-//   /* content */
-//   p,
-//   address {
-//     font-size: 15px;
-//   }
-
-//   /* 지원과 보상 */
-//   지원.title {
-//     font-size: 22px;
-//   }
-
-//   /* 태블릿 버전 */
-//   /* main title */
-//   h2 {
-//     font-size: 50px;
-//   }
-
-//   /* title */
-//   h3 {
-//     font-size: 40px;
-//   }
-
-//   /* content */
-//   p,
-//   address {
-//     font-size: 30px;
-//   }
-
-//   /* 랜딩 */
-//   다운로드 (점보에만) {
-//     font-size: 26px;
-//   }
-
-//   /* 브라우저 버전 */
-//   /* main title */
-//   h2 {
-//     font-size: 66px;
-//   }
-
-//   /* title */
-//   h3 {
-//     font-size: 32px;
-//   }
-
-//   /* content */
-//   p,
-//   address {
-//     font-size: 24px;
-//   }
-
-//   /* main */
-//   vision,
-//   채용 2번째 텍스트 {
-//     font-size: 48px;
-//   }
-
-//   /* 랜딩 */
-//   다운로드 (점보에만) {
-//     font-size: 26px;
-//   }

@@ -1,8 +1,8 @@
 const screenSize = {
-  mobile: "600px",
-  tablet: "900px",
-  laptop: "1200px",
-  desktop: "1800px",
+  mobile: "767px",
+  tablet_min: "768px",
+  tablet_max: "991px",
+  desktop: "992px",
 };
 
 const color = {
@@ -18,8 +18,7 @@ const color = {
 const theme = {
   ...color,
   mobile: `(max-width: ${screenSize.mobile})`,
-  tablet: `(max-width: ${screenSize.tablet})`,
-  laptop: `(max-width: ${screenSize.laptop})`,
+  tablet: `(min-width: ${screenSize.tablet_min}) and (max-width: ${screenSize.tablet_max})`,
   desktop: `(min-width: ${screenSize.desktop})`,
 };
 
