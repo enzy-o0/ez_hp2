@@ -1,8 +1,8 @@
 import GlobalStyled from "../styles/GlobalStyle";
-import "../styles/Footer.css";
-import "../styles/Header.css";
-import "../styles/companyInfo.css";
-import "../styles/policy.css";
+// import "../styles/Footer.css";
+// import "../styles/Header.css";
+// import "../styles/companyInfo.css";
+// import "../styles/policy.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "aos/dist/aos.css";
@@ -14,9 +14,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyled />
-      <Header />
-      <Component {...pageProps} />;
-      <Footer />
+      {/* <Header /> */}
+      <Component {...pageProps} />;{/* <Footer /> */}
     </>
   );
 }
