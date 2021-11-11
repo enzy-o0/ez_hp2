@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 72px;
     }
 
+    h1, h2, h3, p {
+        word-break: keep-all;
+    }
+
     h1,
     h2,
     h3 {
@@ -60,6 +64,28 @@ const GlobalStyle = createGlobalStyle`
 
     address {
         font-style: normal;
+    }
+
+    .slick-prev:before {
+        width: 50px;
+        height: 50px;
+        content: "" !important;
+        position: absolute;
+        top: -11px;
+        left: -31px;
+        background-image: url(/asset/images/prev-arrow.svg);
+        background-position: center;
+    }
+
+    .slick-next:before {
+        width: 50px;
+        height: 50px;
+        content: "" !important;
+        position: absolute;
+        top: -11px;
+        left: 0px;
+        background-image: url(/asset/images/next-arrow.svg);
+        background-position: center;
     }
 
     @media screen and (min-width: 992px) {
