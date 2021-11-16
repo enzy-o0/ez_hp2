@@ -111,7 +111,7 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* main */
-        .main.vision, .recruit.subTitle {
+        .main.vision, .carrer.subTitle {
             font-size: 2rem;
         }
 
@@ -172,7 +172,7 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* 지원과 보상 */
-        .recruit.title {
+        .carrer.title {
             font-size: 1.467rem
 ;
         }

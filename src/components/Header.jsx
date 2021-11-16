@@ -91,12 +91,12 @@ const Header = (props) => {
                 to={`/${t.language}/career#`}
                 onClick={() => menuClick("career")}
                 className={
-                  menuActive === "career" || menuActive === "recruit"
+                  menuActive === "career" || menuActive === "carrer"
                     ? "active"
                     : ""
                 }
               >
-                {t("nav.recruit")}
+                {t("nav.carrer")}
               </Nav.Link>
               <Nav.Link
                 smooth

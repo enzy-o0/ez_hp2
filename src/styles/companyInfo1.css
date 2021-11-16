@@ -41,10 +41,6 @@ section {
   font-size: 2.25rem;
 }
 
-/* .jumbotron strong {
-  color: #005500;
-} */
-
 .about-jumbotron-title {
   margin-left: 3em;
 }
@@ -679,11 +675,11 @@ section {
     left: 8px;
   }
 
+  /* location */
   .about-location {
     margin-bottom: 3rem;
   }
 
-  /* location */
   .about-location-title {
     font-size: 1.3rem;
   }

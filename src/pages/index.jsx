@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 // i18
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -10,11 +11,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import dynamic from "next/dynamic";
 
-import jumboImg from "../../public/asset/images/jumbotron.png";
-import about from "../../public/asset/images/about1.png";
-import aboutT from "../../public/asset/images/about1_t.png";
-import about2 from "../../public/asset/images/about2.png";
-import about2T from "../../public/asset/images/about2_t.png";
 import Circle1 from "../../public/asset/images/circle1.svg";
 import Circle2 from "../../public/asset/images/circle2.svg";
 import Circle3 from "../../public/asset/images/circle3.svg";
@@ -25,11 +21,19 @@ import Next from "../../public/asset/images/next-arrow.svg";
 import aisData from "../../public/asset/aisData.json";
 
 import * as Ais from "../styles/companyInfo";
-import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
+
+// import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const Slider = dynamic(import("react-slick"), {
   ssr: false,
 });
+
+const { RenderAfterNavermapsLoaded, NaverMap, Marker } = dynamic(
+  import("react-naver-maps"),
+  {
+    ssr: false,
+  }
+);
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -89,24 +93,27 @@ const Home = () => {
 
   function NaverMapAPI() {
     const navermaps = window.naver.maps;
-
     return (
-      <NaverMap
-        mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
-        style={{
-          width: "100%", // 네이버지도 가로 길이
-          height: "400px", // 네이버지도 세로 길이
-        }}
-        defaultCenter={new navermaps.LatLng(37.5115437, 127.0478224)}
-        zoomControl={false}
-        defaultZoom={18} // 지도 초기 확대 배율
-      >
-        <Marker
-          key={1}
-          position={new navermaps.LatLng(37.5115437, 127.0478224)}
-          animation={2}
-        />
-      </NaverMap>
+      <>
+        {typeof document !== "undefined" && (
+          <NaverMap
+            mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
+            style={{
+              width: "100%", // 네이버지도 가로 길이
+              height: "400px", // 네이버지도 세로 길이
+            }}
+            defaultCenter={new navermaps.LatLng(37.5115437, 127.0478224)}
+            zoomControl={false}
+            defaultZoom={18} // 지도 초기 확대 배율
+          >
+            <Marker
+              key={1}
+              position={new navermaps.LatLng(37.5115437, 127.0478224)}
+              animation={2}
+            />
+          </NaverMap>
+        )}
+      </>
     );
   }
 
@@ -367,25 +374,25 @@ const Home = () => {
               )}
             </section>
             {/* location */}
-            <section>
+            <Ais.LocationWrapper>
               <Ais.LocationTitle>
                 {t("companyInfo.aisLocationTitle")}
               </Ais.LocationTitle>
-            </section>
-            <Ais.LocationAddress>
-              {t("companyInfo.aisLocationAddress")}
-            </Ais.LocationAddress>
-            {typeof window !== "undefined" && (
-              <Ais.LocationWrapper>
-                <RenderAfterNavermapsLoaded
-                  ncpClientId={"wqw7xk67ax"}
-                  error={<p>Maps Load Error</p>}
-                  loading={<p>Maps Loading...</p>}
-                >
-                  <NaverMapAPI />
-                </RenderAfterNavermapsLoaded>
-              </Ais.LocationWrapper>
-            )}
+              <Ais.LocationAddress>
+                {t("companyInfo.aisLocationAddress")}
+              </Ais.LocationAddress>
+              <Ais.AddressWrapper>
+                {/* {typeof document !== "undefined" && (
+                  <RenderAfterNavermapsLoaded
+                    ncpClientId={"wqw7xk67ax"}
+                    error={<p>Maps Load Error</p>}
+                    loading={<p>Maps Loading...</p>}
+                  >
+                    <NaverMapAPI />
+                  </RenderAfterNavermapsLoaded>
+                )} */}
+              </Ais.AddressWrapper>
+            </Ais.LocationWrapper>
           </main>
         </>
       )}

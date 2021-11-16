@@ -18,6 +18,10 @@ export const JumbotronWrapper = styled.div`
   background: url(/asset/images/jumbotron.png) no-repeat center center;
   height: 100vh;
   background-size: cover;
+
+  @media ${(props) => props.theme.tablet} {
+    padding: 0;
+  }
 `;
 
 export const JumbotronTitleWrapper = styled.div`
@@ -33,12 +37,32 @@ export const JumbotronTitleStrong = styled.strong`
 export const AisWrapper = styled.div`
   width: 70%;
   margin: 3em auto;
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80%;
+    padding: 3.875em 0 0px 0;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 90%;
+    padding: 3.875em 0 0px 0;
+  }
 `;
 
 export const AisTitle = styled.h3`
   text-align: center;
   width: 70%;
   margin: auto auto 3em;
+
+  @media ${(props) => props.theme.tablet} {
+    margin-bottom: 3.875em;
+    width: 100%;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    margin-bottom: 3.875em;
+    width: 100%;
+  }
 `;
 
 export const AisImgWrapper = styled.div`
@@ -62,12 +86,36 @@ export const AisContentWrapper = styled(AboutFlex)`
     text-align: end;
     margin-bottom: 0em;
   }
+
+  @media ${(props) => props.theme.tablet} {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    display: block;
+    width: 100%;
+    border: none;
+  }
 `;
 
 export const AisContent = styled.div`
   width: 50%;
   margin: auto 0;
   padding: 1em;
+
+  @media ${(props) => props.theme.tablet} {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
 `;
 
 // vision
@@ -82,6 +130,16 @@ export const VisionWrapper = styled(AboutFlex)`
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+
+  @media ${(props) => props.theme.tablet} {
+    height: auto;
+    margin: 3.875em auto 0;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    height: auto;
+    margin: 3.875em auto;
+  }
 `;
 
 export const VisionOuterWrapper = styled.div`
@@ -114,6 +172,11 @@ export const VisionTitle = styled.h3`
     margin: auto;
     border-bottom: 2px solid #005500;
     margin-bottom: 2px;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    margin: 2em auto;
+    font-size: 1.1rem;
   }
 `;
 
@@ -149,6 +212,16 @@ export const VisionContent = styled.h3`
 export const HistoryWrapper = styled.section`
   width: 100%;
   text-align: center;
+
+  @media ${(props) => props.theme.tablet} {
+    margin-top: 3.875em;
+    padding: 0 1.563em;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    margin-top: 3.875em;
+    padding: 0 1.563em;
+  }
 `;
 
 export const HistoryOuterWrapper = styled.div`
@@ -162,12 +235,33 @@ export const HistoryTitleWrapper = styled.h2`
   text-align: center;
   font-size: 1.313rem;
   line-height: 1.5;
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80%;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 80%;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 
 export const HistoryInnerWrapper = styled.div`
   width: 80%;
   margin: auto;
   padding: 5% 10%;
+
+  @media ${(props) => props.theme.tablet} {
+    padding: 5%;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    padding: 5%;
+  }
 `;
 
 export const HistoryItems = styled.div`
@@ -190,6 +284,14 @@ export const HistoryItems = styled.div`
     width: 5px;
     height: 100%;
     background: linear-gradient(to bottom, #ffffff, #ffffff);
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 80%;
+
+    &::before {
+      left: 8px;
+    }
   }
 `;
 
@@ -241,6 +343,14 @@ export const NewsSlide = styled.h3`
   height: 21.719em;
   background: rgba(0, 85, 0, 0.03);
   padding: 2.625em 5.688em;
+
+  @media ${(props) => props.theme.tablet} {
+    padding: 2.625em 3.688em;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    padding: 1em 2em;
+  }
 `;
 
 export const NewsItem = styled.div`
@@ -279,8 +389,30 @@ export const NewsContent = styled.p`
 //location
 
 export const LocationWrapper = styled.div`
+  @media ${(props) => props.theme.tablet} {
+    margin-bottom: 3.875rem;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    margin-bottom: 3rem;
+  }
+`;
+
+export const AddressWrapper = styled.div`
   width: 50%;
   margin: auto;
+
+  @media ${(props) => props.theme.tablet} {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.25em;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.25em;
+  }
 `;
 
 export const LocationTitle = styled.h3`
@@ -292,5 +424,15 @@ export const LocationTitle = styled.h3`
 export const LocationAddress = styled.address`
   text-align: center;
   word-break: keep-all;
-  margin-bottom: 1rem; ;
+  margin-bottom: 1rem;
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80%;
+    margin: auto;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 80%;
+    margin: auto;
+  }
 `;

@@ -2,7 +2,7 @@
   "nav": {
     "home": "About us",
     "service": "Our service",
-    "recruit": "Career",
+    "carrer": "Career",
     "inquiry": "Support"
   },
   "navBottom": {
@@ -130,7 +130,7 @@
     "alertFail": "Transmission failed. Please try again in a few minutes.",
     "alertEmail": "It doesn't fit the email format. Please re-enter."
   },
-  "recruit": {
+  "carrer": {
     "topTitle1": "We are looking for colleagues who will lead changes in agriculture with us.",
     "topTitle2": "AIS actively engages to make even tiny changes, ",
     "topTitle3": "feels the joy of growth, ",
@@ -144,17 +144,17 @@
     "inquiryTitle3": "We prioritize the most important value.",
     "inquiryContent3": "To find and solve the essence of the problem, rather than caught up with the surface of the problem, we find the most important value by asking ourselves “why?”",
 
-    "recruitTitle1": "Support and rewards prepared for the members ",
-    "recruitContent1": "who challenge for the better",
-    "recruitList1": "Support for the business equipment on demand",
-    "recruitList2": "Flexible working hours",
-    "recruitList3": "Free to use annual leave",
-    "recruitList4": "Free lunches and you can decide the menu",
-    "recruitList5": "Attend workshop once a year",
-    "recruitList6": "Support online lecture, books for our task",
-    "recruitList7": "Free, unlimited snacks",
-    "recruitList8": "Half-day birthday",
-    "recruitList9": "Time to rest and relax after having lunch"
+    "carrerTitle1": "Support and rewards prepared for the members ",
+    "carrerContent1": "who challenge for the better",
+    "carrerList1": "Support for the business equipment on demand",
+    "carrerList2": "Flexible working hours",
+    "carrerList3": "Free to use annual leave",
+    "carrerList4": "Free lunches and you can decide the menu",
+    "carrerList5": "Attend workshop once a year",
+    "carrerList6": "Support online lecture, books for our task",
+    "carrerList7": "Free, unlimited snacks",
+    "carrerList8": "Half-day birthday",
+    "carrerList9": "Time to rest and relax after having lunch"
   },
 
   "footer": {

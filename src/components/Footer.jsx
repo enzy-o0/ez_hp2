@@ -58,7 +58,7 @@ const NavBottom = () => {
               </Col>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{t("nav.recruit")}</p>
+                  <p className="menuTitle">{t("nav.carrer")}</p>
                   {/* <Link smooth href={`/${t.language}/career#`}>
                     <a>{t("footer.aisAbout")}</a>
                   </Link>
