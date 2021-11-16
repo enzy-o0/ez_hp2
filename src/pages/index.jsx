@@ -43,20 +43,21 @@ export const getStaticProps = async ({ locale }) => ({
 
 const Home = () => {
   const isPc = useMediaQuery({
-    query: "(min-width:1024px)",
+    query: "(min-width:1025px)",
   });
 
-  const isTablet1 = useMediaQuery({
-    query: "(min-width:992px)",
+  const isLaptop = useMediaQuery({
+    query: "(min-width:992px) and (max-width:1024px)",
   });
 
-  const isTablet2 = useMediaQuery({
+  const isTablet = useMediaQuery({
     query: "(min-width:768px) and (max-width:991px)",
   });
 
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
+
   const aisDataToArr = [...aisData.news];
   const { t } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
@@ -197,10 +198,10 @@ const Home = () => {
                       />
                     </Ais.AisImgWrapper>
                   )}
-                  {isMobile && (
+                  {(isMobile || isLaptop || isTablet) && (
                     <Ais.AisImgWrapper>
                       <Ais.AisImgItem
-                        src={"/asset/images/about1.png"}
+                        src={"/asset/images/about1_t.png"}
                         alt="about"
                       />
                     </Ais.AisImgWrapper>
@@ -219,9 +220,12 @@ const Home = () => {
                       />
                     </Ais.AisImgWrapper>
                   )}
-                  {isMobile && (
+                  {(isMobile || isLaptop || isTablet) && (
                     <Ais.AisImgWrapper>
-                      <img src={"/asset/images/about2_t.png"} alt="about" />
+                      <Ais.AisImgItem
+                        src={"/asset/images/about2_t.png"}
+                        alt="about"
+                      />
                     </Ais.AisImgWrapper>
                   )}
                   <Ais.AisContent>
@@ -244,21 +248,30 @@ const Home = () => {
               </Ais.VisionOuterWrapper>
               <Ais.VisionWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle1.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentScale1")}
                     <br></br> {t("companyInfo.aisVisionContentScale2")}
                   </Ais.VisionContent>
                 </Ais.VisionContentWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle2.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentStabilization1")}
                     <br></br> {t("companyInfo.aisVisionContentStabilization2")}
                   </Ais.VisionContent>
                 </Ais.VisionContentWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle3.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentSmart1")}
                     <br></br> {t("companyInfo.aisVisionContentSmart2")}

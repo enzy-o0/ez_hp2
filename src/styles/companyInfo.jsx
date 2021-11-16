@@ -19,6 +19,10 @@ export const JumbotronWrapper = styled.div`
   height: 100vh;
   background-size: cover;
 
+  @media ${(props) => props.theme.laptop} {
+    padding: 0;
+  }
+
   @media ${(props) => props.theme.tablet} {
     padding: 0;
   }
@@ -38,6 +42,11 @@ export const AisWrapper = styled.div`
   width: 70%;
   margin: 3em auto;
 
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+    margin: auto;
+  }
+
   @media ${(props) => props.theme.tablet} {
     width: 80%;
     padding: 3.875em 0 0px 0;
@@ -54,6 +63,11 @@ export const AisTitle = styled.h3`
   width: 70%;
   margin: auto auto 3em;
 
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+    margin: 3em auto;
+  }
+
   @media ${(props) => props.theme.tablet} {
     margin-bottom: 3.875em;
     width: 100%;
@@ -67,6 +81,18 @@ export const AisTitle = styled.h3`
 
 export const AisImgWrapper = styled.div`
   width: 50%;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    width: 100%;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 export const AisImgItem = styled.img`
@@ -87,16 +113,34 @@ export const AisContentWrapper = styled(AboutFlex)`
     margin-bottom: 0em;
   }
 
+  @media ${(props) => props.theme.laptop} {
+    display: block;
+    width: 100%;
+    border: none;
+
+    &:last-child {
+      margin-bottom: 3.125em;
+    }
+  }
+
   @media ${(props) => props.theme.tablet} {
     display: block;
     width: 100%;
     border: none;
+
+    &:last-child {
+      margin-bottom: 3.125em;
+    }
   }
 
   @media ${(props) => props.theme.mobile} {
     display: block;
     width: 100%;
     border: none;
+
+    &:last-child {
+      margin-bottom: 3.125em;
+    }
   }
 `;
 
@@ -104,6 +148,12 @@ export const AisContent = styled.div`
   width: 50%;
   margin: auto 0;
   padding: 1em;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.125em;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 100%;
@@ -121,7 +171,6 @@ export const AisContent = styled.div`
 // vision
 
 export const VisionWrapper = styled(AboutFlex)`
-  font-size: 1rem;
   position: relative;
   margin: 3rem auto;
   width: 100%;
@@ -131,12 +180,20 @@ export const VisionWrapper = styled(AboutFlex)`
   justify-content: center;
   flex-wrap: nowrap;
 
+  @media ${(props) => props.theme.laptop} {
+    display: block;
+    height: auto;
+    margin: 3.875em auto 0;
+  }
+
   @media ${(props) => props.theme.tablet} {
+    display: block;
     height: auto;
     margin: 3.875em auto 0;
   }
 
   @media ${(props) => props.theme.mobile} {
+    display: block;
     height: auto;
     margin: 3.875em auto;
   }
@@ -174,9 +231,12 @@ export const VisionTitle = styled.h3`
     margin-bottom: 2px;
   }
 
+  @media ${(props) => props.theme.laptop} {
+    margin: 2em auto;
+  }
+
   @media ${(props) => props.theme.tablet} {
     margin: 2em auto;
-    font-size: 1.1rem;
   }
 `;
 
@@ -186,6 +246,21 @@ export const VisionTitle2 = styled.h3`
   margin-top: 1.688em;
   font-weight: 600;
   font-size: 2rem;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 70%;
+    margin: auto;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80%;
+    margin: auto;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    margin: auto;
+  }
 `;
 
 export const VisionContentWrapper = styled.div`
@@ -194,6 +269,27 @@ export const VisionContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75em;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const VisionContent = styled.h3`
@@ -213,14 +309,16 @@ export const HistoryWrapper = styled.section`
   width: 100%;
   text-align: center;
 
+  @media ${(props) => props.theme.laptop} {
+    margin-top: 3.875em;
+  }
+
   @media ${(props) => props.theme.tablet} {
     margin-top: 3.875em;
-    padding: 0 1.563em;
   }
 
   @media ${(props) => props.theme.mobile} {
     margin-top: 3.875em;
-    padding: 0 1.563em;
   }
 `;
 
@@ -233,8 +331,11 @@ export const HistoryTitleWrapper = styled.h2`
   width: 70%;
   margin: 1em auto 2em;
   text-align: center;
-  font-size: 1.313rem;
   line-height: 1.5;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 80%;
@@ -255,6 +356,10 @@ export const HistoryInnerWrapper = styled.div`
   margin: auto;
   padding: 5% 10%;
 
+  @media ${(props) => props.theme.laptop} {
+    padding: 5%;
+  }
+
   @media ${(props) => props.theme.tablet} {
     padding: 5%;
   }
@@ -271,7 +376,7 @@ export const HistoryItems = styled.div`
 
   &:first-child {
     &::before {
-      top: 12px;
+      top: 25px;
       height: calc(100%-10px);
     }
   }
@@ -287,7 +392,7 @@ export const HistoryItems = styled.div`
   }
 
   @media ${(props) => props.theme.mobile} {
-    width: 80%;
+    width: 100%;
 
     &::before {
       left: 8px;
@@ -312,6 +417,15 @@ export const HistoryYear = styled.h3`
     background: #fff;
     transform: translateY(-50%);
   }
+
+  @media ${(props) => props.theme.mobile} {
+    padding-left: 0px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 
 export const HistoryContents = styled.ol`
@@ -321,6 +435,10 @@ export const HistoryContents = styled.ol`
   font-size: 1rem;
   padding-left: 20px;
   word-break: keep-all;
+
+  @media ${(props) => props.theme.mobile} {
+    padding: 0 0 50px;
+  }
 `;
 
 export const HistoryContent = styled.li`
@@ -343,6 +461,10 @@ export const NewsSlide = styled.h3`
   height: 21.719em;
   background: rgba(0, 85, 0, 0.03);
   padding: 2.625em 5.688em;
+
+  @media ${(props) => props.theme.laptop} {
+    padding: 2.625em 3.688em;
+  }
 
   @media ${(props) => props.theme.tablet} {
     padding: 2.625em 3.688em;
@@ -389,6 +511,10 @@ export const NewsContent = styled.p`
 //location
 
 export const LocationWrapper = styled.div`
+  @media ${(props) => props.theme.laptop} {
+    margin-bottom: 3.875rem;
+  }
+
   @media ${(props) => props.theme.tablet} {
     margin-bottom: 3.875rem;
   }
@@ -401,6 +527,12 @@ export const LocationWrapper = styled.div`
 export const AddressWrapper = styled.div`
   width: 50%;
   margin: auto;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.25em;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 100%;
@@ -425,6 +557,11 @@ export const LocationAddress = styled.address`
   text-align: center;
   word-break: keep-all;
   margin-bottom: 1rem;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+    margin: auto;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 80%;

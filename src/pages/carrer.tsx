@@ -37,7 +37,6 @@ const Carrer = () => {
 
   const handleScroll = useCallback(() => {
     if (typeof window !== "undefined") {
-      console.log(window.scrollY);
       if (window.scrollY < height) {
         setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
         setMainTitleOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)

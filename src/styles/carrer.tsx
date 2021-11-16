@@ -44,7 +44,6 @@ export const CarrerMainSubTitle1 = styled.h3`
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  line-height: 34px;
   color: rgb(255, 255, 255);
   text-align: center;
   white-space: pre-line;
