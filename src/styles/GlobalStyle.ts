@@ -28,8 +28,6 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
-<<<<<<< HEAD
-=======
     h1 {
         font-size: 72px;
     }
@@ -38,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
         word-break: keep-all;
     }
 
->>>>>>> 79bff5c012191233ed0c9276ea19b37e6ddac4ba
     h1,
     h2,
     h3,

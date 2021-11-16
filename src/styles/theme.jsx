@@ -2,7 +2,9 @@ const screenSize = {
   mobile: "767px",
   tablet_min: "768px",
   tablet_max: "991px",
-  desktop: "992px",
+  laptop_min: "992px",
+  laptop_max: "1279px",
+  desktop: "1280px",
 };
 
 const color = {
@@ -13,12 +15,15 @@ const color = {
   highlightTextColor: "#005500",
   disableTextColor: "rgba(153, 153, 153, 0.4)",
   underLineColor: "#c9f227",
+  defaultBackgroundColor: "rgba(0, 85, 0, 0.05)",
+  borderColor: "rgba(204, 204, 204, 0.6)",
 };
 
 const theme = {
   ...color,
   mobile: `(max-width: ${screenSize.mobile})`,
   tablet: `(min-width: ${screenSize.tablet_min}) and (max-width: ${screenSize.tablet_max})`,
+  laptop: `(min-width: ${screenSize.laptop_min}) and (max-width: ${screenSize.laptop_max})`,
   desktop: `(min-width: ${screenSize.desktop})`,
 };
 

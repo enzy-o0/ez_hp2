@@ -52,7 +52,7 @@
     "aisLocationTitle": "오시는 길",
     "aisLocationAddress": "서울특별시 강남구 삼성동 봉은사로 439, 7층 (삼성동, CC빌딩)"
   },
-  "serviceInfo": {
+  "service": {
     "headerTitleFirst": "이제 농사도 다르게 생각할 때",
     "headerTitleLast": "1:1 맞춤 처방농법",
     "headerTitleSub1": "잘",
