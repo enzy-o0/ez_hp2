@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 
 // i18
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -17,6 +17,7 @@ export const getStaticProps = async ({ locale }) => ({
 
 const Carrer = () => {
   const { t } = useTranslation("common");
+
   const [isRendering, setisRendering] = useState(false);
 
   useEffect(() => {
@@ -27,33 +28,36 @@ const Carrer = () => {
     });
   }, []);
 
-  const [bgOpacity, setbgOpacity] = useState(0);
-  const [initTxtOpacity, setInitTextOpacity] = useState(1);
-  const [scrollTxtOpacity, setScrollTextOpacity] = useState(0);
+  const [bgOpacity, setbgOpacity] = useState(0.3);
+  const [mainTitleOpacity, setMainTitleOpacity] = useState(1);
+  const [subTitleOpacity, setSubTitleOpacity] = useState(0);
   const [bgScale, setBgScale] = useState(1);
   const [opacity, setOpacity] = useState(1);
-  // const { height } = useWindowDimensions();
+  const height = useWindowDimensions();
 
-  // const handleScroll = useCallback(() => {
-  //   if (window.scrollY < height) {
-  //     setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
-  //     setInitTextOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)
-  //     setScrollTextOpacity(window.scrollY * 4 * (1 / height));
-  //     setBgScale(1 + window.scrollY * 4 * (0.1 / height));
-  //     setOpacity(1);
-  //   } else if (window.scrollY < height * 4) {
-  //     setOpacity(1 / (window.scrollY * (1 / height)));
-  //   } else {
-  //     setOpacity(0);
-  //   }
-  // }, [height]);
+  const handleScroll = useCallback(() => {
+    if (typeof window !== "undefined") {
+      console.log(window.scrollY);
+      if (window.scrollY < height) {
+        setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
+        setMainTitleOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)
+        setSubTitleOpacity(window.scrollY * 4 * (1 / height));
+        setBgScale(1 + window.scrollY * 4 * (0.1 / height));
+        setOpacity(1);
+      } else if (window.scrollY < height * 4) {
+        setOpacity(1 / (window.scrollY * (1 / height)));
+      } else {
+        setOpacity(0);
+      }
+    }
+  }, [height]);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [handleScroll]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <>
@@ -66,11 +70,17 @@ const Carrer = () => {
               <Carrers.CarrerMainImage
                 style={{ transform: `scale(${bgScale})` }}
               />
-              <Carrers.CarrerMainImageOpacity style={{ opacity: 0.3 }} />
-              <Carrers.CarrerMainTitle>
+              <Carrers.CarrerMainImageOpacity
+                style={{ opacity: `${bgOpacity}` }}
+              />
+              <Carrers.CarrerMainTitle
+                style={{ opacity: `${mainTitleOpacity}` }}
+              >
                 {t("carrer.topTitle1")}
               </Carrers.CarrerMainTitle>
-              <Carrers.CarrerMainSubTitle1>
+              <Carrers.CarrerMainSubTitle1
+                style={{ opacity: `${subTitleOpacity}` }}
+              >
                 {t("carrer.topTitle2")}
                 <br />
                 {t("carrer.topTitle3")}
@@ -130,7 +140,7 @@ const Carrer = () => {
               </Carrers.TopTextWapper>
             </div> */}
             <Carrers.CarrerSectionWrapper
-            // style={{ paddingTop: `calc(${height} * 6px)` }}
+              style={{ paddingTop: `calc(${height} * 5px)` }}
             >
               <Carrers.CarrerContentsWrapper>
                 <Carrers.CarrerSectionImageWrapper>
@@ -310,29 +320,28 @@ const Carrer = () => {
   );
 };
 
-// function getWindowDimensions() {
-//   const { innerWidth: width, innerHeight: height } = window;
-//   return {
-//     width,
-//     height,
-//   };
-// }
+function getWindowDimensions() {
+  if (typeof window !== "undefined") {
+    const { innerWidth: width, innerHeight: height } = window;
+    return height;
+  }
+}
 
-// function useWindowDimensions() {
-//   const [windowDimensions, setWindowDimensions] = useState(
-//     getWindowDimensions()
-//   );
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
-//   useEffect(() => {
-//     function handleResize() {
-//       setWindowDimensions(getWindowDimensions());
-//     }
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
 
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-//   return windowDimensions;
-// }
+  return windowDimensions;
+}
 
 export default Carrer;
