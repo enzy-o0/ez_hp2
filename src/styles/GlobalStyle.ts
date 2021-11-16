@@ -28,6 +28,17 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
+<<<<<<< HEAD
+=======
+    h1 {
+        font-size: 72px;
+    }
+
+    h1, h2, h3, p {
+        word-break: keep-all;
+    }
+
+>>>>>>> 79bff5c012191233ed0c9276ea19b37e6ddac4ba
     h1,
     h2,
     h3,
@@ -86,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* main */
-        .main.vision, .recruit.subTitle {
+        .main.vision, .carrer.subTitle {
             font-size: 2rem;
         }
 
@@ -175,7 +186,7 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* 지원과 보상 */
-        .recruit.title {
+        .carrer.title {
             font-size: 1.467rem
 ;
         }

@@ -16,14 +16,14 @@
   width: 90%;
 }
 
-.recruitTable {
+.carrerTable {
   padding-top: 3rem;
   margin-bottom: 5em;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.recruitTableTd {
+.carrerTableTd {
   width: 33%;
   height: 12rem;
   padding: 1rem;
@@ -31,54 +31,54 @@
   margin: 0;
 }
 
-.recruitTableTdWeb {
+.carrerTableTdWeb {
   border-bottom: none;
 }
 
-.recruitTableTdCenter {
+.carrerTableTdCenter {
   border-right: solid 1px rgba(5, 7, 9, 0.58);
   border-left: solid 1px rgba(5, 7, 9, 0.58);
 }
 
-.recruitTableTdEng {
+.carrerTableTdEng {
   /* width: 33%; */
   height: 12rem;
   padding-bottom: 1rem;
   border-bottom: solid 1px #000;
 }
 
-.recruitTableRow {
+.carrerTableRow {
   font-size: 1rem;
 }
 
-.recruitTableRowEng {
+.carrerTableRowEng {
   font-size: 0.9rem;
 }
 
-.recruitTableTitle {
+.carrerTableTitle {
   height: 65%;
   word-break: keep-all;
   width: 90%;
 }
 
-.recruitTableImgWrapper {
+.carrerTableImgWrapper {
   text-align: right;
   width: 100%;
   height: 35%;
   vertical-align: bottom;
 }
 
-.recruitTableImg {
+.carrerTableImg {
   width: 4rem;
   height: 4rem;
 }
 
-.recruitSection {
+.carrerSection {
   width: 100%;
   margin: 0 auto;
 }
 
-.recruitSectionWrapper {
+.carrerSectionWrapper {
   width: 60%;
   margin: 0 auto;
 }
@@ -99,7 +99,7 @@
   font-weight: 500;
 }
 
-.recruitSectionRow {
+.carrerSectionRow {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -109,33 +109,33 @@
   margin-bottom: 64px;
 }
 
-.recruitSectionCol {
+.carrerSectionCol {
   padding: 0;
   font-size: 0.8rem;
 }
 
-.recruitSectionColTitle {
+.carrerSectionColTitle {
   color: #00a52a;
   font-weight: 500;
   margin-bottom: 16px;
   word-break: keep-all;
 }
 
-.recruitSection2 {
+.carrerSection2 {
   display: flex;
   text-align: right;
 }
 
-.recruitSectionText {
+.carrerSectionText {
   order: 1;
 }
 
-.recruitSectionImg {
+.carrerSectionImg {
   order: 2;
   text-align: right;
 }
 
-.recruitMoreTitle {
+.carrerMoreTitle {
   padding-top: 5rem;
   color: #000;
   font-weight: 500;
@@ -147,19 +147,19 @@
   left: 0px;
   width: 100%;
   height: 100vh;
-  /* background-image: url(../public/asset/images/recruit_main_image.png); */
+  /* background-image: url(../public/asset/images/carrer_main_image.png); */
   background-position: 45% 0%;
   background-size: cover;
 }
 
-.recruitButtonWrapper {
+.carrerButtonWrapper {
   text-align: center;
   display: flex;
   padding-bottom: 3rem;
   z-index: 101;
 }
 
-.recruitButton {
+.carrerButton {
   display: flex;
   justify-content: center;
   width: 50%;
@@ -178,67 +178,67 @@
     width: 60%;
   }
 
-  .recruitSectionRow {
+  .carrerSectionRow {
     text-align: center;
   }
 
-  .recruitSectionCol {
+  .carrerSectionCol {
     margin-top: 1.125rem;
     font-size: 1rem;
   }
 
-  .recruitSectionText {
+  .carrerSectionText {
     order: 2;
   }
 
-  .recruitSectionImg {
+  .carrerSectionImg {
     order: 1;
     text-align: center;
   }
 
-  .recruitMoreTitle {
+  .carrerMoreTitle {
     font-size: 1.313rem;
     margin-top: 2em;
   }
 
-  .recruitMoreTitleEng {
+  .carrerMoreTitleEng {
     font-size: 1rem;
     margin-top: 2em;
   }
 
-  .recruitTableTd {
+  .carrerTableTd {
     /* width: 10rem;
         height: 10rem; */
     width: 50%;
   }
 
-  .recruitSectionWrapper {
+  .carrerSectionWrapper {
     width: 80%;
   }
 
   .topImage {
-    background-image: url(../../public/asset/images/recruit_main_image_tablet.png);
+    background-image: url(../../public/asset/images/carrer_main_image_tablet.png);
     background-position: 0% 50%;
   }
 
-  .recruitTableTitle {
+  .carrerTableTitle {
     width: 60%;
   }
 
-  .recruitTableTdCenter {
+  .carrerTableTdCenter {
     border-right: none;
     border-left: none;
   }
 
-  .recruitTableTdTablet {
+  .carrerTableTdTablet {
     border-right: solid 1px rgba(5, 7, 9, 0.58);
   }
 
-  .recruitTableTdWeb {
+  .carrerTableTdWeb {
     border-bottom: solid 1px rgba(5, 7, 9, 0.58);
   }
 
-  .recruitTableTdTabletBottom {
+  .carrerTableTdTabletBottom {
     border-bottom: none;
   }
 }
@@ -258,101 +258,101 @@
     font-size: 1.406rem;
   }
 
-  .recruitSectionRow {
+  .carrerSectionRow {
     text-align: center;
     justify-content: center;
   }
 
-  .recruitSectionCol {
+  .carrerSectionCol {
     margin-top: 1.125rem;
     width: 80%;
   }
 
-  .recruitSectionText {
+  .carrerSectionText {
     order: 2;
   }
 
-  .recruitSectionImg {
+  .carrerSectionImg {
     order: 1;
     text-align: center;
   }
 
-  .recruitTableRow {
+  .carrerTableRow {
     display: flex;
     justify-content: center;
     font-size: 1.25rem;
   }
 
-  .recruitTableTd {
+  .carrerTableTd {
     width: 60%;
     margin: 0 auto;
     padding: 2rem 3rem;
     border-bottom: none;
   }
 
-  .recruitSectionWrapper {
+  .carrerSectionWrapper {
     width: 80%;
   }
 
-  .recruitTableTitle {
+  .carrerTableTitle {
     width: 60%;
     height: 40%;
   }
 
-  .recruitSectionColTitle {
+  .carrerSectionColTitle {
     font-size: 1.25rem;
   }
 
-  .recruitSectionColContent {
+  .carrerSectionColContent {
     font-size: 1rem;
     width: 50%;
   }
 
-  .recruitTableImgWrapper {
+  .carrerTableImgWrapper {
     margin-top: 0;
     height: 60%;
   }
 
-  .recruitTableImg {
+  .carrerTableImg {
     width: 7rem;
     height: 7rem;
   }
 
-  .recruitMoreTitle {
+  .carrerMoreTitle {
     font-size: 1.25rem;
   }
 
   .topImage {
-    background-image: url(../../public/asset/images/recruit_main_image_phone.png);
+    background-image: url(../../public/asset/images/carrer_main_image_phone.png);
     background-position: 45% 45%;
   }
 
-  .recruitTableRowEng {
+  .carrerTableRowEng {
     font-size: 1rem;
   }
 
-  .recruitTableTdCenter {
+  .carrerTableTdCenter {
     border: none;
   }
 
   @media screen and (max-width: 540px) {
-    .recruitTableTd {
+    .carrerTableTd {
       width: 70%;
     }
   }
 
   @media screen and (max-width: 450px) {
-    .recruitTableTd {
+    .carrerTableTd {
       width: 90%;
     }
   }
 
   @media screen and (max-width: 359px) {
-    .recruitTableTd {
+    .carrerTableTd {
       width: 100%;
     }
 
-    .recruitTableTitle {
+    .carrerTableTitle {
       width: 100%;
     }
   }

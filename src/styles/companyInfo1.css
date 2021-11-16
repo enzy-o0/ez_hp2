@@ -25,7 +25,7 @@ section {
   padding-top: 2.875em;
 }
 
-.jumbotron {
+.about-jumbotron-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -36,30 +36,25 @@ section {
   background-size: cover;
 }
 
-.jumbotron h1 {
+.about-jumbotron-main-title {
   font-weight: 600;
   font-size: 2.25rem;
 }
 
-.jumbotron strong {
-  color: #005500;
-}
-
-.jumbotronTitle {
+.about-jumbotron-title {
   margin-left: 3em;
 }
 
-.jumbotronTitleEng {
+.about-jumbotron-title-eng {
   margin-left: 3em;
 }
 
-/* aisAbout */
-.aisAbout {
+/* about-ais-wrapper */
+.about-ais-wrapper {
   width: 70%;
   margin: 3em auto;
 }
-
-.aisAboutTitle {
+` .about-ais-title {
   text-align: center;
   width: 70%;
   margin: auto;
@@ -68,7 +63,7 @@ section {
   line-height: 1.5;
 }
 
-.aisAboutWrapper {
+.about-ais-content-wrapper {
   display: flex;
   width: 90%;
   margin: auto;
@@ -77,42 +72,42 @@ section {
   border-radius: 27px;
 }
 
-.aisAboutWrapper:last-child {
+.about-ais-content-wrapper:last-child {
   flex-direction: row-reverse;
   text-align: end;
   margin-bottom: 0em;
 }
 
-.aisAboutImg {
+.about-ais-img {
   width: 50%;
 }
 
-.aisAboutImgT {
+.about-ais-img-title {
   display: none;
 }
 
-.aisAboutImg img {
+.about-ais-img-item {
   width: 100%;
   height: 100%;
 }
 
-.aisAboutContent {
+.about-ais-content {
   width: 50%;
   margin: auto 0;
   padding: 1em;
 }
 
-.aisAboutContent h3 {
+.about-ais-content-title {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.875em;
 }
 
-.aisAboutContent p {
+.about-ais-content-content {
   font-size: 0.75rem;
 }
 
-.outerVision {
+.about-outer-vision {
   background: url(../../public/asset/images/visionbg.png) no-repeat center
     center;
   width: 100%;
@@ -121,7 +116,7 @@ section {
   background-size: cover;
 }
 
-.innerVision {
+.about-inner-vision {
   width: 70%;
   height: 12em;
   background: #ffffff;
@@ -134,13 +129,13 @@ section {
   border-top-left-radius: 40px;
 }
 
-.aisVision {
+.about-ais-vision {
   text-align: center;
   margin-top: 1.813em;
   font-size: 1.125rem;
 }
 
-.aisVision:after {
+.about-ais-vision:after {
   content: "";
   display: block;
   width: 10%;
@@ -149,7 +144,7 @@ section {
   margin-bottom: 2px;
 }
 
-.aisVisionTitle {
+.about-ais-vision-title {
   color: #005500;
   text-align: center;
   margin-top: 1.688em;
@@ -157,7 +152,7 @@ section {
   font-weight: 600;
 }
 
-.aisVisionsWrapper {
+.about-ais-visions-wrapper {
   font-size: 1rem;
   position: relative;
   margin: 3rem auto;
@@ -169,15 +164,15 @@ section {
   flex-wrap: nowrap;
 }
 
-.aisVisionImg {
+.about-ais-vision-img {
   position: relative;
 }
 
-.aisVisionImg img {
+.about-ais-vision-img-item {
   width: 100%;
 }
 
-.aisVisionContent {
+.about-ais-vision-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,12 +185,12 @@ section {
 
 /* history */
 
-.historyWrapper {
+.about-history-wrapper {
   width: 100%;
   text-align: center;
 }
 
-.historyWrapper h2 {
+.about-history-wrapper-title {
   width: 70%;
   margin: 1em auto 2em;
   text-align: center;
@@ -208,35 +203,18 @@ section {
     center;
   background-size: cover;
 }
-
-.lineWrapper {
-  padding-top: 5.063em;
-  padding-right: 3.313em;
-}
-
-.historyContent {
-  padding-top: 3.5em;
-  text-align: left;
-  color: #ffffff;
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-.historyContent p {
-  margin-bottom: 0.25em;
-}
-
+/* 
 .history {
   border: 1px solid #fff;
-}
+} */
 
-.historyInner {
+.about-history-inner {
   width: 80%;
   margin: auto;
   padding: 5% 10%;
 }
 
-.history h3 {
+.about-history-year {
   position: relative;
   font-size: 1rem;
   color: #fff;
@@ -244,7 +222,7 @@ section {
   padding-left: 20px;
 }
 
-.history h3:before {
+.about-history-year:before {
   content: "";
   position: absolute;
   left: -48px;
@@ -256,13 +234,13 @@ section {
   transform: translateY(-50%);
 }
 
-.history .historyItem {
+.about-history .about-history-item {
   position: relative;
   padding: 0 0 0 48px;
   text-align: left;
 }
 
-.history .historyItem:before {
+.about-history .about-history-item:before {
   content: "";
   position: absolute;
   left: 13px;
@@ -272,12 +250,12 @@ section {
   background: linear-gradient(to bottom, #ffffff, #ffffff);
 }
 
-.historyItem:first-child:before {
+.about-history-item:first-child:before {
   top: 12px;
   height: calc(100%-10px);
 }
 
-.history ol {
+.history-contents {
   padding: 20px 0 74px;
   text-align: left;
   margin-bottom: 0;
@@ -286,7 +264,7 @@ section {
   word-break: keep-all;
 }
 
-.history li {
+.history-content {
   color: #fff;
   font-size: 1rem;
   margin-bottom: 0.5em;
@@ -294,27 +272,27 @@ section {
 
 /* news */
 
-.news h2 {
+.about-news-title {
   text-align: center;
   margin: 2rem auto;
   font-size: 1.5rem;
   padding-top: 3rem;
 }
 
-.newsSlide {
+.about-news-slide {
   height: 21.719em;
   background: rgba(0, 85, 0, 0.03);
   padding: 2.625em 5.688em;
 }
 
-.newsItem {
+.about-news-item {
   background: #ffffff;
   height: 16.469em;
   border: solid 0.8px rgba(0, 0, 0, 0.5);
   margin: 0 0.469em;
 }
 
-.newsImgWrapper {
+.about-news-img-wrapper {
   width: 100%;
   height: 60%;
   display: flex;
@@ -324,11 +302,11 @@ section {
   background-position: center center;
 }
 
-.newsImgWrapper img {
+.about-news-img-wrapper img {
   overflow: hidden;
 }
 
-.newsContent {
+.about-news-content-wrapper {
   width: 100%;
   height: 30%;
   background: #ffffff;
@@ -336,7 +314,7 @@ section {
   padding: 0.938em 0.625em 0.875em;
 }
 
-.newsContent p {
+.about-news-content {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -346,34 +324,34 @@ section {
 }
 
 /* location */
-.location {
+.about-location {
   margin-bottom: 7.75rem;
 }
 
-.addressWrapper {
+.about-address-wrapper {
   width: 50%;
   margin: auto;
 }
 
-.location h2 {
+.about-location-title {
   text-align: center;
   margin: 2em auto 1em;
   padding-top: 3rem;
   font-size: 1.5rem;
 }
 
-.location address {
+.about-location-address {
   text-align: center;
   font-size: 1.125rem;
   word-break: keep-all;
 }
 
 @media screen and (max-width: 1224px) {
-  .jumbotronTitle {
+  .about-jumbotron-title {
     margin-left: 2em;
   }
 
-  .jumbotronTitleEng {
+  .about-jumbotron-title-eng {
     margin-left: 2em;
   }
 }
@@ -385,36 +363,36 @@ section {
   }
 
   /* about */
-  .aisAbout {
+  .about-ais-wrapper {
     width: 90%;
     padding: 3.875em 0 0px 0;
   }
 
-  .aisAboutTitle {
+  .about-ais-title {
     margin-bottom: 3.875em;
     width: 100%;
   }
 
-  .aisAboutWrapper {
+  .about-ais-content-wrapper {
     display: block;
     width: 100%;
     border: none;
   }
 
-  .aisAboutImg {
+  .about-ais-img {
     display: none;
   }
 
-  .aisAboutImgT {
+  .about-ais-img-title {
     width: 100%;
     display: block;
   }
 
-  .aisAboutImgT img {
+  .about-ais-img-item {
     width: 100%;
   }
 
-  .aisAboutContent {
+  .about-ais-content {
     width: 100%;
     text-align: center;
     margin-top: 1.125em;
@@ -422,79 +400,79 @@ section {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .jumbotron {
+  .about-jumbotron-wrapper {
     padding: 0;
   }
 
-  .jumbotron h1 {
+  .about-jumbotron-main-title {
     line-height: 1.5;
   }
 
-  .jumbotronTitle {
+  .about-jumbotron-title {
     width: 60%;
     margin-left: 2em;
   }
 
-  .jumbotronTitleEng {
+  .about-jumbotron-title-eng {
     margin: 0;
   }
 
-  .companyInfoTitleEng {
+  .about-company-title-eng {
     text-align: center;
   }
 
   /* about */
-  .aisAbout {
+  .about-ais-wrapper {
     width: 80%;
     padding: 3.875em 0 0px 0;
   }
 
-  .aisAboutTitle {
+  .about-ais-title {
     margin-bottom: 3.875em;
     width: 100%;
   }
 
-  .aisAboutWrapper {
+  .about-ais-content-wrapper {
     display: block;
     width: 100%;
     border: none;
   }
 
-  .aisAboutImg {
+  .about-ais-img {
     display: none;
   }
 
-  .aisAboutImgT {
+  .about-ais-img-title {
     width: 100%;
     display: block;
   }
 
-  .aisAboutImgT img {
+  .about-ais-img-title-img {
     width: 100%;
   }
 
-  .aisAboutContent {
+  .about-ais-content {
     width: 100%;
     text-align: center;
     margin-top: 1.125em;
   }
 
   /* vision */
-  .aisVisionsWrapper {
+  .about-ais-visions-wrapper {
     height: auto;
     margin: 3.875em auto 0;
   }
 
-  .aisVisionTitle {
+  .about-ais-vision-title {
     margin: 2em auto;
     font-size: 1.1rem;
   }
 
-  .aisVisionsWrapper {
+  .about-ais-visions-wrapper {
     display: block;
   }
 
-  .aisVisionImg {
+  .about-ais-vision-img {
     position: relative;
     display: flex;
     align-items: center;
@@ -502,11 +480,11 @@ section {
     margin-bottom: 0.75em;
   }
 
-  .aisVisionImg img {
+  .about-ais-vision-img-item {
     width: 50%;
   }
 
-  .aisVisionImg {
+  .about-ais-vision-img {
     position: relative;
     display: flex;
     align-items: center;
@@ -514,7 +492,7 @@ section {
     margin-bottom: 0.75em;
   }
 
-  .aisVision:after {
+  .about-ais-vision:after {
     width: 20%;
   }
 
@@ -524,7 +502,7 @@ section {
     padding: 0 1.563em;
   }
 
-  .historyWrapper h2 {
+  .about-history-wrapper h2 {
     width: 80%;
   }
 
@@ -532,12 +510,12 @@ section {
     padding-right: 1.25em;
   }
 
-  .historyInner {
+  .about-history-inner {
     padding: 5%;
   }
 
   /* press */
-  .newsSlide {
+  .about-news-slide {
     padding: 2.625em 3.688em;
   }
 
@@ -557,7 +535,7 @@ section {
     margin: auto;
   }
 
-  .addressWrapper {
+  .about-address-wrapper {
     width: 100%;
     margin: auto;
     margin-top: 1.25em;
@@ -576,71 +554,71 @@ section {
     width: 80%;
   }
 
-  .jumbotronTitle {
+  .about-jumbotron-title {
     margin-left: 1em;
   }
 
-  .jumbotronTitleEng {
+  .about-jumbotron-title-eng {
     margin: 1em;
   }
 
   /* about */
-  .aisAbout {
+  .about-ais-wrapper {
     width: 90%;
     padding: 3.875em 0 0px 0;
   }
 
-  .aisAboutTitle {
+  .about-ais-title {
     margin-bottom: 3.875em;
     width: 100%;
     font-size: 1.25rem;
   }
 
-  .aisAboutContent h3 {
+  .about-ais-content h3 {
     font-size: 1.2rem;
   }
 
-  .aisAboutContent p {
+  .about-ais-content p {
     font-size: 1rem;
   }
 
-  .aisAboutWrapper {
+  .about-ais-content-wrapper {
     display: block;
     width: 100%;
     border: none;
   }
 
-  .aisAboutImg {
+  .about-ais-img {
     display: none;
   }
 
-  .aisAboutImgT {
+  .about-ais-img-title {
     width: 100%;
     display: block;
   }
 
-  .aisAboutImgT img {
+  .about-ais-img-title img {
     width: 100%;
   }
 
-  .aisAboutContent {
+  .about-ais-content {
     width: 100%;
     text-align: center;
     margin-top: 1.125em;
   }
 
   /* vision */
-  .aisVisionsWrapper {
+  .about-ais-visions-wrapper {
     height: auto;
     margin: 3.875em auto;
   }
 
-  .aisVisionTitle {
+  .about-ais-vision-title {
     margin-top: 1rem;
     font-size: 1.6rem;
   }
 
-  .aisVisionImg {
+  .about-ais-vision-img {
     position: relative;
     display: flex;
     align-items: center;
@@ -648,28 +626,28 @@ section {
     margin-bottom: 0.75em;
   }
 
-  .aisVisionImg img {
+  .about-ais-vision-img-item {
     width: 80%;
   }
 
-  .aisVisionContent {
+  .about-ais-vision-content {
     font-size: 1.781rem;
   }
 
-  .aisVision:after {
+  .about-ais-vision:after {
     width: 20%;
   }
 
   /* news */
-  .news h2 {
+  .about-news-title {
     font-size: 1.3rem;
   }
 
-  .aisVisionsWrapper {
+  .about-ais-visions-wrapper {
     flex-wrap: wrap;
   }
 
-  .newsSlide {
+  .about-news-slide {
     padding: 1em 2em;
   }
 
@@ -679,47 +657,39 @@ section {
     padding: 0 1.563em;
   }
 
-  .historyWrapper h2 {
+  .about-history-wrapper-title {
     width: 80%;
     font-size: 1.281rem;
   }
 
-  .lineWrapper {
-    padding-right: 1.25em;
-  }
-
-  .lineWrapper img {
-    width: 50%;
-  }
-
-  .historyInner {
+  .about-history-inner {
     padding: 5%;
   }
 
-  .history h3:before {
+  .about-history-wrapper-title:before {
     width: 20px;
     height: 20px;
   }
 
-  .history .historyItem:before {
+  .about-history-item:before {
     left: 8px;
   }
 
-  .location {
+  /* location */
+  .about-location {
     margin-bottom: 3rem;
   }
 
-  /* location */
-  .location h2 {
+  .about-location-title {
     font-size: 1.3rem;
   }
 
-  .location address {
+  .about-location-address {
     width: 80%;
     margin: auto;
   }
 
-  .addressWrapper {
+  .about-address-wrapper {
     width: 100%;
     margin: auto;
     margin-top: 1.25em;
@@ -727,15 +697,11 @@ section {
 }
 
 @media screen and (max-width: 456px) {
-  .lineWrapper img {
-    width: 70%;
-  }
-
-  .newsSlide {
+  .about-news-slide {
     padding: 1em 2em;
   }
 
-  .location {
+  .about-location-address {
     margin-bottom: 3rem;
   }
 }

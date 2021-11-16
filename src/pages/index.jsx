@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 
+// i18
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+// response
+import { useMediaQuery } from "react-responsive";
+// slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import about from "../../public/asset/images/about1.png";
-import aboutT from "../../public/asset/images/about1_t.png";
-import about2 from "../../public/asset/images/about2.png";
-import about2T from "../../public/asset/images/about2_t.png";
+import dynamic from "next/dynamic";
+
 import Circle1 from "../../public/asset/images/circle1.svg";
-import circle2 from "../../public/asset/images/circle2.svg";
-import circle3 from "../../public/asset/images/circle3.svg";
+import Circle2 from "../../public/asset/images/circle2.svg";
+import Circle3 from "../../public/asset/images/circle3.svg";
 import aisLogo from "../../public/asset/images/aislogo.png";
-import prev from "../../public/asset/images/prev-arrow.svg";
-import next from "../../public/asset/images/next-arrow.svg";
+import Prev from "../../public/asset/images/prev-arrow.svg";
+import Next from "../../public/asset/images/next-arrow.svg";
 
 import aisData from "../../public/asset/aisData.json";
-import styles from "../styles/Home.module.css";
+
+import * as Ais from "../styles/companyInfo";
+
+// import { RenderAfterNavermapsLoaded, NaverMap, Marker } from "react-naver-maps";
 
 const Slider = dynamic(import("react-slick"), {
-  ssr: false,
-});
-
-const AOS = dynamic(import("aos"), {
   ssr: false,
 });
 
@@ -39,43 +41,84 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: next,
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: prev }}
-      onClick={onClick}
-    />
-  );
-}
-
 const Home = () => {
-  const { t, i18n } = useTranslation("common");
-  const [isRendering, setisRendering] = useState(false);
+  const isPc = useMediaQuery({
+    query: "(min-width:1024px)",
+  });
+
+  const isTablet1 = useMediaQuery({
+    query: "(min-width:992px)",
+  });
+
+  const isTablet2 = useMediaQuery({
+    query: "(min-width:768px) and (max-width:991px)",
+  });
+
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
   const aisDataToArr = [...aisData.news];
+  const { t } = useTranslation("common");
+  const [isRendering, setisRendering] = useState(false);
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          background: <Next />,
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          background: <Prev />,
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function NaverMapAPI() {
+    const navermaps = window.naver.maps;
+    return (
+      <>
+        {typeof document !== "undefined" && (
+          <NaverMap
+            mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
+            style={{
+              width: "100%", // 네이버지도 가로 길이
+              height: "400px", // 네이버지도 세로 길이
+            }}
+            defaultCenter={new navermaps.LatLng(37.5115437, 127.0478224)}
+            zoomControl={false}
+            defaultZoom={18} // 지도 초기 확대 배율
+          >
+            <Marker
+              key={1}
+              position={new navermaps.LatLng(37.5115437, 127.0478224)}
+              animation={2}
+            />
+          </NaverMap>
+        )}
+      </>
+    );
+  }
 
   useEffect(() => {
     setisRendering(true);
-    // typeof window !== "undefined" &&
-    //   AOS.init({
-    //     duration: 2000,
-    //   });
   }, []);
 
   const settings = {
@@ -125,200 +168,221 @@ const Home = () => {
     <>
       {isRendering && typeof window !== "undefined" && (
         <>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <section id="aisAbout" className={styles.jumbotron}>
-              <div data-aos="fade-up" data-aos-duration="2000">
-                {i18n.language === "ko" ? (
-                  <>
-                    <div className={styles.jumbotronTitle}>
-                      <h1>
-                        {t("companyInfo.jumboTitleFirst")}
-                        <br></br>
-                        <strong>{t("companyInfo.jumboTitleStrong")}</strong>
-                        {t("companyInfo.jumboTitleLast")}
-                      </h1>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className={styles.jumbotronTitleEng}>
-                      <h1 className={styles.companyInfoTitleEng}>
-                        {t("companyInfo.jumboTitleFirst")}
-                        <br></br>
-                        <strong>{t("companyInfo.jumboTitleStrong")}</strong>
-                        {t("companyInfo.jumboTitleLast")}
-                      </h1>
-                    </div>
-                  </>
-                )}
-              </div>
+          <main className="wrap">
+            {/* jumbotron */}
+            <section>
+              <Ais.JumbotronWrapper>
+                <Ais.JumbotronTitleWrapper>
+                  <h2>
+                    {t("companyInfo.jumboTitleFirst")}
+                    <br></br>
+                    <Ais.JumbotronTitleStrong>
+                      {t("companyInfo.jumboTitleStrong")}
+                    </Ais.JumbotronTitleStrong>
+                    {t("companyInfo.jumboTitleLast")}
+                  </h2>
+                </Ais.JumbotronTitleWrapper>
+              </Ais.JumbotronWrapper>
             </section>
-            <section className={styles.aisAbout}>
-              <h2 className={styles.aisAboutTitle}>
-                {t("companyInfo.aisAboutTitle")}
-              </h2>
-              <div
-                className={styles.aisAboutWrapper}
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                data-aos-once="false"
-              >
-                <div className={styles.aisAboutImg}>
-                  <img src={about} alt="about" />
-                </div>
-                <div className={styles.aisAboutImgT}>
-                  <img src={aboutT} alt="about" />
-                </div>
-                <div className={styles.aisAboutContent}>
-                  <h3>{t("companyInfo.aisAboutContentTitle1")}</h3>
-                  <p>{t("companyInfo.aisAboutContentSub1")}</p>
-                </div>
-              </div>
-              <div
-                className={styles.aisAboutWrapper}
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                data-aos-once="false"
-              >
-                <div className={styles.aisAboutImg}>
-                  <img src={about2} alt="about2" />
-                </div>
-                <div className={styles.aisAboutImgT}>
-                  <img src={about2T} alt="about2" />
-                </div>
-                <div className={styles.aisAboutContent}>
-                  <h3>{t("companyInfo.aisAboutContentTitle2")}</h3>
-                  <p>{t("companyInfo.aisAboutContentSub2")}</p>
-                </div>
-              </div>
+            {/* about */}
+            <section>
+              <Ais.AisWrapper>
+                <Ais.AisTitle>{t("companyInfo.aisAboutTitle")}</Ais.AisTitle>
+                <Ais.AisContentWrapper>
+                  {isPc && (
+                    <Ais.AisImgWrapper>
+                      <Ais.AisImgItem
+                        src={"/asset/images/about1.png"}
+                        alt="about"
+                      />
+                    </Ais.AisImgWrapper>
+                  )}
+                  {isMobile && (
+                    <Ais.AisImgWrapper>
+                      <Ais.AisImgItem
+                        src={"/asset/images/about1.png"}
+                        alt="about"
+                      />
+                    </Ais.AisImgWrapper>
+                  )}
+                  <Ais.AisContent>
+                    <h3>{t("companyInfo.aisAboutContentTitle1")}</h3>
+                    <p>{t("companyInfo.aisAboutContentSub1")}</p>
+                  </Ais.AisContent>
+                </Ais.AisContentWrapper>
+                <Ais.AisContentWrapper>
+                  {isPc && (
+                    <Ais.AisImgWrapper>
+                      <Ais.AisImgItem
+                        src={"/asset/images/about2.png"}
+                        alt="about"
+                      />
+                    </Ais.AisImgWrapper>
+                  )}
+                  {isMobile && (
+                    <Ais.AisImgWrapper>
+                      <img src={"/asset/images/about2_t.png"} alt="about" />
+                    </Ais.AisImgWrapper>
+                  )}
+                  <Ais.AisContent>
+                    <h3>{t("companyInfo.aisAboutContentTitle2")}</h3>
+                    <p>{t("companyInfo.aisAboutContentSub2")}</p>
+                  </Ais.AisContent>
+                </Ais.AisContentWrapper>
+              </Ais.AisWrapper>
             </section>
-            <section id="aisVision">
-              <div className={styles.outerVision}>
-                <div className={styles.innerVision}>
-                  <p className={styles.aisVision}>vision</p>
-                  <h2 className={styles.aisVisionTitle}>
+            {/* vision */}
+            <section>
+              <Ais.VisionOuterWrapper>
+                <Ais.VisionInnerWrapper>
+                  <Ais.VisionTitle>vision</Ais.VisionTitle>
+                  <Ais.VisionTitle2>
                     “{t("companyInfo.aisVisionTitle1")}
                     <br></br> {t("companyInfo.aisVisionTitle2")}”
-                  </h2>
-                </div>
-              </div>
-              <div className={styles.aisVisionsWrapper}>
-                <div className={styles.aisVisionImg} id="scale">
+                  </Ais.VisionTitle2>
+                </Ais.VisionInnerWrapper>
+              </Ais.VisionOuterWrapper>
+              <Ais.VisionWrapper>
+                <Ais.VisionContentWrapper>
                   <Circle1 alt="scale" />
-                  <p className={styles.aisVisionContent}>
+                  <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentScale1")}
                     <br></br> {t("companyInfo.aisVisionContentScale2")}
-                  </p>
-                </div>
-                <div className={styles.aisVisionImg} id="stabilization">
-                  <img src={circle2} alt="stabilization" />
-                  <p className={styles.aisVisionContent}>
+                  </Ais.VisionContent>
+                </Ais.VisionContentWrapper>
+                <Ais.VisionContentWrapper>
+                  <Circle1 alt="scale" />
+                  <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentStabilization1")}
                     <br></br> {t("companyInfo.aisVisionContentStabilization2")}
-                  </p>
-                </div>
-                <div className={styles.aisVisionImg} id="smart">
-                  <img src={circle3} alt="smart" />
-                  <p className={styles.aisVisionContent}>
+                  </Ais.VisionContent>
+                </Ais.VisionContentWrapper>
+                <Ais.VisionContentWrapper>
+                  <Circle1 alt="scale" />
+                  <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentSmart1")}
                     <br></br> {t("companyInfo.aisVisionContentSmart2")}
-                  </p>
-                </div>
-              </div>
+                  </Ais.VisionContent>
+                </Ais.VisionContentWrapper>
+              </Ais.VisionWrapper>
             </section>
-            <section id="aisHistory" className={styles.historyWrapper}>
-              <div className={styles.aisLogoWrapper}>
-                <img src={aisLogo} alt="aislogo" />
+            {/* history */}
+            <Ais.HistoryWrapper>
+              <div className="about-aisLogoWrapper">
+                <img src={"/asset/images/aislogo.png"} alt="aislogo" />
               </div>
-              <h2 data-aos="fade-up" data-aos-duration="2000">
+              <Ais.HistoryTitleWrapper>
                 {t("companyInfo.aisHistoryTitle")}
-              </h2>
-              <div className={`${styles.history} history`}>
-                <div className={styles.historyInner}>
-                  <div className={styles.historyItem}>
-                    <h3>2021</h3>
-                    <ol>
-                      <li>{t("companyInfo.aisHistoryContent20211")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20212")}</li>
-                    </ol>
-                  </div>
-                  <div className={styles.historyItem}>
-                    <h3>2020</h3>
-                    <ol>
-                      <li>{t("companyInfo.aisHistoryContent20201")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20202")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20203")}</li>
-                    </ol>
-                  </div>
-                  <div className={styles.historyItem}>
-                    <h3>2019</h3>
-                    <ol>
-                      <li>{t("companyInfo.aisHistoryContent20191")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20192")}</li>
-                    </ol>
-                  </div>
-                  <div className={styles.historyItem}>
-                    <h3>2018</h3>
-                    <ol>
-                      <li>{t("companyInfo.aisHistoryContent20181")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20182")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20183")}</li>
-                    </ol>
-                  </div>
-                  <div className={styles.historyItem}>
-                    <h3>2017</h3>
-                    <ol>
-                      <li>{t("companyInfo.aisHistoryContent20171")}</li>
-                      <li>{t("companyInfo.aisHistoryContent20172")}</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section id="aisNews" className={styles.news}>
-              <h2>{t("companyInfo.aisNewsTitle")}</h2>
+              </Ais.HistoryTitleWrapper>
+              <Ais.HistoryOuterWrapper>
+                <Ais.HistoryInnerWrapper>
+                  <Ais.HistoryItems>
+                    <Ais.HistoryYear>2021</Ais.HistoryYear>
+                    <Ais.HistoryContents>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20211")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20212")}
+                      </Ais.HistoryContent>
+                    </Ais.HistoryContents>
+                  </Ais.HistoryItems>
+                  <Ais.HistoryItems>
+                    <Ais.HistoryYear>2020</Ais.HistoryYear>
+                    <Ais.HistoryContents>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20201")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20202")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20203")}
+                      </Ais.HistoryContent>
+                    </Ais.HistoryContents>
+                  </Ais.HistoryItems>
+                  <Ais.HistoryItems>
+                    <Ais.HistoryYear>2019</Ais.HistoryYear>
+                    <Ais.HistoryContents>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20191")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20192")}
+                      </Ais.HistoryContent>
+                    </Ais.HistoryContents>
+                  </Ais.HistoryItems>
+                  <Ais.HistoryItems>
+                    <Ais.HistoryYear>2018</Ais.HistoryYear>
+                    <Ais.HistoryContents>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20181")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20182")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20183")}
+                      </Ais.HistoryContent>
+                    </Ais.HistoryContents>
+                  </Ais.HistoryItems>
+                  <Ais.HistoryItems>
+                    <Ais.HistoryYear>2017</Ais.HistoryYear>
+                    <Ais.HistoryContents>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20171")}
+                      </Ais.HistoryContent>
+                      <Ais.HistoryContent>
+                        {t("companyInfo.aisHistoryContent20172")}
+                      </Ais.HistoryContent>
+                    </Ais.HistoryContents>
+                  </Ais.HistoryItems>
+                </Ais.HistoryInnerWrapper>
+              </Ais.HistoryOuterWrapper>
+            </Ais.HistoryWrapper>
+            {/* new */}
+            <section>
+              <Ais.NewsTitle>{t("companyInfo.aisNewsTitle")}</Ais.NewsTitle>
               {typeof window !== "undefined" && (
-                <div className={styles.newsSlide}>
+                <Ais.NewsSlide className="about-news-slide">
                   <Slider {...settings}>
                     {aisDataToArr.reverse().map((item) => {
                       return (
                         <div key={item}>
                           <a href={item.link} target="_blank" rel="noreferrer">
-                            <div className={styles.newsItem}>
-                              <div
-                                className={styles.newsImgWrapper}
+                            <Ais.NewsItem>
+                              <Ais.NewsImgWrapper
                                 style={{
                                   backgroundImage: item.image
                                     ? `url(${item.image})`
-                                    : `url(${aisLogo})`,
+                                    : `url("/asset/images/aislogo.png")`,
                                   backgroundSize: item.image
                                     ? "cover"
                                     : "contain",
                                 }}
-                              ></div>
-                              <div className={styles.newsContent}>
-                                <p>{item.title}</p>
-                              </div>
-                            </div>
+                              ></Ais.NewsImgWrapper>
+                              <Ais.NewsContentWrapper>
+                                <Ais.NewsContent>{item.title}</Ais.NewsContent>
+                              </Ais.NewsContentWrapper>
+                            </Ais.NewsItem>
                           </a>
                         </div>
                       );
                     })}
                   </Slider>
-                </div>
+                </Ais.NewsSlide>
               )}
             </section>
-            <section id="aisLocation" className={styles.location}>
-              <h2>{t("companyInfo.aisLocationTitle")}</h2>
-              <address>{t("companyInfo.aisLocationAddress")}</address>
-              {typeof window !== "undefined" && (
-                <div className={styles.addressWrapper}>
+            {/* location */}
+            <Ais.LocationWrapper>
+              <Ais.LocationTitle>
+                {t("companyInfo.aisLocationTitle")}
+              </Ais.LocationTitle>
+              <Ais.LocationAddress>
+                {t("companyInfo.aisLocationAddress")}
+              </Ais.LocationAddress>
+              <Ais.AddressWrapper>
+                {/* {typeof document !== "undefined" && (
                   <RenderAfterNavermapsLoaded
                     ncpClientId={"wqw7xk67ax"}
                     error={<p>Maps Load Error</p>}
@@ -326,37 +390,14 @@ const Home = () => {
                   >
                     <NaverMapAPI />
                   </RenderAfterNavermapsLoaded>
-                </div>
-              )}
-            </section>
-          </div>
+                )} */}
+              </Ais.AddressWrapper>
+            </Ais.LocationWrapper>
+          </main>
         </>
       )}
     </>
   );
 };
-
-function NaverMapAPI() {
-  const navermaps = window.naver.maps;
-
-  return (
-    <NaverMap
-      mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
-      style={{
-        width: "100%", // 네이버지도 가로 길이
-        height: "400px", // 네이버지도 세로 길이
-      }}
-      defaultCenter={new navermaps.LatLng(37.5115437, 127.0478224)}
-      zoomControl={false}
-      defaultZoom={18} // 지도 초기 확대 배율
-    >
-      <Marker
-        key={1}
-        position={new navermaps.LatLng(37.5115437, 127.0478224)}
-        animation={2}
-      />
-    </NaverMap>
-  );
-}
 
 export default Home;
