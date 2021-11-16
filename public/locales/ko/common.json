@@ -55,9 +55,7 @@
   "service": {
     "headerTitleFirst": "이제 농사도 다르게 생각할 때",
     "headerTitleLast": "1:1 맞춤 처방농법",
-    "headerTitleSub1": "잘",
-    "headerTitleSub2": "키",
-    "headerTitleSub3": "움",
+    "headerTitleSub": "잘키움",
     "appDownload": "앱 다운로드",
 
     "introTitleStrong1": "파종일",
