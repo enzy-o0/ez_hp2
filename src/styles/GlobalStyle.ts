@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
-    span {
+    span, p {
+        line-height: 1.5;
         word-break: keep-all;
     }
 
@@ -27,14 +28,13 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
-    h1 {
-        font-size: 72px;
-    }
-
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
+        line-height: 1.5;
         margin: 0;
+        display: inline-block;
     }
 
     a {
@@ -62,7 +62,8 @@ const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
 
-    @media screen and (min-width: 992px) {
+
+    @media screen and (min-width: 1280px) {
         html {
             font-size: 24px;
         }
@@ -75,7 +76,7 @@ const GlobalStyle = createGlobalStyle`
 
         /* title */
         h3 {
-            font-size: 1.333rem;
+            font-size: 2rem;
         }
 
         /* content */
@@ -90,10 +91,38 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* 서비스 소개 - 점보에 있는 다운로드 버튼 텍스트 */
-        .service.download {
-            font-size: 1.083rem;
+        h4 {
+            font-size: 1.333rem;
         }
 
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1279px) {
+        html {
+            font-size: 30px;
+        }
+
+          /* 태블릿 버전 */
+        /* main title */
+        h2 {
+            font-size: 1.667rem;
+        }
+
+        /* title */
+        h3 {
+            font-size: 1.333rem;
+        }
+
+        /* content */
+        p,
+        address {
+            font-size: 1rem;
+        }
+
+        /* 서비스 소개 - 점보에 있는 다운로드 버튼 텍스트 */
+        h4 {
+            font-size: 1rem;
+        }
     }
 
     @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -119,8 +148,8 @@ const GlobalStyle = createGlobalStyle`
         }
 
         /* 서비스 소개 - 점보에 있는 다운로드 버튼 텍스트 */
-        .service.download {
-            font-size: 0.867rem;
+        h4 {
+            font-size: 1rem;
         }
     }
 
