@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 // i18
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -19,18 +19,6 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 const Carrer = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width:767px)",
-  });
-
-  const isTablet = useMediaQuery({
-    query: "(min-width:768px) and (max-width:991px)",
-  });
-
-  const isLaptop = useMediaQuery({
-    query: "(min-width:992px) and (max-width:1279px)",
-  });
-
   const isPc = useMediaQuery({
     query: "(min-width:1280px)",
   });
