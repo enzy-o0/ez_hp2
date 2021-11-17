@@ -33,7 +33,6 @@ export const CarrerMainTitle = styled.h2`
   z-index: 1;
   text-align: center;
   font-weight: bold;
-  line-height: 89px;
   color: rgb(255, 255, 255);
 `;
 

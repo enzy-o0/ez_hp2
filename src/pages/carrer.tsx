@@ -4,6 +4,9 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
+// response
+import { useMediaQuery } from "react-responsive";
+
 import * as Carrers from "../styles/carrer";
 
 import AOS from "aos";
@@ -16,6 +19,22 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 const Carrer = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)",
+  });
+
+  const isTablet = useMediaQuery({
+    query: "(min-width:768px) and (max-width:991px)",
+  });
+
+  const isLaptop = useMediaQuery({
+    query: "(min-width:992px) and (max-width:1279px)",
+  });
+
+  const isPc = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
+
   const { t } = useTranslation("common");
 
   const [isRendering, setisRendering] = useState(false);
@@ -89,57 +108,12 @@ const Carrer = () => {
                 {t("carrer.topTitle5")}
               </Carrers.CarrerMainSubTitle1>
             </Carrers.CarrerMainImageSectionWrapper>
-            {/* <div
-              style={{
-                width: "100%",
-                height: "100vh",
-                position: "fixed",
-                opacity: `${opacity}`,
-                overflow: "hidden",
-              }}
-            >
-              <div
-                style={{
-                  width: "100%",
-                  height: "100vh",
-                  backgroundColor: `rgba(0,0,0, ${bgOpacity}`,
-                  opacity: `${opacity}`,
-                  position: "absolute",
-                  // zIndex: "100",
-                }}
-              ></div>
-              <Carrers.TopImage
-                style={{ transform: `scale(${bgScale})` }}
-              ></Carrers.TopImage>
-              <Carrers.TopTextWapper style={{ width: "100%", height: "100%" }}>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                >
-                  <Carrers.InitText style={{ opacity: `${initTxtOpacity}` }}>
-                    {t("carrer.topTitle1")}
-                  </Carrers.InitText>
-                  <Carrers.ScrollText
-                    style={{ opacity: `${scrollTxtOpacity}` }}
-                  >
-                    {t("carrer.topTitle2")}
-                    <br />
-                    {t("carrer.topTitle3")}
-                    <br />
-                    {t("carrer.topTitle4")}
-                    <br />
-                    {t("carrer.topTitle5")}
-                  </Carrers.ScrollText>
-                </div>
-              </Carrers.TopTextWapper>
-            </div> */}
             <Carrers.CarrerSectionWrapper
-              style={{ paddingTop: `calc(${height} * 5px)` }}
+              style={
+                isPc
+                  ? { paddingTop: `calc(${height} * 5px)` }
+                  : { paddingTop: `calc(${height} * 4.5px)` }
+              }
             >
               <Carrers.CarrerContentsWrapper>
                 <Carrers.CarrerSectionImageWrapper>
