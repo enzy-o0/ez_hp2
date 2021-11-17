@@ -16,35 +16,10 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 import { send } from "emailjs-com";
-// import Swal from "sweetalert2";
-// import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
-// const MySwal = withReactContent(Swal);
-
-const alert = () => {
-  // MySwal.fire({
-  //   icon: "success",
-  //   title: t("inquiry.alertSuccess"),
-  //   showConfirmButton: false,
-  //   timer: 1500,
-  // });
-};
-
-const errorAlert = () => {
-  // MySwal.fire({
-  //   icon: "error",
-  //   title: t("inquiry.alertFail"),
-  //   showConfirmButton: true,
-  // });
-};
-
-const emailAlert = () => {
-  // MySwal.fire({
-  //   icon: "error",
-  //   title: t("inquiry.alertEmail"),
-  //   showConfirmButton: true,
-  // });
-};
+const MySwal = withReactContent(Swal);
 
 const Inquiry = () => {
   const [inputs, setInputs] = useState({
@@ -125,6 +100,31 @@ const Inquiry = () => {
       duration: 2000,
     });
   }, []);
+
+  const alert = () => {
+    MySwal.fire({
+      icon: "success",
+      title: t("inquiry.alertSuccess"),
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
+  const errorAlert = () => {
+    MySwal.fire({
+      icon: "error",
+      title: t("inquiry.alertFail"),
+      showConfirmButton: true,
+    });
+  };
+
+  const emailAlert = () => {
+    MySwal.fire({
+      icon: "error",
+      title: t("inquiry.alertEmail"),
+      showConfirmButton: true,
+    });
+  };
 
   return (
     <>
