@@ -105,7 +105,7 @@ const Header = (props) => {
                 onClick={() => menuClick("support")}
                 className={menuActive === "support" ? "active" : ""}
               >
-                {t("nav.inquiry")}
+                {t("nav.support")}
               </Nav.Link> */}
             </Nav>
             <Nav

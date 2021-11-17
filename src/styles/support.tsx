@@ -11,7 +11,7 @@ export const SupportMain = styled.div`
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
-  background: url(/asset/images/inquiry_main.png) no-repeat;
+  background: url(/asset/images/support_main.png) no-repeat;
   background-position: 0% 0%;
   height: 100vh;
   background-size: cover;

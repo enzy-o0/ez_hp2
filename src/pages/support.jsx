@@ -21,7 +21,7 @@ import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
 
-const Inquiry = () => {
+const Support = () => {
   const [inputs, setInputs] = useState({
     title: "",
     email: "",
@@ -104,7 +104,7 @@ const Inquiry = () => {
   const alert = () => {
     MySwal.fire({
       icon: "success",
-      title: t("inquiry.alertSuccess"),
+      title: t("support.alertSuccess"),
       showConfirmButton: false,
       timer: 1500,
     });
@@ -113,7 +113,7 @@ const Inquiry = () => {
   const errorAlert = () => {
     MySwal.fire({
       icon: "error",
-      title: t("inquiry.alertFail"),
+      title: t("support.alertFail"),
       showConfirmButton: true,
     });
   };
@@ -121,7 +121,7 @@ const Inquiry = () => {
   const emailAlert = () => {
     MySwal.fire({
       icon: "error",
-      title: t("inquiry.alertEmail"),
+      title: t("support.alertEmail"),
       showConfirmButton: true,
     });
   };
@@ -137,25 +137,25 @@ const Inquiry = () => {
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
-                  {t("inquiry.inquiryMainTitle1")}
+                  {t("support.supportMainTitle1")}
                 </Supports.SupportTitle>
                 <Supports.SupportSubTitle
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
-                  {t("inquiry.inquiryMainTitle2")}
+                  {t("support.supportMainTitle2")}
                 </Supports.SupportSubTitle>
               </Supports.SupportMain>
             </Supports.SupportMainWrapper>
             <Supports.SupportMainWrapper>
               <Supports.SupportContentWrapper>
                 <Supports.SupportContentTitle>
-                  {t("inquiry.inquiryContent")}
+                  {t("support.supportContent")}
                 </Supports.SupportContentTitle>
                 <Supports.SupportContentForm onSubmit={onSubmitForm}>
                   <Supports.SupportContentInput
                     name="title"
-                    placeholder={t("inquiry.inquiryPlaceholderTitle")}
+                    placeholder={t("support.supportPlaceholderTitle")}
                     value={title}
                     onChange={onChange}
                     spellCheck="false"
@@ -164,7 +164,7 @@ const Inquiry = () => {
                   />
                   <Supports.SupportContentInput
                     name="email"
-                    placeholder={t("inquiry.inquiryPlaceholderEmail")}
+                    placeholder={t("support.supportPlaceholderEmail")}
                     value={email}
                     ref={inputRef}
                     required
@@ -173,7 +173,7 @@ const Inquiry = () => {
                   />
                   <Supports.SupportContentTextarea
                     name="message"
-                    placeholder={t("inquiry.inquiryPlaceholderMessage")}
+                    placeholder={t("support.supportPlaceholderMessage")}
                     value={message}
                     onChange={onChange}
                     required
@@ -181,8 +181,8 @@ const Inquiry = () => {
                   />
                   <Supports.SupportContentSubmit type="submit">
                     {isSending
-                      ? t("inquiry.inquirySubmitting")
-                      : t("inquiry.inquirySubmit")}
+                      ? t("support.supportSubmitting")
+                      : t("support.supportSubmit")}
                   </Supports.SupportContentSubmit>
                 </Supports.SupportContentForm>
               </Supports.SupportContentWrapper>
@@ -194,4 +194,4 @@ const Inquiry = () => {
   );
 };
 
-export default Inquiry;
+export default Support;

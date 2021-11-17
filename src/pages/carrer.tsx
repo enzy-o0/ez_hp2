@@ -112,10 +112,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle1")}
+                    {t("carrer.supportTitle1")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent1")}
+                    {t("carrer.supportContent1")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>
@@ -128,10 +128,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle2")}
+                    {t("carrer.supportTitle2")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent2")}
+                    {t("carrer.supportContent2")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>
@@ -144,10 +144,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle3")}
+                    {t("carrer.supportTitle3")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent3")}
+                    {t("carrer.supportContent3")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>
