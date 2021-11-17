@@ -1,27 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
 
-import Footer from "../components/Footer";
+// i18
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
+import * as Supports from "../styles/support";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
+
 import { send } from "emailjs-com";
 // import Swal from "sweetalert2";
 // import withReactContent from "sweetalert2-react-content";
-
-import styles from "../styles/inquiry.module.css";
-
-import { useTranslation } from "next-i18next";
-
-import inquiryMainImg from "../../public/asset/images/inquiry_main.png";
-
-const AOS = dynamic(import("aos"), {
-  ssr: false,
-});
 
 // const MySwal = withReactContent(Swal);
 
 const alert = () => {
   // MySwal.fire({
   //   icon: "success",
-  //   title: i18n("inquiry.alertSuccess"),
+  //   title: t("inquiry.alertSuccess"),
   //   showConfirmButton: false,
   //   timer: 1500,
   // });
@@ -30,7 +33,7 @@ const alert = () => {
 const errorAlert = () => {
   // MySwal.fire({
   //   icon: "error",
-  //   title: i18n("inquiry.alertFail"),
+  //   title: t("inquiry.alertFail"),
   //   showConfirmButton: true,
   // });
 };
@@ -38,7 +41,7 @@ const errorAlert = () => {
 const emailAlert = () => {
   // MySwal.fire({
   //   icon: "error",
-  //   title: i18n("inquiry.alertEmail"),
+  //   title: t("inquiry.alertEmail"),
   //   showConfirmButton: true,
   // });
 };
@@ -112,7 +115,7 @@ const Inquiry = () => {
     }
   };
 
-  const { i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
 
   useEffect(() => {
@@ -127,64 +130,64 @@ const Inquiry = () => {
     <>
       {isRendering && (
         <>
-          <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
-            <section className={styles.inquiryMain}>
-              <h1
-                className={styles.mainTitle}
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                {i18n("inquiry.inquiryMainTitle1")}
-              </h1>
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className={styles.mainTitle}
-              >
-                {i18n("inquiry.inquiryMainTitle2")}
-              </h2>
-            </section>
-            <section className={styles.inquiry}>
-              <h2>{i18n("inquiry.inquiryContent")}</h2>
-              <form onSubmit={onSubmitForm}>
-                <input
-                  name="title"
-                  placeholder={i18n("inquiry.inquiryPlaceholderTitle")}
-                  className={styles.inquiryInput}
-                  value={title}
-                  onChange={onChange}
-                  spellCheck="false"
-                  required
-                  maxLength="30"
-                ></input>
-                <input
-                  name="email"
-                  placeholder={i18n("inquiry.inquiryPlaceholderEmail")}
-                  className={styles.inquiryInput}
-                  value={email}
-                  ref={inputRef}
-                  required
-                  onChange={onChange}
-                  spellCheck="false"
-                ></input>
-                <textarea
-                  name="message"
-                  placeholder={i18n("inquiry.inquiryPlaceholderMessage")}
-                  className={styles.inquiryInput}
-                  value={message}
-                  onChange={onChange}
-                  required
-                  spellCheck="false"
-                ></textarea>
-                <button type="submit">
-                  {isSending
-                    ? i18n("inquiry.inquirySubmitting")
-                    : i18n("inquiry.inquirySubmit")}
-                </button>
-              </form>
-            </section>
-          </div>
-          <Footer />
+          <main className="wrap">
+            <Supports.SupportMainWrapper>
+              <Supports.SupportMain>
+                <Supports.SupportTitle
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  {t("inquiry.inquiryMainTitle1")}
+                </Supports.SupportTitle>
+                <Supports.SupportSubTitle
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  {t("inquiry.inquiryMainTitle2")}
+                </Supports.SupportSubTitle>
+              </Supports.SupportMain>
+            </Supports.SupportMainWrapper>
+            <Supports.SupportMainWrapper>
+              <Supports.SupportContentWrapper>
+                <Supports.SupportContentTitle>
+                  {t("inquiry.inquiryContent")}
+                </Supports.SupportContentTitle>
+                <Supports.SupportContentForm onSubmit={onSubmitForm}>
+                  <Supports.SupportContentInput
+                    name="title"
+                    placeholder={t("inquiry.inquiryPlaceholderTitle")}
+                    value={title}
+                    onChange={onChange}
+                    spellCheck="false"
+                    required
+                    maxLength="30"
+                  />
+                  <Supports.SupportContentInput
+                    name="email"
+                    placeholder={t("inquiry.inquiryPlaceholderEmail")}
+                    value={email}
+                    ref={inputRef}
+                    required
+                    onChange={onChange}
+                    spellCheck="false"
+                  />
+                  <Supports.SupportContentTextarea
+                    name="message"
+                    placeholder={t("inquiry.inquiryPlaceholderMessage")}
+                    value={message}
+                    onChange={onChange}
+                    required
+                    spellCheck="false"
+                  />
+                  <Supports.SupportContentSubmit type="submit">
+                    {isSending
+                      ? t("inquiry.inquirySubmitting")
+                      : t("inquiry.inquirySubmit")}
+                  </Supports.SupportContentSubmit>
+                </Supports.SupportContentForm>
+              </Supports.SupportContentWrapper>
+            </Supports.SupportMainWrapper>
+          </main>
         </>
       )}
     </>
