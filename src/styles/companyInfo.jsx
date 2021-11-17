@@ -60,7 +60,7 @@ export const AisWrapper = styled.div`
 
 export const AisTitle = styled.h3`
   text-align: center;
-  width: 70%;
+  width: 100%;
   margin: auto auto 3em;
 
   @media ${(props) => props.theme.laptop} {
@@ -244,6 +244,7 @@ export const VisionTitle2 = styled.h3`
   color: #005500;
   text-align: center;
   margin-top: 1.688em;
+  margin-bottom: 1em;
   font-weight: 600;
   font-size: 2rem;
 
@@ -271,21 +272,21 @@ export const VisionContentWrapper = styled.div`
   margin-bottom: 0.75em;
 
   @media ${(props) => props.theme.laptop} {
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
     margin-bottom: 1rem;
   }
 
   @media ${(props) => props.theme.tablet} {
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
     margin-bottom: 1rem;
   }
 
   @media ${(props) => props.theme.mobile} {
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
     margin-bottom: 1rem;
@@ -458,28 +459,39 @@ export const NewsTitle = styled.h3`
 `;
 
 export const NewsSlide = styled.h3`
-  height: 21.719em;
   background: rgba(0, 85, 0, 0.03);
-  padding: 2.625em 5.688em;
+  padding: 2.625em 3em;
 
   @media ${(props) => props.theme.laptop} {
-    padding: 2.625em 3.688em;
+    padding: 2.625em;
   }
 
   @media ${(props) => props.theme.tablet} {
-    padding: 2.625em 3.688em;
+    padding: 2.625em;
   }
 
   @media ${(props) => props.theme.mobile} {
-    padding: 1em 2em;
+    padding: 1em;
   }
 `;
 
 export const NewsItem = styled.div`
   background: #ffffff;
-  height: 16.469em;
+  height: 527px;
   border: solid 0.8px rgba(0, 0, 0, 0.5);
   margin: 0 0.469em;
+
+  @media ${(props) => props.theme.laptop} {
+    height: 527px;
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    height: 527px;
+  }
+
+  @media ${(props) => props.theme.mobile} {
+    height: 263px;
+  }
 `;
 
 export const NewsImgWrapper = styled.div`
