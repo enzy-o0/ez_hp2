@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     span, p {
         line-height: 1.5;
         word-break: keep-all;
+        margin: 0;
     }
 
     ul,
@@ -32,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 72px;
     }
 
-    h1, h2, h3, p {
+    h1, h2, h3, h4, p {
         word-break: keep-all;
     }
 

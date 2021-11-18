@@ -55,7 +55,7 @@
   "service": {
     "headerTitleFirst": "Now it's time to think differently about farming",
     "headerTitleLast": "Customized farming prescription",
-    "headerTitleSub1": "WELLGROWER",
+    "headerTitleSub": "WELLGROWER",
     "appDownload": "Download App",
 
     "introTitleStrong1": " the sowing date ",
@@ -64,7 +64,8 @@
     "introTitleSub2": " to ",
     "introTitleSub3": "Get a prescription for farming covering",
 
-    "introContent": "Wellgrower is a service that collects and analyzes crop environment data based on a crop algorithm and manages the crops in a customized manner.",
+    "introContent1": "Wellgrower is a service that collects and analyzes crop environment data",
+    "introContent2": "based on a crop algorithm and manages the crops in a customized manner.",
 
     "imgTitle1": "Analyze farmland environment",
     "imgContent1": "Precisely diagnose the environment in which crops grow with meteorological analysis data of farmland and soil analysis data.",
@@ -93,7 +94,8 @@
 
     "farmTitle1": "Find a ",
     "farmTitleStrong": "suitable service ",
-    "farmTitle2": "for you at Wellgrower, a customized prescription farming service for a crop.",
+    "farmTitle2": "for you at Wellgrower,",
+    "farmTitle3": " a customized prescription farming service for a crop.",
     "farmAppDownload": "Download App",
     "appDownAlert": "Service is being prepared",
 
