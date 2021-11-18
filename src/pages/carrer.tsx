@@ -1,8 +1,11 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 // i18
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+
+// response
+import { useMediaQuery } from "react-responsive";
 
 import * as Carrers from "../styles/carrer";
 
@@ -16,6 +19,10 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 const Carrer = () => {
+  const isPc = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
+
   const { t } = useTranslation("common");
 
   const [isRendering, setisRendering] = useState(false);
@@ -37,7 +44,6 @@ const Carrer = () => {
 
   const handleScroll = useCallback(() => {
     if (typeof window !== "undefined") {
-      console.log(window.scrollY);
       if (window.scrollY < height) {
         setbgOpacity(window.scrollY * 0.5 * (1 / height)); // 투명도 (rgab(0,0,0, (0.3 -> 0.6))) 스크롤에 맞춰서 투명도 조정
         setMainTitleOpacity(1 - window.scrollY * 4 * (1 / height)); // 첫번째 텍스트 opacity 스크롤에 맞춰서 투명도 조정 (스크롤의 3배 속도)
@@ -90,57 +96,12 @@ const Carrer = () => {
                 {t("carrer.topTitle5")}
               </Carrers.CarrerMainSubTitle1>
             </Carrers.CarrerMainImageSectionWrapper>
-            {/* <div
-              style={{
-                width: "100%",
-                height: "100vh",
-                position: "fixed",
-                opacity: `${opacity}`,
-                overflow: "hidden",
-              }}
-            >
-              <div
-                style={{
-                  width: "100%",
-                  height: "100vh",
-                  backgroundColor: `rgba(0,0,0, ${bgOpacity}`,
-                  opacity: `${opacity}`,
-                  position: "absolute",
-                  // zIndex: "100",
-                }}
-              ></div>
-              <Carrers.TopImage
-                style={{ transform: `scale(${bgScale})` }}
-              ></Carrers.TopImage>
-              <Carrers.TopTextWapper style={{ width: "100%", height: "100%" }}>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                >
-                  <Carrers.InitText style={{ opacity: `${initTxtOpacity}` }}>
-                    {t("carrer.topTitle1")}
-                  </Carrers.InitText>
-                  <Carrers.ScrollText
-                    style={{ opacity: `${scrollTxtOpacity}` }}
-                  >
-                    {t("carrer.topTitle2")}
-                    <br />
-                    {t("carrer.topTitle3")}
-                    <br />
-                    {t("carrer.topTitle4")}
-                    <br />
-                    {t("carrer.topTitle5")}
-                  </Carrers.ScrollText>
-                </div>
-              </Carrers.TopTextWapper>
-            </div> */}
             <Carrers.CarrerSectionWrapper
-              style={{ paddingTop: `calc(${height} * 5px)` }}
+              style={
+                isPc
+                  ? { paddingTop: `calc(${height} * 5px)` }
+                  : { paddingTop: `calc(${height} * 4.5px)` }
+              }
             >
               <Carrers.CarrerContentsWrapper>
                 <Carrers.CarrerSectionImageWrapper>
@@ -151,10 +112,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle1")}
+                    {t("carrer.supportTitle1")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent1")}
+                    {t("carrer.supportContent1")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>
@@ -167,10 +128,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle2")}
+                    {t("carrer.supportTitle2")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent2")}
+                    {t("carrer.supportContent2")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>
@@ -183,10 +144,10 @@ const Carrer = () => {
                 </Carrers.CarrerSectionImageWrapper>
                 <Carrers.CarrerContentWrapper>
                   <Carrers.CarrerSectionColTitle>
-                    {t("carrer.inquiryTitle3")}
+                    {t("carrer.supportTitle3")}
                   </Carrers.CarrerSectionColTitle>
                   <Carrers.CarrerSectionColContent>
-                    {t("carrer.inquiryContent3")}
+                    {t("carrer.supportContent3")}
                   </Carrers.CarrerSectionColContent>
                 </Carrers.CarrerContentWrapper>
               </Carrers.CarrerContentsWrapper>

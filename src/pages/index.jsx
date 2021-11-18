@@ -10,11 +10,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import dynamic from "next/dynamic";
-
-import Circle1 from "../../public/asset/images/circle1.svg";
-import Circle2 from "../../public/asset/images/circle2.svg";
-import Circle3 from "../../public/asset/images/circle3.svg";
-import aisLogo from "../../public/asset/images/aislogo.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Prev from "../../public/asset/images/prev-arrow.svg";
 import Next from "../../public/asset/images/next-arrow.svg";
 
@@ -42,21 +39,22 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 const Home = () => {
-  const isPc = useMediaQuery({
-    query: "(min-width:1024px)",
-  });
-
-  const isTablet1 = useMediaQuery({
-    query: "(min-width:992px)",
-  });
-
-  const isTablet2 = useMediaQuery({
-    query: "(min-width:768px) and (max-width:991px)",
-  });
-
   const isMobile = useMediaQuery({
     query: "(max-width:767px)",
   });
+
+  const isTablet = useMediaQuery({
+    query: "(min-width:768px) and (max-width:991px)",
+  });
+
+  const isLaptop = useMediaQuery({
+    query: "(min-width:992px) and (max-width:1279px)",
+  });
+
+  const isPc = useMediaQuery({
+    query: "(min-width:1280px)",
+  });
+
   const aisDataToArr = [...aisData.news];
   const { t } = useTranslation("common");
   const [isRendering, setisRendering] = useState(false);
@@ -119,6 +117,10 @@ const Home = () => {
 
   useEffect(() => {
     setisRendering(true);
+
+    AOS.init({
+      duration: 2000,
+    });
   }, []);
 
   const settings = {
@@ -188,7 +190,11 @@ const Home = () => {
             <section>
               <Ais.AisWrapper>
                 <Ais.AisTitle>{t("companyInfo.aisAboutTitle")}</Ais.AisTitle>
-                <Ais.AisContentWrapper>
+                <Ais.AisContentWrapper
+                  data-aos="fade-left"
+                  data-aos-duration="2000"
+                  data-aos-once="false"
+                >
                   {isPc && (
                     <Ais.AisImgWrapper>
                       <Ais.AisImgItem
@@ -197,10 +203,10 @@ const Home = () => {
                       />
                     </Ais.AisImgWrapper>
                   )}
-                  {isMobile && (
+                  {(isMobile || isLaptop || isTablet) && (
                     <Ais.AisImgWrapper>
                       <Ais.AisImgItem
-                        src={"/asset/images/about1.png"}
+                        src={"/asset/images/about1_t.png"}
                         alt="about"
                       />
                     </Ais.AisImgWrapper>
@@ -210,7 +216,11 @@ const Home = () => {
                     <p>{t("companyInfo.aisAboutContentSub1")}</p>
                   </Ais.AisContent>
                 </Ais.AisContentWrapper>
-                <Ais.AisContentWrapper>
+                <Ais.AisContentWrapper
+                  data-aos="fade-right"
+                  data-aos-duration="2000"
+                  data-aos-once="false"
+                >
                   {isPc && (
                     <Ais.AisImgWrapper>
                       <Ais.AisImgItem
@@ -219,9 +229,12 @@ const Home = () => {
                       />
                     </Ais.AisImgWrapper>
                   )}
-                  {isMobile && (
+                  {(isMobile || isLaptop || isTablet) && (
                     <Ais.AisImgWrapper>
-                      <img src={"/asset/images/about2_t.png"} alt="about" />
+                      <Ais.AisImgItem
+                        src={"/asset/images/about2_t.png"}
+                        alt="about"
+                      />
                     </Ais.AisImgWrapper>
                   )}
                   <Ais.AisContent>
@@ -244,21 +257,30 @@ const Home = () => {
               </Ais.VisionOuterWrapper>
               <Ais.VisionWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle1.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentScale1")}
                     <br></br> {t("companyInfo.aisVisionContentScale2")}
                   </Ais.VisionContent>
                 </Ais.VisionContentWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle2.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentStabilization1")}
                     <br></br> {t("companyInfo.aisVisionContentStabilization2")}
                   </Ais.VisionContent>
                 </Ais.VisionContentWrapper>
                 <Ais.VisionContentWrapper>
-                  <Circle1 alt="scale" />
+                  <Ais.AisImgItem
+                    src={"/asset/images/circle3.svg"}
+                    alt="about"
+                  />
                   <Ais.VisionContent>
                     {t("companyInfo.aisVisionContentSmart1")}
                     <br></br> {t("companyInfo.aisVisionContentSmart2")}
@@ -271,7 +293,10 @@ const Home = () => {
               <div className="about-aisLogoWrapper">
                 <img src={"/asset/images/aislogo.png"} alt="aislogo" />
               </div>
-              <Ais.HistoryTitleWrapper>
+              <Ais.HistoryTitleWrapper
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 {t("companyInfo.aisHistoryTitle")}
               </Ais.HistoryTitleWrapper>
               <Ais.HistoryOuterWrapper>

@@ -33,7 +33,6 @@ export const CarrerMainTitle = styled.h2`
   z-index: 1;
   text-align: center;
   font-weight: bold;
-  line-height: 89px;
   color: rgb(255, 255, 255);
 `;
 
@@ -44,7 +43,6 @@ export const CarrerMainSubTitle1 = styled.h3`
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  line-height: 34px;
   color: rgb(255, 255, 255);
   text-align: center;
   white-space: pre-line;
@@ -67,9 +65,13 @@ export const TopImage = styled.div`
   left: 0px;
   width: 100%;
   height: 100vh;
-  /* background-image: url(export const export const /public/asset/images/Carrer_main_imageexport const png); */
   background-position: 45% 0%;
   background-size: cover;
+
+  @media ${(props) => props.theme.laptop} {
+    background-image: url(/asset/images/carrer_main_image_tablet.png);
+    background-position: 0% 50%;
+  }
 
   @media ${(props) => props.theme.tablet} {
     background-image: url(/asset/images/carrer_main_image_tablet.png);
@@ -89,6 +91,10 @@ export const InitText = styled.h2`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${(props) => props.theme.laptop} {
+    width: 60%;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 60%;
@@ -128,6 +134,15 @@ export const CarrerContentsWrapper = styled.div`
     margin-bottom: 5rem;
   }
 
+  @media ${(props) => props.theme.laptop} {
+    display: block;
+    text-align: center;
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+  }
+
   @media ${(props) => props.theme.tablet} {
     display: block;
     text-align: center;
@@ -151,6 +166,10 @@ export const CarrerSectionImageWrapper = styled.div`
   margin-right: 30px;
   width: 50%;
 
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+  }
+
   @media ${(props) => props.theme.tablet} {
     width: 100%;
   }
@@ -171,6 +190,10 @@ export const CarrerContentWrapper = styled.div`
     margin-right: 30px;
   }
 
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+  }
+
   @media ${(props) => props.theme.tablet} {
     width: 100%;
   }
@@ -185,6 +208,10 @@ export const CarrerTable = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 3rem;
   margin-bottom: 5em;
+
+  @media ${(props) => props.theme.laptop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media ${(props) => props.theme.tablet} {
     grid-template-columns: repeat(2, 1fr);
@@ -210,6 +237,23 @@ export const CarrerTableContentWrapper = styled.div`
   &:nth-child(6),
   &:nth-child(9) {
     border-right: none;
+  }
+
+  @media ${(props) => props.theme.laptop} {
+    border-bottom: 1px solid rgba(5, 7, 9, 0.58);
+
+    &:nth-child(7),
+    &:nth-child(8) {
+      border-bottom: 1px solid rgba(5, 7, 9, 0.58);
+    }
+
+    &:nth-child(odd) {
+      border-right: 1px solid rgba(5, 7, 9, 0.58);
+    }
+
+    &:nth-child(even) {
+      border-right: none;
+    }
   }
 
   @media ${(props) => props.theme.tablet} {
@@ -251,6 +295,10 @@ export const CarrerSectionWrapper = styled.section`
   width: 60%;
   margin: 0 auto;
 
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+  }
+
   @media ${(props) => props.theme.tablet} {
     width: 80%;
   }
@@ -265,6 +313,10 @@ export const CarrerSectionColTitle = styled.h3`
   font-weight: 500;
   margin-bottom: 16px;
   word-break: keep-all;
+
+  @media ${(props) => props.theme.laptop} {
+    margin-top: 1rem;
+  }
 
   @media ${(props) => props.theme.tablet} {
     margin-top: 1rem;
@@ -301,6 +353,10 @@ export const CarrerButton = styled.button`
   z-index: 101;
   color: #fff;
   font-weight: bold;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 80%;
+  }
 
   @media ${(props) => props.theme.tablet} {
     width: 80%;

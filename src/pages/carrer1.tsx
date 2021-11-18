@@ -185,10 +185,10 @@ const Carrer = () => {
                       sm={12}
                     >
                       <div className={styles.carrerSectionColTitle}>
-                        {i18n.t("carrer.inquiryTitle1")}
+                        {i18n.t("carrer.supportTitle1")}
                       </div>
                       <span className={styles.carrerSectionColContent}>
-                        {i18n.t("carrer.inquiryContent1")}
+                        {i18n.t("carrer.supportContent1")}
                       </span>
                     </Col>
                   </Row>
@@ -205,10 +205,10 @@ const Carrer = () => {
                       sm={12}
                     >
                       <div className={styles.carrerSectionColTitle}>
-                        {i18n.t("carrer.inquiryTitle2")}
+                        {i18n.t("carrer.supportTitle2")}
                       </div>
                       <span className={styles.carrerSectionColContent}>
-                        {i18n.t("carrer.inquiryContent2")}
+                        {i18n.t("carrer.supportContent2")}
                       </span>
                     </Col>
                     <Col
@@ -251,10 +251,10 @@ const Carrer = () => {
                       sm={12}
                     >
                       <div className={styles.carrerSectionColTitle}>
-                        {i18n.t("carrer.inquiryTitle3")}
+                        {i18n.t("carrer.supportTitle3")}
                       </div>
                       <span className={styles.carrerSectionColContent}>
-                        {i18n.t("carrer.inquiryContent3")}
+                        {i18n.t("carrer.supportContent3")}
                       </span>
                     </Col>
                   </Row>

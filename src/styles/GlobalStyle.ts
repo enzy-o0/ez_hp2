@@ -43,7 +43,10 @@ const GlobalStyle = createGlobalStyle`
     h4 {
         line-height: 1.5;
         margin: 0;
+<<<<<<< HEAD
         /* display: inline-block; */
+=======
+>>>>>>> aed6d75f6658b5b0323851b1a28f8aa1577e4831
     }
 
     a {
@@ -70,6 +73,36 @@ const GlobalStyle = createGlobalStyle`
     address {
         font-style: normal;
     }
+
+    /**** Worked for Image present on outside server *****/
+    .slick-prev:before {
+    width: 50px;
+    height: 50px;
+    content: "" !important;
+    position: absolute;
+    top: -11px;
+    left: -31px;
+    background-image: url(./asset/images/prev-arrow.svg);
+    background-position: center;
+    }
+
+    .slick-next:before {
+    width: 50px;
+    height: 50px;
+    content: "" !important;
+    position: absolute;
+    top: -11px;
+    left: 0px;
+    background-image: url(./asset/images/next-arrow.svg);
+    background-position: center;
+    }
+
+    @media screen and (max-width: 767px) {
+        .slick-slider {
+            margin-top: 1.5rem;
+        }
+    }
+
 
 
     @media screen and (min-width: 1280px) {

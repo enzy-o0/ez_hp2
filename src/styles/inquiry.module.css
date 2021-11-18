@@ -3,7 +3,7 @@ body {
   font-size: 32px;
 } */
 
-.inquiryMain {
+.supportMain {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ body {
   text-align: center;
   font-size: 1.625rem;
   box-sizing: border-box;
-  /* background: url(../../public/asset/images/inquiry_main.png) no-repeat; */
+  /* background: url(../../public/asset/images/support_main.png) no-repeat; */
   background-position: 0% 0%;
   height: 100vh;
   padding-top: 96px;
@@ -19,8 +19,8 @@ body {
   color: #ffffff;
 }
 
-.inquiryMain h1,
-.inquiryMain h2 {
+.supportMain h1,
+.supportMain h2 {
   width: 70%;
   font-size: 1.625rem;
   font-weight: 600;
@@ -30,13 +30,13 @@ body {
   margin-bottom: 24px;
 }
 
-.inquiry {
+.support {
   width: 80%;
   padding: 4.75em 0;
   margin: auto;
 }
 
-.inquiry h2 {
+.support h2 {
   width: 70%;
   text-align: center;
   font-size: 1.625rem;
@@ -45,24 +45,24 @@ body {
   font-weight: 600;
 }
 
-.inquiry form {
+.support form {
   width: 70%;
   margin: auto;
 }
 
-.inquiryInput {
+.supportInput {
   width: 100%;
   padding: 0.5em 2em;
   margin-bottom: 1em;
   border: 1px solid rgba(5, 7, 9, 0.58);
 }
 
-.inquiry textarea {
+.support textarea {
   height: 15em;
   font-size: 0.75rem;
 }
 
-.inquiry button {
+.support button {
   display: block;
   width: 80%;
   margin: auto;
@@ -77,52 +77,52 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .inquiry h2 {
+  .support h2 {
     width: 95%;
   }
 
-  .inquiryInput {
+  .supportInput {
     padding: 0.5em 1em;
   }
 
-  .inquiry form {
+  .support form {
     width: 95%;
   }
 }
 
 /* media */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .inquiry h2 {
+  .support h2 {
     width: 100%;
   }
 
-  .inquiry form {
+  .support form {
     width: 100%;
   }
 
-  .inquiryInput {
+  .supportInput {
     width: 100%;
     padding: 15px 20px;
     margin-bottom: 36px;
     font-size: 28px;
   }
 
-  .inquiry textarea {
+  .support textarea {
     font-size: 24px;
   }
 
-  .inquiry a {
+  .support a {
     height: 2.25em;
   }
 
-  .inquiry button {
+  .support button {
     width: 100%;
     font-size: 1rem;
     padding: 15px;
   }
 
-  .inquiryMain {
-    /* background-image: url(../../public/asset/images/inquiry_main_tablet.png); */
+  .supportMain {
+    /* background-image: url(../../public/asset/images/support_main_tablet.png); */
   }
 }
 
@@ -132,21 +132,21 @@ body {
     font-size: 16px;
   } */
 
-  .inquiryMain h1,
-  .inquiryMain h2 {
+  .supportMain h1,
+  .supportMain h2 {
     font-size: 1.525rem;
     line-height: 1.5;
   }
 
-  .inquiry form {
+  .support form {
     width: 95%;
   }
 
-  .inquiry {
+  .support {
     width: 95%;
   }
 
-  .inquiry h2 {
+  .support h2 {
     width: 100%;
     text-align: center;
     font-size: 1.625rem;
@@ -154,24 +154,24 @@ body {
     margin-bottom: 3.25em;
   }
 
-  .inquiryInput {
+  .supportInput {
     width: 100%;
     padding: 8px 16px;
     margin-bottom: 16px;
     font-size: 15px;
   }
 
-  .inquiry textarea {
+  .support textarea {
     font-size: 13px;
   }
 
-  .inquiry button {
+  .support button {
     width: 100%;
     font-size: 1rem;
     padding: 8px;
   }
 
-  .inquiryMain {
-    /* background-image: url(../public/asset/images/inquiry_main_mobile.png); */
+  .supportMain {
+    /* background-image: url(../public/asset/images/support_main_mobile.png); */
   }
 }

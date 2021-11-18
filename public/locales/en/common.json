@@ -3,7 +3,7 @@
     "home": "About us",
     "service": "Our service",
     "carrer": "Career",
-    "inquiry": "Support"
+    "support": "Support"
   },
   "navBottom": {
     "ais": "AIS Co., Ltd",
@@ -117,15 +117,15 @@
     "farmGoodList3Strong": "for my farmland",
     "farmEntryImg": "puzzleIcon"
   },
-  "inquiry": {
-    "inquiryMainTitle1": "How can we help you?",
-    "inquiryMainTitle2": "We will carefully listen to your voice and take another step forward with various services.",
-    "inquiryContent": "If you have any questions or requests, please fill out the form and send us. We will do our best to answer.",
-    "inquiryPlaceholderTitle": "Subject",
-    "inquiryPlaceholderEmail": "E-mail",
-    "inquiryPlaceholderMessage": "Request:",
-    "inquirySubmit": "Submit",
-    "inquirySubmitting": "Submitting",
+  "support": {
+    "supportMainTitle1": "How can we help you?",
+    "supportMainTitle2": "We will carefully listen to your voice and take another step forward with various services.",
+    "supportContent": "If you have any questions or requests, please fill out the form and send us. We will do our best to answer.",
+    "supportPlaceholderTitle": "Subject",
+    "supportPlaceholderEmail": "E-mail",
+    "supportPlaceholderMessage": "Request:",
+    "supportSubmit": "Submit",
+    "supportSubmitting": "Submitting",
     "alertSuccess": "Your email has been sent.",
     "alertFail": "Transmission failed. Please try again in a few minutes.",
     "alertEmail": "It doesn't fit the email format. Please re-enter."
@@ -137,12 +137,12 @@
     "topTitle4": "and works together to achieve our goals.",
     "topTitle5": "In AIS, anyone can grow as much as you want.",
 
-    "inquiryTitle1": "We do what we want to do.",
-    "inquiryContent1": "In AIS, it’s free to collaborate with other teams. Like-minded teams can freely do what they want to do following the value of service users.",
-    "inquiryTitle2": "We openly express opinions.",
-    "inquiryContent2": "We aim for horizontal culture to freely share diverse information and perspectives. Everyone involves in decision making process since good decision comes from multiple opinions and feedback.",
-    "inquiryTitle3": "We prioritize the most important value.",
-    "inquiryContent3": "To find and solve the essence of the problem, rather than caught up with the surface of the problem, we find the most important value by asking ourselves “why?”",
+    "supportTitle1": "We do what we want to do.",
+    "supportContent1": "In AIS, it’s free to collaborate with other teams. Like-minded teams can freely do what they want to do following the value of service users.",
+    "supportTitle2": "We openly express opinions.",
+    "supportContent2": "We aim for horizontal culture to freely share diverse information and perspectives. Everyone involves in decision making process since good decision comes from multiple opinions and feedback.",
+    "supportTitle3": "We prioritize the most important value.",
+    "supportContent3": "To find and solve the essence of the problem, rather than caught up with the surface of the problem, we find the most important value by asking ourselves “why?”",
 
     "carrerTitle1": "Support and rewards prepared for the members ",
     "carrerContent1": "who challenge for the better",

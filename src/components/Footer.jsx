@@ -72,9 +72,9 @@ const NavBottom = () => {
               </Col>
               <Col lg={3} md={3} sm={12}>
                 <div>
-                  <p className="menuTitle">{t("nav.inquiry")}</p>
+                  <p className="menuTitle">{t("nav.support")}</p>
                   {/* <Link smooth href={`/${t.language}/support#`}>
-                    <a>{t("nav.inquiry")}</a>
+                    <a>{t("nav.support")}</a>
                   </Link> */}
                 </div>
               </Col>

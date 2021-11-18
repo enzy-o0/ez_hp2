@@ -38,11 +38,11 @@ export const JumboTitle = styled.h3`
           }
         `
       : css`
-          @media (min-width: 1700px) {
+          @media (min-width: 2500px) {
             width: 40vw;
           }
 
-          @media ${props.theme.desktop} and max-width: 1449px {
+          @media ${props.theme.desktop} and max-width: 2449px {
             width: 70vw;
           }
 
@@ -54,7 +54,11 @@ export const JumboTitle = styled.h3`
             width: 90vw;
           }
 
-          @media ${props.theme.mobile} {
+          @media (min-width: 460px and max-width: 767px) {
+            width: 50vw;
+          }
+
+          @media (max-width: 459px) {
             width: 90vw;
           }
         `}

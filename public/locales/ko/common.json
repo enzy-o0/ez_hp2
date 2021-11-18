@@ -3,7 +3,7 @@
     "home": "회사 소개",
     "service": "서비스 소개",
     "carrer": "채용",
-    "inquiry": "고객 문의"
+    "support": "고객 문의"
   },
   "navBottom": {
     "ais": "(주)에이아이에스",
@@ -113,15 +113,15 @@
     "farmGoodList3Strong": "내 농지",
     "farmEntryImg": "퍼즐모양"
   },
-  "inquiry": {
-    "inquiryMainTitle1": "무엇을 도와드릴까요?",
-    "inquiryMainTitle2": "여러분의 의견을 소중하게 귀담아 듣고 다양한 서비스로 한걸음 더 나아가겠습니다.",
-    "inquiryContent": "궁금하시거나 요청하실 부분을 기입하여 보내주시면 성심성의껏 답변 드리겠습니다.",
-    "inquiryPlaceholderTitle": "제목",
-    "inquiryPlaceholderEmail": "답변 받으실 이메일 주소",
-    "inquiryPlaceholderMessage": "문의내용:",
-    "inquirySubmit": "제출하기",
-    "inquirySubmitting": "제출 중 입니다.",
+  "support": {
+    "supportMainTitle1": "무엇을 도와드릴까요?",
+    "supportMainTitle2": "여러분의 의견을 소중하게 귀담아 듣고 다양한 서비스로 한걸음 더 나아가겠습니다.",
+    "supportContent": "궁금하시거나 요청하실 부분을 기입하여 보내주시면 성심성의껏 답변 드리겠습니다.",
+    "supportPlaceholderTitle": "제목",
+    "supportPlaceholderEmail": "답변 받으실 이메일 주소",
+    "supportPlaceholderMessage": "문의내용:",
+    "supportSubmit": "제출하기",
+    "supportSubmitting": "제출 중 입니다.",
 
     "alertSuccess": "전송되었습니다",
     "alertFail": "전송에 실패하였습니다. 잠시 후 다시 시도해주세요",
@@ -134,12 +134,12 @@
     "topTitle4": "함께 목표를 이루기 위해 일하고 있습니다.",
     "topTitle5": "저희 팀에서는 누구나 생각하는 만큼 성장할 수 있습니다.",
 
-    "inquiryTitle1": "하고 싶은 일을 합니다.",
-    "inquiryContent1": "에이아이에스에서는 팀 별 업무 협업이 자유로워 마음이 맞는 팀끼리 서비스 사용자의 가치에 맞게 하고 싶은 일을 자유롭게 실행할 수 있습니다.",
-    "inquiryTitle2": "의견을 자유롭게 주고 받습니다.",
-    "inquiryContent2": "자유로운 정보 공유와 아이디어 공유를 위해 수평적인 문화를 지향합니다. 올바른 의사결정은 여러 의견과 피드백을 통해 발생하기 때문에 모두가 참여해 만들어 갑니다.",
-    "inquiryTitle3": "가장 중요한 가치를 먼저 생각합니다.",
-    "inquiryContent3": "보이는 현상이 아닌 숨겨진 본질을 찾아 해결하기 위해 왜? 라는 질문을 통해 가장 중요한 가치를 찾습니다.",
+    "supportTitle1": "하고 싶은 일을 합니다.",
+    "supportContent1": "에이아이에스에서는 팀 별 업무 협업이 자유로워 마음이 맞는 팀끼리 서비스 사용자의 가치에 맞게 하고 싶은 일을 자유롭게 실행할 수 있습니다.",
+    "supportTitle2": "의견을 자유롭게 주고 받습니다.",
+    "supportContent2": "자유로운 정보 공유와 아이디어 공유를 위해 수평적인 문화를 지향합니다. 올바른 의사결정은 여러 의견과 피드백을 통해 발생하기 때문에 모두가 참여해 만들어 갑니다.",
+    "supportTitle3": "가장 중요한 가치를 먼저 생각합니다.",
+    "supportContent3": "보이는 현상이 아닌 숨겨진 본질을 찾아 해결하기 위해 왜? 라는 질문을 통해 가장 중요한 가치를 찾습니다.",
 
     "carrerTitle1": "더 나은 변화에 도전하는",
     "carrerContent1": "팀원을 위해 준비한 지원과 보상",
