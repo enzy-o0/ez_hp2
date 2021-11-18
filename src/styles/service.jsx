@@ -431,3 +431,114 @@ export const ServiceInfoDiffContentText = styled.p`
     background: linear-gradient(to top, #c9f227 50%, transparent 50%);
   }
 `;
+
+export const setData = (t) => {
+  return [
+    {
+      title: t("service.farmListTitle1"),
+      subTitle: t("service.farmListTitleSub1"),
+      icon: "Entry",
+      list: [
+        {
+          check: "check",
+          listTitle: (
+            <>
+              {t("service.farmList1")}
+              {t("service.farmList1_1")}
+            </>
+          ),
+        },
+        {
+          check: "check",
+          listTitle: t("service.farmList2"),
+        },
+        {
+          check: "check",
+          listTitle: t("service.farmList3"),
+        },
+        {
+          check: "check",
+          listTitle: t("service.farmList4"),
+        },
+        {
+          check: "none_check",
+          listTitle: t("service.farmList5"),
+        },
+        {
+          check: "none_check",
+          listTitle: t("service.farmList6"),
+        },
+      ],
+    },
+    {
+      title: t("service.farmListTitle2"),
+      subTitle: t("service.farmListTitleSub2"),
+      icon: "Customized",
+      list: [
+        {
+          check: "check",
+          listTitle: (
+            <b>
+              {t("service.farmList1")}{" "}
+              <span>
+                <b> {t("service.farmGoodList1Strong")}</b>
+                {t("service.farmList1_1")}
+              </span>
+            </b>
+          ),
+          listTitleEng: (
+            <>
+              <span>
+                <b> {t("service.farmGoodList1Strong")}</b>
+              </span>{" "}
+              {t("service.farmList1_1")}
+              {t("service.farmGoodList1")}
+            </>
+          ),
+        },
+        {
+          check: "check",
+          listTitle: (
+            <>
+              <span>
+                <b> {t("service.farmGoodList2Strong")}</b>
+              </span>{" "}
+              {t("service.farmList2")}
+            </>
+          ),
+        },
+        {
+          check: "check",
+          listTitle: (
+            <>
+              <span>
+                <b>{t("service.farmGoodList3Strong")}</b>
+              </span>{" "}
+              {t("service.farmList3")}
+            </>
+          ),
+          listTitleEng: (
+            <>
+              {t("service.farmList3")}{" "}
+              <span>
+                <b> {t("service.farmGoodList3Strong")}</b>
+              </span>
+            </>
+          ),
+        },
+        {
+          check: "check",
+          listTitle: t("service.farmList4"),
+        },
+        {
+          check: "check",
+          listTitle: <b>{t("service.farmList5")}</b>,
+        },
+        {
+          check: "check",
+          listTitle: <b>{t("service.farmList6")}</b>,
+        },
+      ],
+    },
+  ];
+};
