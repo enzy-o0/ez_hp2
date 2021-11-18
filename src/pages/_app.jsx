@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyled />
-        {/* <Header /> */}
+        <Header />
         <Component {...pageProps} />
         {/* <Footer /> */}
       </ThemeProvider>
