@@ -21,7 +21,11 @@ export const JumboTitle = styled.h3`
   ${(props) =>
     props.lng === "ko"
       ? css`
-          @media ${props.theme.desktop} {
+          @media (min-width: 2000px) {
+            width: 35vw;
+          }
+
+          @media (min-width: 1280px) and (max-width: 1999px) {
             width: 45vw;
           }
 
@@ -33,16 +37,20 @@ export const JumboTitle = styled.h3`
             width: 70vw;
           }
 
-          @media ${props.theme.mobile} {
+          @media (min-width: 460px and max-width: 767px) {
+            width: 70vw;
+          }
+
+          @media (max-width: 459px) {
             width: 80vw;
           }
         `
       : css`
-          @media (min-width: 2500px) {
+          @media (min-width: 2000px) {
             width: 40vw;
           }
 
-          @media ${props.theme.desktop} and max-width: 2449px {
+          @media (min-width: 1280px) and (max-width: 1999px) {
             width: 70vw;
           }
 
@@ -171,7 +179,7 @@ export const ServiceInfoContentContainer = styled.section`
   background-color: ${(props) => props.theme.defaultBackgroundColor};
 `;
 
-export const ServiceInfoContent = styled.div`
+export const ServiceInfoContent = styled.ul`
   margin: auto;
   display: grid;
   justify-items: center;
@@ -201,7 +209,7 @@ export const ServiceInfoContent = styled.div`
   }
 `;
 
-export const ServiceInfoContentItem = styled.div`
+export const ServiceInfoContentItem = styled.li`
   width: 95%;
   padding-bottom: 1em;
   overflow: hidden;

@@ -43,10 +43,6 @@ const GlobalStyle = createGlobalStyle`
     h4 {
         line-height: 1.5;
         margin: 0;
-<<<<<<< HEAD
-        /* display: inline-block; */
-=======
->>>>>>> aed6d75f6658b5b0323851b1a28f8aa1577e4831
     }
 
     a {

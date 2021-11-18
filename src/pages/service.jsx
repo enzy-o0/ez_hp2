@@ -59,9 +59,9 @@ const Service = () => {
           check: "check",
           listTitle: (
             <b>
-              {t("service.farmList1")}
+              {t("service.farmList1")}{" "}
               <span>
-                <b> {t("service.farmGoodList1Strong")}</b>{" "}
+                <b> {t("service.farmGoodList1Strong")}</b>
                 {t("service.farmList1_1")}
               </span>
             </b>
@@ -69,9 +69,8 @@ const Service = () => {
           listTitleEng: (
             <>
               <span>
-                {" "}
-                <b> {t("service.farmGoodList1Strong")}</b>{" "}
-              </span>
+                <b> {t("service.farmGoodList1Strong")}</b>
+              </span>{" "}
               {t("service.farmList1_1")}
               {t("service.farmGoodList1")}
             </>
@@ -100,10 +99,10 @@ const Service = () => {
           ),
           listTitleEng: (
             <>
-              {t("service.farmList3")}
+              {t("service.farmList3")}{" "}
               <span>
                 <b> {t("service.farmGoodList3Strong")}</b>
-              </span>{" "}
+              </span>
             </>
           ),
         },
@@ -167,7 +166,7 @@ const Service = () => {
       </Style.ServiceInfoContainer>
       <Style.ServiceInfoContentContainer>
         <Style.ServiceInfoContent>
-          {[1, 2, 3, 4].map((e) => {
+          {[1, 2, 3, 4].map((e, idx) => {
             return (
               <Style.ServiceInfoContentItem>
                 <Style.ServiceInfoContentItemImg
@@ -215,6 +214,9 @@ const Service = () => {
                 {t("service.containContent3")}{" "}
                 <span> {t("service.containContentStrong2")}</span>
                 {t("service.containContent4")}
+                <span>
+                  {i18n.language === "en" && t("service.containContentStrong3")}
+                </span>
               </Style.ServiceInfoScreensubTitle>
             </Style.ServiceInfoScreenText>
           </Style.ServiceInfoScreen>
@@ -226,11 +228,20 @@ const Service = () => {
                 {t("service.simpleTitle2")}
               </Style.ServiceInfoScreenTitle>
               <Style.ServiceInfoScreensubTitle>
-                {t("service.simpleContent1")}{" "}
-                <span> {t("service.simpleContentStrong")}</span>{" "}
-                {t("service.simpleContent2")}
-                <br />
-                {t("service.simpleContent3")}
+                {i18n.language === "ko" ? (
+                  <>
+                    {t("service.simpleContent1")}{" "}
+                    <span> {t("service.simpleContentStrong")}</span> <br />
+                    {t("service.simpleContent2")} {t("service.simpleContent3")}
+                  </>
+                ) : (
+                  <>
+                    {t("service.simpleContent1")}
+                    {t("service.simpleContent2")}{" "}
+                    <span> {t("service.simpleContentStrong")}</span> <br />
+                    {t("service.simpleContent3")}
+                  </>
+                )}
               </Style.ServiceInfoScreensubTitle>
             </Style.ServiceInfoScreenText>
             <Style.ServiceInfoScreenImg
@@ -271,9 +282,9 @@ const Service = () => {
         </Style.ServiceInfoScreenContainer>
       </Style.ServiceInfoContentContainer>
       <Style.ServiceInfoDiffContainer>
-        {DiffData.map((e) => {
+        {DiffData.map((e, idx) => {
           return (
-            <Style.ServiceInfoDiff type={e.icon}>
+            <Style.ServiceInfoDiff type={e.icon} key={idx}>
               <Style.ServiceInfoDiffTitleContainer>
                 <Style.ServiceInfoDiffTextContainer>
                   <h4>{e.title}</h4>
@@ -288,15 +299,17 @@ const Service = () => {
                 ></Style.ServiceInfoDiffTitleIcon>
               </Style.ServiceInfoDiffTitleContainer>
               <ul>
-                {e.list.map((e) => {
+                {e.list.map((e, idx) => {
                   return (
-                    <Style.ServiceInfoDiffContent>
+                    <Style.ServiceInfoDiffContent key={idx}>
                       <Style.ServiceInfoDiffContentImg
                         src={`/asset/images/${e.check}.png`}
                         alt="아이콘"
                       />
                       <Style.ServiceInfoDiffContentText>
-                        {e.listTitleEng ? e.listTitleEng : e.listTitle}
+                        {i18n.language === "en" && e.listTitleEng
+                          ? e.listTitleEng
+                          : e.listTitle}
                       </Style.ServiceInfoDiffContentText>
                     </Style.ServiceInfoDiffContent>
                   );
